@@ -7,9 +7,9 @@ export default function Footer() {
     <footer className="bg-white border-t border-slate-200 py-6 mt-12 text-slate-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-4">
-          {/* Official A2C Logo Image Container */}
-          <div className="h-12 w-auto max-w-[160px] relative flex items-center justify-center p-1 bg-white border border-slate-200 rounded-lg shadow-2xs">
-            <img src="/a2c-logo.svg" alt="A2C - Any Idea Converting Logo" className="h-full w-auto object-contain" />
+          {/* Exact Un-retouched Uploaded A2C Logo Image */}
+          <div className="h-14 w-auto relative flex items-center justify-center p-1.5 bg-white border border-slate-200 rounded-xl shadow-2xs overflow-hidden">
+            <img src="/a2c-logo.png" alt="A2C - Any Idea Converting Logo" className="h-full w-auto object-contain" />
           </div>
 
           <div>

@@ -8,9 +8,9 @@ export default function AnalyticsHeader({ onExportPdf, isLoading, onRefresh }) {
     <header className="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-4">
-          {/* Official A2C Logo SVG */}
-          <div className="w-12 h-12 relative rounded-xl bg-white border border-slate-200 p-1 flex items-center justify-center shadow-xs shrink-0">
-            <img src="/a2c-logo.svg" alt="A2C Logo" className="w-full h-full object-contain" />
+          {/* Exact Un-retouched Uploaded A2C Logo Image */}
+          <div className="h-14 w-auto relative flex items-center justify-center p-1 bg-white border border-slate-200 rounded-xl shadow-2xs shrink-0 overflow-hidden">
+            <img src="/a2c-logo.png" alt="A2C Logo" className="h-full w-auto object-contain" />
           </div>
 
           <div>

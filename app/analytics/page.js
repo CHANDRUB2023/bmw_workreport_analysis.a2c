@@ -14,6 +14,7 @@ import ScenarioComparisonCard from '@/components/analytics/ScenarioComparisonCar
 import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysisCard';
 import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
 import Footer from '@/components/analytics/Footer';
+import { Download } from 'lucide-react';
 
 import { exportAnalyticsPdfReport } from '@/lib/pdfAnalyticsExporter';
 import { calculateProductivityMetrics } from '@/lib/productivityService';
@@ -196,17 +197,14 @@ export default function AnalyticsDashboardPage() {
                 <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
               </div>
 
-              {/* BOTTOM ACTION CALL */}
-              <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl p-6 text-center space-y-3 shadow-lg">
-                <h3 className="text-xl font-black tracking-tight">R&D Report Analysis — Ready for Professor Demonstration</h3>
-                <p className="text-xs text-blue-200 max-w-xl mx-auto">
-                  Generate a comprehensive multi-page PDF Analytics Report for Book My Venue (BMW) containing executive KPIs, geographic map insights, individual venue audits, and workforce scenario forecasts.
-                </p>
+              {/* BOTTOM DOWNLOAD PDF REPORT ACTION BUTTON */}
+              <div className="flex justify-center pt-2">
                 <button
                   onClick={handleExportPdf}
-                  className="px-6 py-3 bg-white text-blue-950 font-extrabold text-xs sm:text-sm rounded-xl shadow-md hover:bg-blue-50 transition-all inline-flex items-center gap-2 cursor-pointer"
+                  className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-blue-600/20 hover:shadow-lg transition-all inline-flex items-center gap-2.5 cursor-pointer"
                 >
-                  DOWNLOAD R&D PDF REPORT
+                  <Download className="w-4 h-4" />
+                  DOWNLOAD PDF REPORT
                 </button>
               </div>
             </>
