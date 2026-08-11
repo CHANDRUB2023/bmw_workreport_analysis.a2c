@@ -1,8 +1,13 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'A2C ANALYTICAL DASHBOARD | India & Tamil Nadu District Pincode Analytics',
-  description: 'Production-ready All-India postal data classification, geographical exploration, interactive GeoJSON mapping, and ReportLab PDF document export system.',
+  title: 'R&D REPORT ANALYSIS | Book My Venue (BMW) — Data Analyzed by A2C Team',
+  description: 'Production-ready R&D Report Analysis System for Book My Venue (BMW). Geographic exploration, district completion analytics, individual venue insights, and automated PDF reporting.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {

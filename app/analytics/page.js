@@ -5,20 +5,15 @@ import AnalyticsHeader from '@/components/analytics/AnalyticsHeader';
 import ExecutiveOverview from '@/components/analytics/ExecutiveOverview';
 import IndiaGeoAnalysis from '@/components/analytics/IndiaGeoAnalysis';
 import TnDistrictAnalysis from '@/components/analytics/TnDistrictAnalysis';
-import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
 import CompletionDonutCard from '@/components/analytics/CompletionDonutCard';
-import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysisCard';
-import CutoffAnalysisCard from '@/components/analytics/CutoffAnalysisCard';
-import TeamSizeAnalysisCard from '@/components/analytics/TeamSizeAnalysisCard';
+import IndividualVenueAnalysisCard from '@/components/analytics/IndividualVenueAnalysisCard';
+import ManpowerRequirementCard from '@/components/analytics/ManpowerRequirementCard';
+import MetroAnalysisCard from '@/components/analytics/MetroAnalysisCard';
 import WhatIfAnalyzerCard from '@/components/analytics/WhatIfAnalyzerCard';
 import ScenarioComparisonCard from '@/components/analytics/ScenarioComparisonCard';
-import ScenarioHeatmapCard from '@/components/analytics/ScenarioHeatmapCard';
-import PendingWorkBurndownCard from '@/components/analytics/PendingWorkBurndownCard';
-import ManpowerRequirementCard from '@/components/analytics/ManpowerRequirementCard';
-import ProductivityInsightsCard from '@/components/analytics/ProductivityInsightsCard';
-import DistrictRankingCard from '@/components/analytics/DistrictRankingCard';
-import MetroAnalysisCard from '@/components/analytics/MetroAnalysisCard';
-import PincodeDataTable from '@/components/tables/PincodeDataTable';
+import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysisCard';
+import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
+import Footer from '@/components/analytics/Footer';
 
 import { exportAnalyticsPdfReport } from '@/lib/pdfAnalyticsExporter';
 import { calculateProductivityMetrics } from '@/lib/productivityService';
@@ -29,6 +24,15 @@ export default function AnalyticsDashboardPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
+  
+  // Dynamic status tracking from SEC-3 checkboxes
+  const [tnStatusCounts, setTnStatusCounts] = useState({
+    completedCount: 8,
+    progressCount: 0,
+    pendingCount: 30,
+    totalDistricts: 38,
+    completionPct: 21.1
+  });
 
   const fetchAnalytics = () => {
     setIsLoading(true);
@@ -76,13 +80,19 @@ export default function AnalyticsDashboardPage() {
   const handleExportPdf = () => {
     if (!data) return;
     exportAnalyticsPdfReport({
-      kpis: data.kpis,
+      kpis: {
+        ...data.kpis,
+        tnCompletedDistricts: tnStatusCounts.completedCount,
+        tnPendingDistricts: tnStatusCounts.pendingCount,
+        tnCompletionPct: tnStatusCounts.completionPct
+      },
       statesData: data.states,
       tnDistrictsData: data.tnDistricts,
       topDistrictsData: data.topDistricts,
       productivityMetrics,
       whatIfScenarios,
-      metroData: data.metro
+      metroData: data.metro,
+      statusCounts: tnStatusCounts
     });
   };
 
@@ -100,7 +110,7 @@ export default function AnalyticsDashboardPage() {
           </p>
           <button
             onClick={fetchAnalytics}
-            className="px-4 py-2 text-xs font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+            className="px-4 py-2 text-xs font-bold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors cursor-pointer"
           >
             Retry Loading Analytics
           </button>
@@ -110,111 +120,102 @@ export default function AnalyticsDashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
-      {/* 1. Header Navigation Banner */}
-      <AnalyticsHeader
-        onExportPdf={handleExportPdf}
-        isLoading={isLoading}
-        onRefresh={fetchAnalytics}
-      />
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between">
+      <div>
+        {/* Header Navigation Banner */}
+        <AnalyticsHeader
+          onExportPdf={handleExportPdf}
+          isLoading={isLoading}
+          onRefresh={fetchAnalytics}
+        />
 
-      {/* Main Content Dashboard */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* Loading Overlay */}
-        {isLoading && (
-          <div className="p-12 text-center bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
-            <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto" />
-            <p className="text-sm font-bold text-slate-700">Loading Master Dataset Analytics...</p>
-            <p className="text-xs text-slate-400">Parsing and memoizing 165,627 records in-memory...</p>
-          </div>
-        )}
-
-        {!isLoading && data && (
-          <>
-            {/* SECTION 1 — EXECUTIVE OVERVIEW */}
-            <ExecutiveOverview kpis={data.kpis} />
-
-            {/* SECTION 2 — INDIA GEOGRAPHIC ANALYSIS */}
-            <IndiaGeoAnalysis
-              statesData={data.states || []}
-              selectedState={selectedState}
-              onSelectState={setSelectedState}
-            />
-
-            {/* SECTION 3 & 5 — TAMIL NADU DISTRICT ANALYSIS + COMPLETION DONUT */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              <div className="lg:col-span-8">
-                <TnDistrictAnalysis tnDistricts={data.tnDistricts || []} />
-              </div>
-              <div className="lg:col-span-4">
-                <CompletionDonutCard
-                  tnCompleted={data.kpis?.tnCompletedDistricts ?? 8}
-                  tnTotal={data.kpis?.tnTotalDistricts ?? 38}
-                />
-              </div>
+        {/* Main Content Dashboard */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+          {/* Loading Overlay */}
+          {isLoading && (
+            <div className="p-12 text-center bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
+              <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto" />
+              <p className="text-sm font-bold text-slate-700">Loading Master Dataset Analytics...</p>
+              <p className="text-xs text-slate-400">Parsing and memoizing 165,627 records in-memory...</p>
             </div>
+          )}
 
-            {/* SECTION 4 — DISTRICT PINCODE DISTRIBUTION BAR CHART */}
-            <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
+          {!isLoading && data && (
+            <>
+              {/* SEC 1 — EXECUTIVE OVERVIEW */}
+              <ExecutiveOverview kpis={{
+                ...data.kpis,
+                tnCompletedDistricts: tnStatusCounts.completedCount,
+                tnPendingDistricts: tnStatusCounts.pendingCount,
+                tnCompletionPct: tnStatusCounts.completionPct
+              }} />
 
-            {/* SECTION 15 — TOP DISTRICT RANKING TABLE */}
-            <DistrictRankingCard topDistrictsData={data.topDistricts || []} />
+              {/* SEC 2 — INDIA GEOGRAPHIC MAP (Protected) */}
+              <IndiaGeoAnalysis
+                statesData={data.states || []}
+                selectedState={selectedState}
+                onSelectState={setSelectedState}
+              />
 
-            {/* SECTION 4 — DATASET EXPLORER & TABLE */}
-            <PincodeDataTable />
+              {/* SEC 3 — TAMIL NADU DISTRICT MAP & CHECKBOX STATUS + COMPLETION DONUT */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                <div className="lg:col-span-8">
+                  <TnDistrictAnalysis
+                    tnDistricts={data.tnDistricts || []}
+                    onStatusChange={setTnStatusCounts}
+                  />
+                </div>
+                <div className="lg:col-span-4">
+                  <CompletionDonutCard
+                    tnCompleted={tnStatusCounts.completedCount}
+                    tnProgress={tnStatusCounts.progressCount}
+                    tnPending={tnStatusCounts.pendingCount}
+                    tnTotal={tnStatusCounts.totalDistricts}
+                  />
+                </div>
+              </div>
 
-            {/* SECTION 6 — PRODUCTIVITY ANALYSIS */}
-            <ProductivityAnalysisCard />
+              {/* SEC 4 — INDIVIDUAL VENUE ANALYSIS */}
+              <IndividualVenueAnalysisCard />
 
-            {/* SECTION 7 & 8 — CUT-OFF & TEAM SIZE ANALYSIS */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <CutoffAnalysisCard />
-              <TeamSizeAnalysisCard />
-            </div>
-
-            {/* SECTION 9 — WORKFORCE WHAT-IF ANALYZER */}
-            <WhatIfAnalyzerCard />
-
-            {/* SECTION 10 — WORKFORCE SCENARIO COMPARISON */}
-            <ScenarioComparisonCard />
-
-            {/* SECTION 11 — SCENARIO HEATMAP */}
-            <ScenarioHeatmapCard individualHourlyRate={0.5625} />
-
-            {/* SECTION 12 & 13 — BURNDOWN & MANPOWER REQUIREMENT */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <PendingWorkBurndownCard />
+              {/* SEC 5 — REMAINING WORK PINCODES & MANPOWER REQUIREMENT */}
               <ManpowerRequirementCard />
-            </div>
 
-            {/* SECTION 16 — METRO ANALYSIS */}
-            <MetroAnalysisCard metroData={data.metro} />
+              {/* SEC 6 — METRO SYSTEM NETWORK ANALYSIS */}
+              <MetroAnalysisCard metroData={data.metro} />
 
-            {/* SECTION 14 — PRODUCTIVITY INSIGHTS */}
-            <ProductivityInsightsCard
-              teamMembers={4}
-              workingHours={8}
-              completedVenues={18}
-              cutoffHours={5}
-              targetRemainingVenues={90}
-            />
+              {/* SEC 7 — WORKFORCE WHAT-IF ANALYZER & SCENARIO COMPARISON */}
+              <div className="space-y-6">
+                <WhatIfAnalyzerCard />
+                <ScenarioComparisonCard />
+              </div>
 
-            {/* SECTION 20 — PDF REPORT BOTTOM ACTION CALL */}
-            <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl p-6 text-center space-y-3 shadow-lg">
-              <h3 className="text-xl font-black tracking-tight">A2C Analytical Dashboard — Ready for Faculty & Management Presentation</h3>
-              <p className="text-xs text-blue-200 max-w-xl mx-auto">
-                Generate a comprehensive multi-page PDF Analytics Report containing executive KPIs, geographic charts, workforce scenario forecasts, and productivity insights.
-              </p>
-              <button
-                onClick={handleExportPdf}
-                className="px-6 py-3 bg-white text-blue-950 font-extrabold text-xs sm:text-sm rounded-xl shadow-md hover:bg-blue-50 transition-all inline-flex items-center gap-2 cursor-pointer"
-              >
-                DOWNLOAD ANALYTICS REPORT (PDF)
-              </button>
-            </div>
-          </>
-        )}
-      </main>
+              {/* SEC 8 — PRODUCTIVITY BENCHMARK & DISTRICT DISTRIBUTION */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <ProductivityAnalysisCard />
+                <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
+              </div>
+
+              {/* BOTTOM ACTION CALL */}
+              <div className="bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl p-6 text-center space-y-3 shadow-lg">
+                <h3 className="text-xl font-black tracking-tight">R&D Report Analysis — Ready for Professor Demonstration</h3>
+                <p className="text-xs text-blue-200 max-w-xl mx-auto">
+                  Generate a comprehensive multi-page PDF Analytics Report for Book My Venue (BMW) containing executive KPIs, geographic map insights, individual venue audits, and workforce scenario forecasts.
+                </p>
+                <button
+                  onClick={handleExportPdf}
+                  className="px-6 py-3 bg-white text-blue-950 font-extrabold text-xs sm:text-sm rounded-xl shadow-md hover:bg-blue-50 transition-all inline-flex items-center gap-2 cursor-pointer"
+                >
+                  DOWNLOAD R&D PDF REPORT
+                </button>
+              </div>
+            </>
+          )}
+        </main>
+      </div>
+
+      {/* A2C Team Footer */}
+      <Footer />
     </div>
   );
 }
