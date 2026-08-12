@@ -28,7 +28,7 @@ export default function WhatIfAnalyzerCard() {
     <section className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
       <div className="border-b border-slate-200 pb-3">
         <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-          <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 9</span>
+          <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 6</span>
           <span>WORKFORCE WHAT-IF ANALYZER</span>
         </h3>
         <p className="text-xs text-slate-500 mt-0.5">

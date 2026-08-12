@@ -30,7 +30,7 @@ export default function MetroAnalysisCard({ metroData }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 6</span>
+            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 5</span>
             <span className="flex items-center gap-2">
               <Train className="w-4 h-4 text-blue-600" />
               METRO SYSTEM NETWORK & STATION ANALYSIS

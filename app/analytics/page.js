@@ -6,7 +6,6 @@ import ExecutiveOverview from '@/components/analytics/ExecutiveOverview';
 import IndiaGeoAnalysis from '@/components/analytics/IndiaGeoAnalysis';
 import TnDistrictAnalysis from '@/components/analytics/TnDistrictAnalysis';
 import CompletionDonutCard from '@/components/analytics/CompletionDonutCard';
-import IndividualVenueAnalysisCard from '@/components/analytics/IndividualVenueAnalysisCard';
 import ManpowerRequirementCard from '@/components/analytics/ManpowerRequirementCard';
 import MetroAnalysisCard from '@/components/analytics/MetroAnalysisCard';
 import WhatIfAnalyzerCard from '@/components/analytics/WhatIfAnalyzerCard';
@@ -176,22 +175,19 @@ export default function AnalyticsDashboardPage() {
                 </div>
               </div>
 
-              {/* SEC 4 — INDIVIDUAL VENUE ANALYSIS */}
-              <IndividualVenueAnalysisCard />
-
-              {/* SEC 5 — REMAINING WORK PINCODES & MANPOWER REQUIREMENT */}
+              {/* SEC 4 — REMAINING WORK PINCODES & MANPOWER REQUIREMENT */}
               <ManpowerRequirementCard />
 
-              {/* SEC 6 — METRO SYSTEM NETWORK ANALYSIS */}
+              {/* SEC 5 — METRO SYSTEM NETWORK ANALYSIS */}
               <MetroAnalysisCard metroData={data.metro} />
 
-              {/* SEC 7 — WORKFORCE WHAT-IF ANALYZER & SCENARIO COMPARISON */}
+              {/* SEC 6 & SEC 7 — WORKFORCE WHAT-IF ANALYZER & SCENARIO COMPARISON */}
               <div className="space-y-6">
                 <WhatIfAnalyzerCard />
                 <ScenarioComparisonCard />
               </div>
 
-              {/* SEC 8 — PRODUCTIVITY BENCHMARK & DISTRICT DISTRIBUTION */}
+              {/* SEC 8 & SEC 9 — PRODUCTIVITY BENCHMARK & DISTRICT DISTRIBUTION */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <ProductivityAnalysisCard />
                 <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />

@@ -28,7 +28,7 @@ export default function ProductivityAnalysisCard() {
       <div className="flex flex-col md:flex-row md:items-center justify-between border-b border-slate-200 pb-3 gap-3">
         <div>
           <div className="flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 6</span>
+            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 8</span>
             <h3 className="text-base font-extrabold text-slate-900">WORKING HOURS VS EXPECTED OUTPUT</h3>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
