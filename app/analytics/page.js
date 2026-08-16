@@ -12,6 +12,7 @@ import WhatIfAnalyzerCard from '@/components/analytics/WhatIfAnalyzerCard';
 import ScenarioComparisonCard from '@/components/analytics/ScenarioComparisonCard';
 import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysisCard';
 import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
+import VenueAnalyticsSection from '@/components/analytics/VenueAnalyticsSection';
 import Footer from '@/components/analytics/Footer';
 import { Download } from 'lucide-react';
 
@@ -24,7 +25,8 @@ export default function AnalyticsDashboardPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
-  
+  const [venueRefreshTrigger, setVenueRefreshTrigger] = useState(0);
+
   // Dynamic status tracking from SEC-3 checkboxes
   const [tnStatusCounts, setTnStatusCounts] = useState({
     completedCount: 8,
@@ -37,6 +39,7 @@ export default function AnalyticsDashboardPage() {
   const fetchAnalytics = () => {
     setIsLoading(true);
     setError(null);
+    setVenueRefreshTrigger((prev) => prev + 1);
     fetch('/api/analytics')
       .then((res) => {
         if (!res.ok) throw new Error(`Server returned HTTP ${res.status}`);
@@ -192,6 +195,9 @@ export default function AnalyticsDashboardPage() {
                 <ProductivityAnalysisCard />
                 <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
               </div>
+
+              {/* SEC 10 — VENUE ANALYTICS */}
+              <VenueAnalyticsSection refreshTrigger={venueRefreshTrigger} />
 
               {/* BOTTOM DOWNLOAD PDF REPORT ACTION BUTTON */}
               <div className="flex justify-center pt-2">

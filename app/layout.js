@@ -4,9 +4,12 @@ export const metadata = {
   title: 'R&D REPORT ANALYSIS | Book My Venue (BMW) — Data Analyzed by A2C Team',
   description: 'Production-ready R&D Report Analysis System for Book My Venue (BMW). Geographic exploration, district completion analytics, individual venue insights, and automated PDF reporting.',
   icons: {
-    icon: '/icon.svg',
-    shortcut: '/icon.svg',
-    apple: '/icon.svg',
+    icon: [
+      { url: '/a2c-logo.png', type: 'image/png' },
+      { url: '/a2c-logo.svg', type: 'image/svg+xml' }
+    ],
+    shortcut: '/a2c-logo.png',
+    apple: '/a2c-logo.png',
   },
 };
 
