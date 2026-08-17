@@ -22,20 +22,29 @@ import {
 
 export const NAVIGATION_CATEGORIES = [
   {
-    id: 'overview',
-    title: 'OVERVIEW',
+    id: 'executive',
+    title: 'EXECUTIVE',
     icon: LayoutDashboard,
     items: [
       { id: 1, secCode: 'SEC 1', title: 'Executive Overview', icon: BarChart3, badge: 'KPIs' }
     ]
   },
   {
-    id: 'geography',
-    title: 'GEOGRAPHY',
+    id: 'geographic_analysis',
+    title: 'GEOGRAPHIC ANALYSIS',
     icon: Globe,
     items: [
-      { id: 2, secCode: 'SEC 2', title: 'India Geographic Map Analysis', icon: Map, badge: 'India' },
-      { id: 3, secCode: 'SEC 3', title: 'TN District Map & Completion', icon: Globe, badge: 'Tamil Nadu' }
+      { id: 2, secCode: 'SEC 2', title: 'India Geographic Map', icon: Map, badge: 'India' },
+      { id: 3, secCode: 'SEC 3', title: 'TN District Analysis', icon: Globe, badge: 'Tamil Nadu' }
+    ]
+  },
+  {
+    id: 'operations',
+    title: 'OPERATIONS',
+    icon: TrainTrack,
+    items: [
+      { id: 4, secCode: 'SEC 4', title: 'Manpower Requirement', icon: Users, badge: 'Manpower' },
+      { id: 5, secCode: 'SEC 5', title: 'Metro System Analysis', icon: TrainTrack, badge: 'Metro' }
     ]
   },
   {
@@ -43,19 +52,8 @@ export const NAVIGATION_CATEGORIES = [
     title: 'WORKFORCE',
     icon: Users,
     items: [
-      { id: 4, secCode: 'SEC 4', title: 'Remaining Work & Manpower', icon: Users, badge: 'Manpower' },
-      { id: 5, secCode: 'SEC 5', title: 'Metro System Network Analysis', icon: TrainTrack, badge: 'Metro' },
-      { id: 6, secCode: 'SEC 6', title: 'Workforce What-If Analyzer', icon: Calculator, badge: 'What-If' },
-      { id: 7, secCode: 'SEC 7', title: 'Workforce Scenario Comparison', icon: GitCompare, badge: 'Scenarios' },
-      { id: 8, secCode: 'SEC 8', title: 'Working Hours vs Expected Output', icon: TrendingUp, badge: 'Productivity' }
-    ]
-  },
-  {
-    id: 'distribution',
-    title: 'DISTRIBUTION',
-    icon: MapPin,
-    items: [
-      { id: 9, secCode: 'SEC 9', title: 'District-Wise Pincode Distribution', icon: MapPin, badge: 'Pincodes' }
+      { id: 6, secCode: 'SEC 6', title: 'Workforce What-If', icon: Calculator, badge: 'What-If' },
+      { id: 8, secCode: 'SEC 8', title: 'Working Hours vs Output', icon: TrendingUp, badge: 'Productivity' }
     ]
   },
   {
@@ -214,7 +212,7 @@ export default function AnalyticsSidebar({
             <span>2C Analytics Dashboard</span>
           </div>
           <p className="text-[10px] text-slate-500 font-medium">
-            10 Active Analytics Sections
+            8 Active Analytics Sections
           </p>
         </div>
       </div>

@@ -100,11 +100,11 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
                 </span>
                 <div className="mt-1.5 flex items-center">
                   {activeDistrict.isApproximate ? (
-                    <span className="px-2.5 py-1 rounded-lg font-extrabold bg-amber-50 text-amber-900 border border-amber-300 text-xs flex items-center gap-1.5">
+                    <span className="px-2 py-1 rounded-lg font-extrabold bg-amber-50 text-amber-900 border border-amber-300 text-[11px] sm:text-xs flex items-center gap-1.5 whitespace-nowrap">
                       <AlertCircle className="w-3.5 h-3.5 text-amber-700 shrink-0" /> Approximate (±)
                     </span>
                   ) : (
-                    <span className="px-2.5 py-1 rounded-lg font-extrabold bg-emerald-50 text-emerald-900 border border-emerald-300 text-xs flex items-center gap-1.5">
+                    <span className="px-2 py-1 rounded-lg font-extrabold bg-emerald-50 text-emerald-900 border border-emerald-300 text-[11px] sm:text-xs flex items-center gap-1.5 whitespace-nowrap">
                       <CheckCircle className="w-3.5 h-3.5 text-emerald-700 shrink-0" /> Exact Number
                     </span>
                   )}
@@ -127,10 +127,11 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
               </div>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="mt-2 w-full py-1.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-[11px] font-extrabold rounded-lg shadow-2xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                className="mt-2 w-full py-1.5 px-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-[11px] font-extrabold rounded-lg shadow-2xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap truncate"
+                title="View District Pincodes"
               >
                 <Eye className="w-3.5 h-3.5 shrink-0" />
-                <span>VIEW DISTRICT PINCODES</span>
+                <span className="truncate">VIEW DISTRICT PINCODES</span>
               </button>
             </div>
           </div>

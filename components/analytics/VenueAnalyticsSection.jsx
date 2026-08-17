@@ -5,7 +5,6 @@ import VenueKpisCard from './VenueKpisCard';
 import TnVenueMapCard from './TnVenueMapCard';
 import DistrictVenueBarChart from './DistrictVenueBarChart';
 import VenueRangeDistributionCard from './VenueRangeDistributionCard';
-import PincodeVsVenueScatterCard from './PincodeVsVenueScatterCard';
 import UtVenueBarChart from './UtVenueBarChart';
 import DistrictDrilldownCard from './DistrictDrilldownCard';
 import DistrictVenueTableCard from './DistrictVenueTableCard';
@@ -142,14 +141,11 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
           {/* DISTRICT-WISE VENUE BAR CHART */}
           <DistrictVenueBarChart districts={data.districts || []} />
 
-          {/* VENUE RANGE DISTRIBUTION & SCATTER PLOT GRID */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <VenueRangeDistributionCard
-              distributions={data.distributions || []}
-              totalDistricts={data.summary?.totalDistricts || 38}
-            />
-            <PincodeVsVenueScatterCard districts={data.districts || []} />
-          </div>
+          {/* VENUE RANGE DISTRIBUTION CARD */}
+          <VenueRangeDistributionCard
+            distributions={data.distributions || []}
+            totalDistricts={data.summary?.totalDistricts || 38}
+          />
 
           {/* UNION TERRITORY BAR CHART */}
           {data.unionTerritories && data.unionTerritories.length > 0 && (

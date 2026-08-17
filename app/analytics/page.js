@@ -10,9 +10,7 @@ import CompletionDonutCard from '@/components/analytics/CompletionDonutCard';
 import ManpowerRequirementCard from '@/components/analytics/ManpowerRequirementCard';
 import MetroAnalysisCard from '@/components/analytics/MetroAnalysisCard';
 import WhatIfAnalyzerCard from '@/components/analytics/WhatIfAnalyzerCard';
-import ScenarioComparisonCard from '@/components/analytics/ScenarioComparisonCard';
 import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysisCard';
-import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
 import VenueAnalyticsSection from '@/components/analytics/VenueAnalyticsSection';
 import Footer from '@/components/analytics/Footer';
 import { Download, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -21,16 +19,16 @@ import { exportAnalyticsPdfReport } from '@/lib/pdfAnalyticsExporter';
 import { calculateProductivityMetrics } from '@/lib/productivityService';
 import { calculateWhatIfScenarios } from '@/lib/analyticsService';
 
+const VALID_SECTIONS = [1, 2, 3, 4, 5, 6, 8, 10];
+
 const SECTION_TITLES = {
   1: 'SEC 1 — Executive Overview',
-  2: 'SEC 2 — India Geographic Map Analysis',
-  3: 'SEC 3 — TN District Map & Completion',
-  4: 'SEC 4 — Remaining Work & Manpower Requirement',
-  5: 'SEC 5 — Metro System Network Analysis',
-  6: 'SEC 6 — Workforce What-If Analyzer',
-  7: 'SEC 7 — Workforce Scenario Comparison',
-  8: 'SEC 8 — Working Hours vs Expected Output',
-  9: 'SEC 9 — District-Wise Pincode Distribution',
+  2: 'SEC 2 — India Geographic Map',
+  3: 'SEC 3 — TN District Analysis',
+  4: 'SEC 4 — Manpower Requirement',
+  5: 'SEC 5 — Metro System Analysis',
+  6: 'SEC 6 — Workforce What-If',
+  8: 'SEC 8 — Working Hours vs Output',
   10: 'SEC 10 — Venue Analytics'
 };
 
@@ -41,7 +39,7 @@ export default function AnalyticsDashboardPage() {
   const [selectedState, setSelectedState] = useState(null);
   const [venueRefreshTrigger, setVenueRefreshTrigger] = useState(0);
 
-  // Active section state (1-10)
+  // Active section state (defaults to SEC 1)
   const [selectedSection, setSelectedSection] = useState(1);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
@@ -84,7 +82,7 @@ export default function AnalyticsDashboardPage() {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const sec = parseInt(params.get('section'), 10);
-      if (!isNaN(sec) && sec >= 1 && sec <= 10) {
+      if (!isNaN(sec) && VALID_SECTIONS.includes(sec)) {
         setSelectedSection(sec);
       }
     }
@@ -94,7 +92,7 @@ export default function AnalyticsDashboardPage() {
       if (typeof window !== 'undefined') {
         const params = new URLSearchParams(window.location.search);
         const sec = parseInt(params.get('section'), 10);
-        if (!isNaN(sec) && sec >= 1 && sec <= 10) {
+        if (!isNaN(sec) && VALID_SECTIONS.includes(sec)) {
           setSelectedSection(sec);
         } else {
           setSelectedSection(1);
@@ -107,6 +105,7 @@ export default function AnalyticsDashboardPage() {
   }, []);
 
   const handleSelectSection = (sectionId) => {
+    if (!VALID_SECTIONS.includes(sectionId)) return;
     setSelectedSection(sectionId);
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
@@ -115,6 +114,10 @@ export default function AnalyticsDashboardPage() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
+
+  const currentSectionIndex = VALID_SECTIONS.indexOf(selectedSection);
+  const prevSection = currentSectionIndex > 0 ? VALID_SECTIONS[currentSectionIndex - 1] : null;
+  const nextSection = currentSectionIndex < VALID_SECTIONS.length - 1 ? VALID_SECTIONS[currentSectionIndex + 1] : null;
 
   const productivityMetrics = useMemo(() => {
     return calculateProductivityMetrics({
@@ -204,14 +207,14 @@ export default function AnalyticsDashboardPage() {
                 SEC {selectedSection}
               </span>
               <h2 className="text-base sm:text-lg font-extrabold text-slate-900">
-                {SECTION_TITLES[selectedSection]}
+                {SECTION_TITLES[selectedSection] || `Section ${selectedSection}`}
               </h2>
             </div>
 
             <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
               <button
-                onClick={() => handleSelectSection(Math.max(1, selectedSection - 1))}
-                disabled={selectedSection <= 1}
+                onClick={() => prevSection && handleSelectSection(prevSection)}
+                disabled={!prevSection}
                 className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
                 title="Previous Section"
               >
@@ -219,11 +222,11 @@ export default function AnalyticsDashboardPage() {
                 Prev
               </button>
               <span className="text-slate-400 font-medium text-[11px] px-1">
-                {selectedSection} / 10
+                {currentSectionIndex + 1} / {VALID_SECTIONS.length}
               </span>
               <button
-                onClick={() => handleSelectSection(Math.min(10, selectedSection + 1))}
-                disabled={selectedSection >= 10}
+                onClick={() => nextSection && handleSelectSection(nextSection)}
+                disabled={!nextSection}
                 className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
                 title="Next Section"
               >
@@ -299,19 +302,9 @@ export default function AnalyticsDashboardPage() {
                 <WhatIfAnalyzerCard />
               )}
 
-              {/* SEC 7 — WORKFORCE SCENARIO COMPARISON */}
-              {selectedSection === 7 && (
-                <ScenarioComparisonCard />
-              )}
-
               {/* SEC 8 — PRODUCTIVITY BENCHMARK */}
               {selectedSection === 8 && (
                 <ProductivityAnalysisCard />
-              )}
-
-              {/* SEC 9 — DISTRICT DISTRIBUTION */}
-              {selectedSection === 9 && (
-                <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
               )}
 
               {/* SEC 10 — VENUE ANALYTICS */}

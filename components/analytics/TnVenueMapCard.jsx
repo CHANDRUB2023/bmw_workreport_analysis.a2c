@@ -187,7 +187,7 @@ export default function TnVenueMapCard({ districts = [], selectedDistrict, onSel
 
       <div
         ref={mapContainerRef}
-        className="w-full h-[400px] rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-2xs"
+        className="relative z-0 w-full h-[400px] rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-2xs"
       />
 
       {/* Map Legend */}

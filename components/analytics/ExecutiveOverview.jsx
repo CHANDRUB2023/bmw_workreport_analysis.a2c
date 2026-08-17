@@ -76,9 +76,13 @@ export default function ExecutiveOverview({ kpis }) {
             <div
               key={i}
               className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              title={`${c.title} — ${c.subtitle}`}
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider truncate">
+                <span
+                  className="text-xs font-bold text-slate-500 uppercase tracking-wider truncate cursor-help"
+                  title={c.title}
+                >
                   {c.title}
                 </span>
                 <div className={`p-1.5 rounded-lg ${c.iconBg}`}>
@@ -90,7 +94,10 @@ export default function ExecutiveOverview({ kpis }) {
                 <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
                   {c.value}
                 </div>
-                <div className="text-[11px] font-medium text-slate-400 mt-0.5 truncate">
+                <div
+                  className="text-[11px] font-medium text-slate-400 mt-0.5 truncate cursor-help"
+                  title={c.subtitle}
+                >
                   {c.subtitle}
                 </div>
               </div>
