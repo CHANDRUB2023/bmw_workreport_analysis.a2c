@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useMemo } from 'react';
 import AnalyticsHeader from '@/components/analytics/AnalyticsHeader';
+import AnalyticsSidebar from '@/components/analytics/AnalyticsSidebar';
 import ExecutiveOverview from '@/components/analytics/ExecutiveOverview';
 import IndiaGeoAnalysis from '@/components/analytics/IndiaGeoAnalysis';
 import TnDistrictAnalysis from '@/components/analytics/TnDistrictAnalysis';
@@ -14,11 +15,24 @@ import ProductivityAnalysisCard from '@/components/analytics/ProductivityAnalysi
 import PincodeDistributionBarChart from '@/components/analytics/PincodeDistributionBarChart';
 import VenueAnalyticsSection from '@/components/analytics/VenueAnalyticsSection';
 import Footer from '@/components/analytics/Footer';
-import { Download } from 'lucide-react';
+import { Download, ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { exportAnalyticsPdfReport } from '@/lib/pdfAnalyticsExporter';
 import { calculateProductivityMetrics } from '@/lib/productivityService';
 import { calculateWhatIfScenarios } from '@/lib/analyticsService';
+
+const SECTION_TITLES = {
+  1: 'SEC 1 — Executive Overview',
+  2: 'SEC 2 — India Geographic Map Analysis',
+  3: 'SEC 3 — TN District Map & Completion',
+  4: 'SEC 4 — Remaining Work & Manpower Requirement',
+  5: 'SEC 5 — Metro System Network Analysis',
+  6: 'SEC 6 — Workforce What-If Analyzer',
+  7: 'SEC 7 — Workforce Scenario Comparison',
+  8: 'SEC 8 — Working Hours vs Expected Output',
+  9: 'SEC 9 — District-Wise Pincode Distribution',
+  10: 'SEC 10 — Venue Analytics'
+};
 
 export default function AnalyticsDashboardPage() {
   const [data, setData] = useState(null);
@@ -26,6 +40,10 @@ export default function AnalyticsDashboardPage() {
   const [error, setError] = useState(null);
   const [selectedState, setSelectedState] = useState(null);
   const [venueRefreshTrigger, setVenueRefreshTrigger] = useState(0);
+
+  // Active section state (1-10)
+  const [selectedSection, setSelectedSection] = useState(1);
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
   // Dynamic status tracking from SEC-3 checkboxes
   const [tnStatusCounts, setTnStatusCounts] = useState({
@@ -61,7 +79,42 @@ export default function AnalyticsDashboardPage() {
 
   useEffect(() => {
     fetchAnalytics();
+
+    // Read initial section from URL parameter ?section=X
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const sec = parseInt(params.get('section'), 10);
+      if (!isNaN(sec) && sec >= 1 && sec <= 10) {
+        setSelectedSection(sec);
+      }
+    }
+
+    // Handle browser Back / Forward navigation button clicks
+    const handlePopState = () => {
+      if (typeof window !== 'undefined') {
+        const params = new URLSearchParams(window.location.search);
+        const sec = parseInt(params.get('section'), 10);
+        if (!isNaN(sec) && sec >= 1 && sec <= 10) {
+          setSelectedSection(sec);
+        } else {
+          setSelectedSection(1);
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
+  const handleSelectSection = (sectionId) => {
+    setSelectedSection(sectionId);
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('section', sectionId.toString());
+      window.history.pushState(null, '', url.toString());
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const productivityMetrics = useMemo(() => {
     return calculateProductivityMetrics({
@@ -124,17 +177,63 @@ export default function AnalyticsDashboardPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between">
-      <div>
-        {/* Header Navigation Banner */}
-        <AnalyticsHeader
-          onExportPdf={handleExportPdf}
-          isLoading={isLoading}
-          onRefresh={fetchAnalytics}
+      {/* Header Navigation Banner */}
+      <AnalyticsHeader
+        onExportPdf={handleExportPdf}
+        isLoading={isLoading}
+        onRefresh={fetchAnalytics}
+        onToggleMobileSidebar={() => setIsMobileSidebarOpen((prev) => !prev)}
+      />
+
+      {/* Sidebar + Main Content Layout Container */}
+      <div className="flex-1 flex flex-col lg:flex-row max-w-full">
+        {/* Left Sidebar Navigation */}
+        <AnalyticsSidebar
+          selectedSection={selectedSection}
+          onSelectSection={handleSelectSection}
+          isOpenMobile={isMobileSidebarOpen}
+          onCloseMobile={() => setIsMobileSidebarOpen(false)}
         />
 
-        {/* Main Content Dashboard */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-          {/* Loading Overlay */}
+        {/* Main Content Viewport */}
+        <main className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+          {/* Top Section Navigation Header */}
+          <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="px-2.5 py-1 text-xs font-black bg-blue-600 text-white rounded-lg shadow-2xs">
+                SEC {selectedSection}
+              </span>
+              <h2 className="text-base sm:text-lg font-extrabold text-slate-900">
+                {SECTION_TITLES[selectedSection]}
+              </h2>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-semibold text-slate-600">
+              <button
+                onClick={() => handleSelectSection(Math.max(1, selectedSection - 1))}
+                disabled={selectedSection <= 1}
+                className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
+                title="Previous Section"
+              >
+                <ChevronLeft className="w-3.5 h-3.5" />
+                Prev
+              </button>
+              <span className="text-slate-400 font-medium text-[11px] px-1">
+                {selectedSection} / 10
+              </span>
+              <button
+                onClick={() => handleSelectSection(Math.min(10, selectedSection + 1))}
+                disabled={selectedSection >= 10}
+                className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
+                title="Next Section"
+              >
+                Next
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Loading Indicator */}
           {isLoading && (
             <div className="p-12 text-center bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
               <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto" />
@@ -143,64 +242,85 @@ export default function AnalyticsDashboardPage() {
             </div>
           )}
 
+          {/* Conditional Rendering of Currently Selected Section Only */}
           {!isLoading && data && (
             <>
               {/* SEC 1 — EXECUTIVE OVERVIEW */}
-              <ExecutiveOverview kpis={{
-                ...data.kpis,
-                tnCompletedDistricts: tnStatusCounts.completedCount,
-                tnPendingDistricts: tnStatusCounts.pendingCount,
-                tnCompletionPct: tnStatusCounts.completionPct
-              }} />
+              {selectedSection === 1 && (
+                <ExecutiveOverview kpis={{
+                  ...data.kpis,
+                  tnCompletedDistricts: tnStatusCounts.completedCount,
+                  tnPendingDistricts: tnStatusCounts.pendingCount,
+                  tnCompletionPct: tnStatusCounts.completionPct
+                }} />
+              )}
 
-              {/* SEC 2 — INDIA GEOGRAPHIC MAP (Protected) */}
-              <IndiaGeoAnalysis
-                statesData={data.states || []}
-                selectedState={selectedState}
-                onSelectState={setSelectedState}
-              />
+              {/* SEC 2 — INDIA GEOGRAPHIC MAP ANALYSIS */}
+              {selectedSection === 2 && (
+                <IndiaGeoAnalysis
+                  statesData={data.states || []}
+                  selectedState={selectedState}
+                  onSelectState={setSelectedState}
+                />
+              )}
 
               {/* SEC 3 — TAMIL NADU DISTRICT MAP & CHECKBOX STATUS + COMPLETION DONUT */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <div className="lg:col-span-8">
-                  <TnDistrictAnalysis
-                    tnDistricts={data.tnDistricts || []}
-                    onStatusChange={setTnStatusCounts}
-                  />
+              {selectedSection === 3 && (
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                  <div className="lg:col-span-8">
+                    <TnDistrictAnalysis
+                      tnDistricts={data.tnDistricts || []}
+                      onStatusChange={setTnStatusCounts}
+                    />
+                  </div>
+                  <div className="lg:col-span-4">
+                    <CompletionDonutCard
+                      tnCompleted={tnStatusCounts.completedCount}
+                      tnProgress={tnStatusCounts.progressCount}
+                      tnPending={tnStatusCounts.pendingCount}
+                      tnTotal={tnStatusCounts.totalDistricts}
+                    />
+                  </div>
                 </div>
-                <div className="lg:col-span-4">
-                  <CompletionDonutCard
-                    tnCompleted={tnStatusCounts.completedCount}
-                    tnProgress={tnStatusCounts.progressCount}
-                    tnPending={tnStatusCounts.pendingCount}
-                    tnTotal={tnStatusCounts.totalDistricts}
-                  />
-                </div>
-              </div>
+              )}
 
               {/* SEC 4 — REMAINING WORK PINCODES & MANPOWER REQUIREMENT */}
-              <ManpowerRequirementCard />
+              {selectedSection === 4 && (
+                <ManpowerRequirementCard />
+              )}
 
               {/* SEC 5 — METRO SYSTEM NETWORK ANALYSIS */}
-              <MetroAnalysisCard metroData={data.metro} />
+              {selectedSection === 5 && (
+                <MetroAnalysisCard metroData={data.metro} />
+              )}
 
-              {/* SEC 6 & SEC 7 — WORKFORCE WHAT-IF ANALYZER & SCENARIO COMPARISON */}
-              <div className="space-y-6">
+              {/* SEC 6 — WORKFORCE WHAT-IF ANALYZER */}
+              {selectedSection === 6 && (
                 <WhatIfAnalyzerCard />
-                <ScenarioComparisonCard />
-              </div>
+              )}
 
-              {/* SEC 8 & SEC 9 — PRODUCTIVITY BENCHMARK & DISTRICT DISTRIBUTION */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* SEC 7 — WORKFORCE SCENARIO COMPARISON */}
+              {selectedSection === 7 && (
+                <ScenarioComparisonCard />
+              )}
+
+              {/* SEC 8 — PRODUCTIVITY BENCHMARK */}
+              {selectedSection === 8 && (
                 <ProductivityAnalysisCard />
+              )}
+
+              {/* SEC 9 — DISTRICT DISTRIBUTION */}
+              {selectedSection === 9 && (
                 <PincodeDistributionBarChart districtsData={data.districtsDistribution || []} />
-              </div>
+              )}
 
               {/* SEC 10 — VENUE ANALYTICS */}
-              <VenueAnalyticsSection refreshTrigger={venueRefreshTrigger} />
+              {selectedSection === 10 && (
+                <VenueAnalyticsSection refreshTrigger={venueRefreshTrigger} />
+              )}
 
               {/* BOTTOM DOWNLOAD PDF REPORT ACTION BUTTON */}
-              <div className="flex justify-center pt-2">
+              <div className="flex justify-center pt-4">
                 <button
                   onClick={handleExportPdf}
                   className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-blue-600/20 hover:shadow-lg transition-all inline-flex items-center gap-2.5 cursor-pointer"
