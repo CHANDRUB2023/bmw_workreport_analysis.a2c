@@ -72,6 +72,20 @@ export default function ExecutiveOverview({ kpis }) {
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-3 sm:gap-4">
         {cards.map((c, i) => {
           const Icon = c.icon;
+          const isFirst = i === 0;
+          const isLast = i === cards.length - 1;
+
+          let tooltipPosClass = "left-1/2 -translate-x-1/2";
+          let arrowPosClass = "left-1/2 -translate-x-1/2";
+
+          if (isFirst) {
+            tooltipPosClass = "left-0 translate-x-0";
+            arrowPosClass = "left-6 -translate-x-1/2";
+          } else if (isLast) {
+            tooltipPosClass = "right-0 left-auto translate-x-0";
+            arrowPosClass = "right-6 translate-x-1/2";
+          }
+
           return (
             <div
               key={i}
@@ -99,8 +113,10 @@ export default function ExecutiveOverview({ kpis }) {
                 </div>
               </div>
 
-              {/* Floating Rich Tooltip (Smooth 250ms Hover & Focus Animation) */}
-              <div className="opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-250 ease-out transform translate-y-1 group-hover:translate-y-0 group-focus:translate-y-0 group-focus-within:translate-y-0 absolute bottom-full left-1/2 -translate-x-1/2 mb-2.5 w-56 z-50 p-3 bg-slate-900 text-white rounded-xl shadow-2xl border border-slate-700/80 text-left">
+              {/* Edge-Safe Floating Rich Tooltip */}
+              <div
+                className={`opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-250 ease-out transform translate-y-1 group-hover:translate-y-0 group-focus:translate-y-0 group-focus-within:translate-y-0 absolute bottom-full mb-2.5 w-56 z-50 p-3 bg-slate-900 text-white rounded-xl shadow-2xl border border-slate-700/80 text-left ${tooltipPosClass}`}
+              >
                 <div className="flex items-center gap-2 mb-1.5 pb-1.5 border-b border-slate-800">
                   <div className={`p-1 rounded-md text-xs shrink-0 ${c.iconBg}`}>
                     <Icon className="w-3.5 h-3.5" />
@@ -118,8 +134,8 @@ export default function ExecutiveOverview({ kpis }) {
                   {c.subtitle}
                 </div>
 
-                {/* Bottom Pointer Arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-slate-900" />
+                {/* Pointer Arrow */}
+                <div className={`absolute top-full -mt-1 border-4 border-transparent border-t-slate-900 ${arrowPosClass}`} />
               </div>
             </div>
           );
