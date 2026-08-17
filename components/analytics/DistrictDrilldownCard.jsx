@@ -26,7 +26,7 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
       {/* Title Bar & Selector Dropdown */}
-      <div className="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="border-b border-slate-200 pb-3 flex flex-col md:flex-row md:items-center justify-between gap-3 overflow-hidden">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
             <MapPin className="w-5 h-5 text-blue-600 shrink-0" />
@@ -38,14 +38,14 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
         </div>
 
         {/* District Selector Dropdown */}
-        <div className="w-full sm:w-64 shrink-0">
+        <div className="w-full md:w-72 shrink-0">
           <select
             value={activeDistrict?.district || ''}
             onChange={(e) => {
               const found = districts.find(d => d.district === e.target.value);
               if (found && onSelectDistrict) onSelectDistrict(found);
             }}
-            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+            className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer truncate"
           >
             {districts.map((d) => (
               <option key={d.district} value={d.district}>
@@ -58,32 +58,32 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
 
       {activeDistrict ? (
         <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
-          {/* Equal Height, Uniform Alignment 4-Card Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch">
+          {/* Responsive Equal-Height 4-Card Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 items-stretch">
             {/* Card 1: District & Rank */}
-            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[110px] shadow-2xs">
+            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[105px] shadow-2xs overflow-hidden">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   District & Rank
                 </span>
-                <div className="text-base font-black text-slate-900 mt-1 truncate" title={activeDistrict.district}>
+                <div className="text-sm sm:text-base font-black text-slate-900 mt-0.5 truncate" title={activeDistrict.district}>
                   {activeDistrict.district}
                 </div>
               </div>
               <div className="mt-2">
-                <span className="inline-block px-2.5 py-0.5 text-[10px] font-extrabold bg-blue-100 text-blue-800 border border-blue-200 rounded-md">
+                <span className="inline-flex items-center px-2 py-0.5 text-[10px] font-extrabold bg-blue-100 text-blue-800 border border-blue-200 rounded-md whitespace-nowrap">
                   Rank #{activeDistrict.rank} of {districts.length}
                 </span>
               </div>
             </div>
 
             {/* Card 2: Venue Count */}
-            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[110px] shadow-2xs">
+            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[105px] shadow-2xs overflow-hidden">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   Venue Count
                 </span>
-                <div className="text-xl font-black text-blue-900 mt-1 tracking-tight">
+                <div className="text-lg sm:text-xl font-black text-blue-900 mt-0.5 tracking-tight whitespace-nowrap">
                   {activeDistrict.displayVenue}
                 </div>
               </div>
@@ -93,19 +93,21 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
             </div>
 
             {/* Card 3: Data Type */}
-            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[110px] shadow-2xs">
+            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[105px] shadow-2xs overflow-hidden">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   Data Type
                 </span>
-                <div className="mt-1.5 flex items-center">
+                <div className="mt-1 flex items-center">
                   {activeDistrict.isApproximate ? (
-                    <span className="px-2 py-1 rounded-lg font-extrabold bg-amber-50 text-amber-900 border border-amber-300 text-[11px] sm:text-xs flex items-center gap-1.5 whitespace-nowrap">
-                      <AlertCircle className="w-3.5 h-3.5 text-amber-700 shrink-0" /> Approximate (±)
+                    <span className="px-2 py-0.5 rounded-md font-extrabold bg-amber-100 text-amber-900 border border-amber-200 text-[10px] sm:text-[11px] inline-flex items-center gap-1 max-w-full">
+                      <AlertCircle className="w-3 h-3 text-amber-700 shrink-0" />
+                      <span className="truncate">Approximate (±)</span>
                     </span>
                   ) : (
-                    <span className="px-2 py-1 rounded-lg font-extrabold bg-emerald-50 text-emerald-900 border border-emerald-300 text-[11px] sm:text-xs flex items-center gap-1.5 whitespace-nowrap">
-                      <CheckCircle className="w-3.5 h-3.5 text-emerald-700 shrink-0" /> Exact Number
+                    <span className="px-2 py-0.5 rounded-md font-extrabold bg-emerald-100 text-emerald-900 border border-emerald-200 text-[10px] sm:text-[11px] inline-flex items-center gap-1 max-w-full">
+                      <CheckCircle className="w-3 h-3 text-emerald-700 shrink-0" />
+                      <span className="truncate">Exact Number</span>
                     </span>
                   )}
                 </div>
@@ -116,22 +118,22 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
             </div>
 
             {/* Card 4: Unique Pincodes & Modal Action */}
-            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[110px] shadow-2xs">
+            <div className="bg-white border border-slate-200 rounded-xl p-3.5 flex flex-col justify-between min-h-[105px] shadow-2xs overflow-hidden">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
                   Unique Pincodes
                 </span>
-                <div className="text-base font-black text-slate-900 mt-1">
+                <div className="text-sm sm:text-base font-black text-slate-900 mt-0.5">
                   {activeDistrict.pincodeCount} <span className="text-xs font-bold text-slate-500">PINs</span>
                 </div>
               </div>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="mt-2 w-full py-1.5 px-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-[11px] font-extrabold rounded-lg shadow-2xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap truncate"
+                className="mt-2 w-full py-1.5 px-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-[11px] font-extrabold rounded-lg shadow-2xs transition-colors flex items-center justify-center gap-1.5 cursor-pointer whitespace-nowrap"
                 title="View District Pincodes"
               >
                 <Eye className="w-3.5 h-3.5 shrink-0" />
-                <span className="truncate">VIEW DISTRICT PINCODES</span>
+                <span>View Pincodes ({activeDistrict.pincodeCount})</span>
               </button>
             </div>
           </div>
@@ -143,7 +145,7 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
       {/* Pincodes Modal */}
       {isModalOpen && activeDistrict && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-xl w-full p-6 space-y-4 max-h-[85vh] flex flex-col">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-xl w-full p-6 space-y-4 max-h-[85vh] flex flex-col animate-modal-pop">
             {/* Modal Header */}
             <div className="flex items-center justify-between border-b border-slate-200 pb-3">
               <div>
