@@ -75,7 +75,7 @@ export default function ExecutiveOverview({ kpis }) {
           return (
             <div
               key={i}
-              className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between"
+              className="bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between animate-fade-in"
               title={`${c.title} — ${c.subtitle}`}
             >
               <div className="flex items-center justify-between mb-2">

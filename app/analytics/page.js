@@ -56,7 +56,11 @@ export default function AnalyticsDashboardPage() {
     setIsLoading(true);
     setError(null);
     setVenueRefreshTrigger((prev) => prev + 1);
-    fetch('/api/analytics')
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
+
+    fetch('/api/analytics', { signal: controller.signal })
       .then((res) => {
         if (!res.ok) throw new Error(`Server returned HTTP ${res.status}`);
         return res.json();
@@ -70,9 +74,16 @@ export default function AnalyticsDashboardPage() {
       })
       .catch((err) => {
         console.error('Failed to fetch analytics data:', err);
-        setError(err.message || 'Master dataset processing error');
+        if (err.name === 'AbortError') {
+          setError('Master dataset request timed out. Please check backend / retry.');
+        } else {
+          setError(err.message || 'Master dataset processing error');
+        }
       })
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        clearTimeout(timeoutId);
+        setIsLoading(false);
+      });
   };
 
   useEffect(() => {

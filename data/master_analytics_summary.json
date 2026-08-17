@@ -1,0 +1,5195 @@
+{
+  "kpis": {
+    "totalStates": 37,
+    "totalDistricts": 755,
+    "totalUniquePincodes": 19586,
+    "totalPostOffices": 165627,
+    "tnTotalDistricts": 38,
+    "tnCompletedDistricts": 8,
+    "tnPendingDistricts": 30,
+    "tnCompletionPct": 21.1
+  },
+  "states": [
+    {
+      "stateName": "ANDAMAN AND NICOBAR ISLANDS",
+      "districtCount": 3,
+      "pincodeCount": 22,
+      "recordCount": 100,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "ANDHRA PRADESH",
+      "districtCount": 26,
+      "pincodeCount": 1262,
+      "recordCount": 10681,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "ARUNACHAL PRADESH",
+      "districtCount": 25,
+      "pincodeCount": 51,
+      "recordCount": 1171,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "ASSAM",
+      "districtCount": 34,
+      "pincodeCount": 577,
+      "recordCount": 4063,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "BIHAR",
+      "districtCount": 38,
+      "pincodeCount": 883,
+      "recordCount": 9309,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "CHANDIGARH",
+      "districtCount": 1,
+      "pincodeCount": 23,
+      "recordCount": 53,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "CHHATTISGARH",
+      "districtCount": 28,
+      "pincodeCount": 279,
+      "recordCount": 4411,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "DELHI",
+      "districtCount": 11,
+      "pincodeCount": 103,
+      "recordCount": 550,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "GOA",
+      "districtCount": 2,
+      "pincodeCount": 89,
+      "recordCount": 261,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "GUJARAT",
+      "districtCount": 33,
+      "pincodeCount": 1010,
+      "recordCount": 8841,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "HARYANA",
+      "districtCount": 22,
+      "pincodeCount": 318,
+      "recordCount": 2706,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "HIMACHAL PRADESH",
+      "districtCount": 12,
+      "pincodeCount": 439,
+      "recordCount": 2807,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "JAMMU AND KASHMIR",
+      "districtCount": 20,
+      "pincodeCount": 213,
+      "recordCount": 1617,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "JHARKHAND",
+      "districtCount": 24,
+      "pincodeCount": 388,
+      "recordCount": 4584,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "KARNATAKA",
+      "districtCount": 31,
+      "pincodeCount": 1359,
+      "recordCount": 9658,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "KERALA",
+      "districtCount": 14,
+      "pincodeCount": 1428,
+      "recordCount": 5057,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "LADAKH",
+      "districtCount": 2,
+      "pincodeCount": 14,
+      "recordCount": 119,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "LAKSHADWEEP",
+      "districtCount": 1,
+      "pincodeCount": 9,
+      "recordCount": 10,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "MADHYA PRADESH",
+      "districtCount": 52,
+      "pincodeCount": 778,
+      "recordCount": 10272,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "MAHARASHTRA",
+      "districtCount": 36,
+      "pincodeCount": 1600,
+      "recordCount": 13762,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "MANIPUR",
+      "districtCount": 16,
+      "pincodeCount": 55,
+      "recordCount": 784,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "MEGHALAYA",
+      "districtCount": 11,
+      "pincodeCount": 71,
+      "recordCount": 929,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "MIZORAM",
+      "districtCount": 11,
+      "pincodeCount": 44,
+      "recordCount": 456,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "NA",
+      "districtCount": 1,
+      "pincodeCount": 338,
+      "recordCount": 715,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "NAGALAND",
+      "districtCount": 12,
+      "pincodeCount": 46,
+      "recordCount": 403,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "ODISHA",
+      "districtCount": 30,
+      "pincodeCount": 943,
+      "recordCount": 8915,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "PUDUCHERRY",
+      "districtCount": 4,
+      "pincodeCount": 33,
+      "recordCount": 95,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "PUNJAB",
+      "districtCount": 23,
+      "pincodeCount": 531,
+      "recordCount": 3796,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "RAJASTHAN",
+      "districtCount": 33,
+      "pincodeCount": 1017,
+      "recordCount": 11032,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "SIKKIM",
+      "districtCount": 6,
+      "pincodeCount": 19,
+      "recordCount": 212,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "TAMIL NADU",
+      "districtCount": 38,
+      "pincodeCount": 2049,
+      "recordCount": 11733,
+      "isTamilNadu": true
+    },
+    {
+      "stateName": "TELANGANA",
+      "districtCount": 33,
+      "pincodeCount": 692,
+      "recordCount": 6253,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+      "districtCount": 3,
+      "pincodeCount": 10,
+      "recordCount": 52,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "TRIPURA",
+      "districtCount": 8,
+      "pincodeCount": 79,
+      "recordCount": 723,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "UTTAR PRADESH",
+      "districtCount": 75,
+      "pincodeCount": 1668,
+      "recordCount": 17968,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "UTTARAKHAND",
+      "districtCount": 13,
+      "pincodeCount": 305,
+      "recordCount": 2742,
+      "isTamilNadu": false
+    },
+    {
+      "stateName": "WEST BENGAL",
+      "districtCount": 23,
+      "pincodeCount": 1131,
+      "recordCount": 8787,
+      "isTamilNadu": false
+    }
+  ],
+  "districtsDistribution": [
+    {
+      "district": "NA",
+      "state": "NA",
+      "pincodeCount": 338,
+      "recordCount": 715
+    },
+    {
+      "district": "THRISSUR",
+      "state": "KERALA",
+      "pincodeCount": 168,
+      "recordCount": 485
+    },
+    {
+      "district": "PUNE",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 150,
+      "recordCount": 801
+    },
+    {
+      "district": "24 PARAGANAS NORTH",
+      "state": "WEST BENGAL",
+      "pincodeCount": 144,
+      "recordCount": 694
+    },
+    {
+      "district": "ERNAKULAM",
+      "state": "KERALA",
+      "pincodeCount": 143,
+      "recordCount": 394
+    },
+    {
+      "district": "PALAKKAD",
+      "state": "KERALA",
+      "pincodeCount": 139,
+      "recordCount": 456
+    },
+    {
+      "district": "THIRUVANANTHAPURAM",
+      "state": "KERALA",
+      "pincodeCount": 133,
+      "recordCount": 413
+    },
+    {
+      "district": "KOTTAYAM",
+      "state": "KERALA",
+      "pincodeCount": 121,
+      "recordCount": 406
+    },
+    {
+      "district": "BENGALURU URBAN",
+      "state": "KARNATAKA",
+      "pincodeCount": 117,
+      "recordCount": 279
+    },
+    {
+      "district": "ALAPPUZHA",
+      "state": "KERALA",
+      "pincodeCount": 116,
+      "recordCount": 298
+    },
+    {
+      "district": "KOLLAM",
+      "state": "KERALA",
+      "pincodeCount": 115,
+      "recordCount": 367
+    },
+    {
+      "district": "BELAGAVI",
+      "state": "KARNATAKA",
+      "pincodeCount": 113,
+      "recordCount": 721
+    },
+    {
+      "district": "PATHANAMTHITTA",
+      "state": "KERALA",
+      "pincodeCount": 111,
+      "recordCount": 318
+    },
+    {
+      "district": "COIMBATORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 109,
+      "recordCount": 414
+    },
+    {
+      "district": "KANGRA",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 103,
+      "recordCount": 651
+    },
+    {
+      "district": "KANNUR",
+      "state": "KERALA",
+      "pincodeCount": 103,
+      "recordCount": 383
+    },
+    {
+      "district": "MALAPPURAM",
+      "state": "KERALA",
+      "pincodeCount": 102,
+      "recordCount": 436
+    },
+    {
+      "district": "THANJAVUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 101,
+      "recordCount": 514
+    },
+    {
+      "district": "DAKSHINA KANNADA",
+      "state": "KARNATAKA",
+      "pincodeCount": 96,
+      "recordCount": 468
+    },
+    {
+      "district": "TUTICORIN",
+      "state": "TAMIL NADU",
+      "pincodeCount": 92,
+      "recordCount": 424
+    },
+    {
+      "district": "KOZHIKODE",
+      "state": "KERALA",
+      "pincodeCount": 91,
+      "recordCount": 409
+    },
+    {
+      "district": "SALEM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 90,
+      "recordCount": 503
+    },
+    {
+      "district": "TIRUCHIRAPPALLI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 90,
+      "recordCount": 487
+    },
+    {
+      "district": "AHMEDNAGAR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 88,
+      "recordCount": 666
+    },
+    {
+      "district": "MEDINIPUR EAST",
+      "state": "WEST BENGAL",
+      "pincodeCount": 88,
+      "recordCount": 630
+    },
+    {
+      "district": "HOOGHLY",
+      "state": "WEST BENGAL",
+      "pincodeCount": 85,
+      "recordCount": 494
+    },
+    {
+      "district": "Y.S.R.",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 84,
+      "recordCount": 819
+    },
+    {
+      "district": "PRAKASAM",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 83,
+      "recordCount": 757
+    },
+    {
+      "district": "JAIPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 83,
+      "recordCount": 558
+    },
+    {
+      "district": "CHENNAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 83,
+      "recordCount": 152
+    },
+    {
+      "district": "AHMADABAD",
+      "state": "GUJARAT",
+      "pincodeCount": 82,
+      "recordCount": 458
+    },
+    {
+      "district": "WEST GODAVARI",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 81,
+      "recordCount": 491
+    },
+    {
+      "district": "GANJAM",
+      "state": "ODISHA",
+      "pincodeCount": 80,
+      "recordCount": 707
+    },
+    {
+      "district": "KOLHAPUR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 79,
+      "recordCount": 569
+    },
+    {
+      "district": "SATARA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 79,
+      "recordCount": 673
+    },
+    {
+      "district": "NASHIK",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 77,
+      "recordCount": 684
+    },
+    {
+      "district": "TIRUNELVELI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 77,
+      "recordCount": 302
+    },
+    {
+      "district": "NADIA",
+      "state": "WEST BENGAL",
+      "pincodeCount": 76,
+      "recordCount": 460
+    },
+    {
+      "district": "SURAT",
+      "state": "GUJARAT",
+      "pincodeCount": 75,
+      "recordCount": 440
+    },
+    {
+      "district": "UTTARA KANNADA",
+      "state": "KARNATAKA",
+      "pincodeCount": 75,
+      "recordCount": 485
+    },
+    {
+      "district": "KOLKATA",
+      "state": "WEST BENGAL",
+      "pincodeCount": 74,
+      "recordCount": 218
+    },
+    {
+      "district": "KRISHNA",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 73,
+      "recordCount": 396
+    },
+    {
+      "district": "RATNAGIRI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 73,
+      "recordCount": 663
+    },
+    {
+      "district": "THIRUVARUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 73,
+      "recordCount": 358
+    },
+    {
+      "district": "VISAKHAPATANAM",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 72,
+      "recordCount": 430
+    },
+    {
+      "district": "SRIKAKULAM",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 71,
+      "recordCount": 579
+    },
+    {
+      "district": "UDUPI",
+      "state": "KARNATAKA",
+      "pincodeCount": 71,
+      "recordCount": 329
+    },
+    {
+      "district": "TIRUVANNAMALAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 71,
+      "recordCount": 496
+    },
+    {
+      "district": "LUDHIANA",
+      "state": "PUNJAB",
+      "pincodeCount": 71,
+      "recordCount": 384
+    },
+    {
+      "district": "MURSHIDABAD",
+      "state": "WEST BENGAL",
+      "pincodeCount": 71,
+      "recordCount": 594
+    },
+    {
+      "district": "PATNA",
+      "state": "BIHAR",
+      "pincodeCount": 70,
+      "recordCount": 490
+    },
+    {
+      "district": "SOLAPUR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 70,
+      "recordCount": 534
+    },
+    {
+      "district": "SANGLI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 69,
+      "recordCount": 417
+    },
+    {
+      "district": "MYSURU",
+      "state": "KARNATAKA",
+      "pincodeCount": 69,
+      "recordCount": 391
+    },
+    {
+      "district": "MAYURBHANJ",
+      "state": "ODISHA",
+      "pincodeCount": 69,
+      "recordCount": 728
+    },
+    {
+      "district": "CUDDALORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 68,
+      "recordCount": 473
+    },
+    {
+      "district": "SPSR NELLORE",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 67,
+      "recordCount": 618
+    },
+    {
+      "district": "24 PARAGANAS SOUTH",
+      "state": "WEST BENGAL",
+      "pincodeCount": 67,
+      "recordCount": 774
+    },
+    {
+      "district": "PURBA BARDHAMAN",
+      "state": "WEST BENGAL",
+      "pincodeCount": 66,
+      "recordCount": 560
+    },
+    {
+      "district": "PASCHIM BARDHAMAN",
+      "state": "WEST BENGAL",
+      "pincodeCount": 66,
+      "recordCount": 215
+    },
+    {
+      "district": "SIVAGANGA",
+      "state": "TAMIL NADU",
+      "pincodeCount": 66,
+      "recordCount": 315
+    },
+    {
+      "district": "CUTTACK",
+      "state": "ODISHA",
+      "pincodeCount": 65,
+      "recordCount": 402
+    },
+    {
+      "district": "TIRUPPUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 65,
+      "recordCount": 354
+    },
+    {
+      "district": "KANNIYAKUMARI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 65,
+      "recordCount": 268
+    },
+    {
+      "district": "NAGPUR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 64,
+      "recordCount": 374
+    },
+    {
+      "district": "JALANDHAR",
+      "state": "PUNJAB",
+      "pincodeCount": 64,
+      "recordCount": 352
+    },
+    {
+      "district": "KHORDHA",
+      "state": "ODISHA",
+      "pincodeCount": 64,
+      "recordCount": 322
+    },
+    {
+      "district": "Eluru",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 63,
+      "recordCount": 440
+    },
+    {
+      "district": "ANAND",
+      "state": "GUJARAT",
+      "pincodeCount": 63,
+      "recordCount": 268
+    },
+    {
+      "district": "JALGAON",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 63,
+      "recordCount": 541
+    },
+    {
+      "district": "DHANBAD",
+      "state": "JHARKHAND",
+      "pincodeCount": 62,
+      "recordCount": 222
+    },
+    {
+      "district": "RAIGAD",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 62,
+      "recordCount": 448
+    },
+    {
+      "district": "SUNDARGARH",
+      "state": "ODISHA",
+      "pincodeCount": 62,
+      "recordCount": 439
+    },
+    {
+      "district": "MEDINIPUR WEST",
+      "state": "WEST BENGAL",
+      "pincodeCount": 62,
+      "recordCount": 604
+    },
+    {
+      "district": "VADODARA",
+      "state": "GUJARAT",
+      "pincodeCount": 61,
+      "recordCount": 417
+    },
+    {
+      "district": "THIRUVALLUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 61,
+      "recordCount": 352
+    },
+    {
+      "district": "Bapatla",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 60,
+      "recordCount": 344
+    },
+    {
+      "district": "CHITTOOR",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 60,
+      "recordCount": 494
+    },
+    {
+      "district": "TUMAKURU",
+      "state": "KARNATAKA",
+      "pincodeCount": 60,
+      "recordCount": 566
+    },
+    {
+      "district": "ERODE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 342
+    },
+    {
+      "district": "NAMAKKAL",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 355
+    },
+    {
+      "district": "CHENGALPATTU",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 277
+    },
+    {
+      "district": "VIRUDHUNAGAR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 279
+    },
+    {
+      "district": "EAST GODAVARI",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 59,
+      "recordCount": 217
+    },
+    {
+      "district": "SHIMLA",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 59,
+      "recordCount": 364
+    },
+    {
+      "district": "AJMER",
+      "state": "RAJASTHAN",
+      "pincodeCount": 59,
+      "recordCount": 401
+    },
+    {
+      "district": "BALESHWAR",
+      "state": "ODISHA",
+      "pincodeCount": 59,
+      "recordCount": 502
+    },
+    {
+      "district": "VILLUPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 59,
+      "recordCount": 390
+    },
+    {
+      "district": "VIZIANAGARAM",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 58,
+      "recordCount": 459
+    },
+    {
+      "district": "DINDIGUL",
+      "state": "TAMIL NADU",
+      "pincodeCount": 58,
+      "recordCount": 460
+    },
+    {
+      "district": "RAMANATHAPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 58,
+      "recordCount": 307
+    },
+    {
+      "district": "HYDERABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 57,
+      "recordCount": 91
+    },
+    {
+      "district": "MANDI",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 57,
+      "recordCount": 374
+    },
+    {
+      "district": "SIKAR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 57,
+      "recordCount": 468
+    },
+    {
+      "district": "MADURAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 57,
+      "recordCount": 389
+    },
+    {
+      "district": "MUMBAI SUBURBAN",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 57,
+      "recordCount": 118
+    },
+    {
+      "district": "GUNTUR",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 56,
+      "recordCount": 292
+    },
+    {
+      "district": "ANANTAPUR",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 56,
+      "recordCount": 496
+    },
+    {
+      "district": "RANGA REDDY",
+      "state": "TELANGANA",
+      "pincodeCount": 55,
+      "recordCount": 271
+    },
+    {
+      "district": "IDUKKI",
+      "state": "KERALA",
+      "pincodeCount": 55,
+      "recordCount": 296
+    },
+    {
+      "district": "NAGAUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 55,
+      "recordCount": 557
+    },
+    {
+      "district": "HOWRAH",
+      "state": "WEST BENGAL",
+      "pincodeCount": 55,
+      "recordCount": 348
+    },
+    {
+      "district": "PRAYAGRAJ",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 55,
+      "recordCount": 424
+    },
+    {
+      "district": "Tirupati",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 54,
+      "recordCount": 383
+    },
+    {
+      "district": "KACHCHH",
+      "state": "GUJARAT",
+      "pincodeCount": 54,
+      "recordCount": 508
+    },
+    {
+      "district": "SINDHUDURG",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 54,
+      "recordCount": 370
+    },
+    {
+      "district": "Konaseema",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 53,
+      "recordCount": 310
+    },
+    {
+      "district": "PUDUKKOTTAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 53,
+      "recordCount": 339
+    },
+    {
+      "district": "KHEDA",
+      "state": "GUJARAT",
+      "pincodeCount": 52,
+      "recordCount": 292
+    },
+    {
+      "district": "HOSHIARPUR",
+      "state": "PUNJAB",
+      "pincodeCount": 52,
+      "recordCount": 356
+    },
+    {
+      "district": "CACHAR",
+      "state": "ASSAM",
+      "pincodeCount": 51,
+      "recordCount": 283
+    },
+    {
+      "district": "THANE",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 51,
+      "recordCount": 218
+    },
+    {
+      "district": "JHUNJHUNU",
+      "state": "RAJASTHAN",
+      "pincodeCount": 51,
+      "recordCount": 412
+    },
+    {
+      "district": "VELLORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 51,
+      "recordCount": 252
+    },
+    {
+      "district": "MAYILADUTHURAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 51,
+      "recordCount": 214
+    },
+    {
+      "district": "Nandyal",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 50,
+      "recordCount": 401
+    },
+    {
+      "district": "SHIVAMOGGA",
+      "state": "KARNATAKA",
+      "pincodeCount": 50,
+      "recordCount": 360
+    },
+    {
+      "district": "TENKASI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 50,
+      "recordCount": 239
+    },
+    {
+      "district": "RAIPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 49,
+      "recordCount": 672
+    },
+    {
+      "district": "RAJKOT",
+      "state": "GUJARAT",
+      "pincodeCount": 49,
+      "recordCount": 348
+    },
+    {
+      "district": "HASSAN",
+      "state": "KARNATAKA",
+      "pincodeCount": 49,
+      "recordCount": 416
+    },
+    {
+      "district": "SARAN",
+      "state": "BIHAR",
+      "pincodeCount": 48,
+      "recordCount": 389
+    },
+    {
+      "district": "Sri Sathya Sai",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 48,
+      "recordCount": 449
+    },
+    {
+      "district": "MAHESANA",
+      "state": "GUJARAT",
+      "pincodeCount": 48,
+      "recordCount": 313
+    },
+    {
+      "district": "HAMIRPUR",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 48,
+      "recordCount": 228
+    },
+    {
+      "district": "JODHPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 48,
+      "recordCount": 446
+    },
+    {
+      "district": "PAURI GARHWAL",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 48,
+      "recordCount": 426
+    },
+    {
+      "district": "MUZAFFARPUR",
+      "state": "BIHAR",
+      "pincodeCount": 47,
+      "recordCount": 423
+    },
+    {
+      "district": "THE NILGIRIS",
+      "state": "TAMIL NADU",
+      "pincodeCount": 47,
+      "recordCount": 181
+    },
+    {
+      "district": "ALWAR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 47,
+      "recordCount": 487
+    },
+    {
+      "district": "BANKURA",
+      "state": "WEST BENGAL",
+      "pincodeCount": 47,
+      "recordCount": 494
+    },
+    {
+      "district": "NORTH GOA",
+      "state": "GOA",
+      "pincodeCount": 46,
+      "recordCount": 133
+    },
+    {
+      "district": "RAE BARELI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 46,
+      "recordCount": 375
+    },
+    {
+      "district": "AURANGABAD",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 45,
+      "recordCount": 347
+    },
+    {
+      "district": "KENDUJHAR",
+      "state": "ODISHA",
+      "pincodeCount": 45,
+      "recordCount": 454
+    },
+    {
+      "district": "PALI",
+      "state": "RAJASTHAN",
+      "pincodeCount": 45,
+      "recordCount": 383
+    },
+    {
+      "district": "BIRBHUM",
+      "state": "WEST BENGAL",
+      "pincodeCount": 45,
+      "recordCount": 467
+    },
+    {
+      "district": "DARJEELING",
+      "state": "WEST BENGAL",
+      "pincodeCount": 45,
+      "recordCount": 173
+    },
+    {
+      "district": "AZAMGARH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 45,
+      "recordCount": 412
+    },
+    {
+      "district": "JAUNPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 45,
+      "recordCount": 426
+    },
+    {
+      "district": "KAMRUP METRO",
+      "state": "ASSAM",
+      "pincodeCount": 44,
+      "recordCount": 78
+    },
+    {
+      "district": "KURNOOL",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 44,
+      "recordCount": 366
+    },
+    {
+      "district": "JAMMU",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 44,
+      "recordCount": 199
+    },
+    {
+      "district": "CHIKKAMAGALURU",
+      "state": "KARNATAKA",
+      "pincodeCount": 44,
+      "recordCount": 302
+    },
+    {
+      "district": "MANDYA",
+      "state": "KARNATAKA",
+      "pincodeCount": 44,
+      "recordCount": 352
+    },
+    {
+      "district": "SOUTH GOA",
+      "state": "GOA",
+      "pincodeCount": 44,
+      "recordCount": 128
+    },
+    {
+      "district": "GHAZIPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 44,
+      "recordCount": 381
+    },
+    {
+      "district": "Palnadu",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 43,
+      "recordCount": 434
+    },
+    {
+      "district": "MADHUBANI",
+      "state": "BIHAR",
+      "pincodeCount": 43,
+      "recordCount": 428
+    },
+    {
+      "district": "VIJAYAPURA",
+      "state": "KARNATAKA",
+      "pincodeCount": 43,
+      "recordCount": 397
+    },
+    {
+      "district": "GANDHINAGAR",
+      "state": "GUJARAT",
+      "pincodeCount": 43,
+      "recordCount": 204
+    },
+    {
+      "district": "NANDED",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 43,
+      "recordCount": 488
+    },
+    {
+      "district": "KANPUR NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 43,
+      "recordCount": 282
+    },
+    {
+      "district": "LUCKNOW",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 43,
+      "recordCount": 288
+    },
+    {
+      "district": "SANGAREDDY",
+      "state": "TELANGANA",
+      "pincodeCount": 42,
+      "recordCount": 253
+    },
+    {
+      "district": "DARBHANGA",
+      "state": "BIHAR",
+      "pincodeCount": 42,
+      "recordCount": 368
+    },
+    {
+      "district": "KALABURAGI",
+      "state": "KARNATAKA",
+      "pincodeCount": 42,
+      "recordCount": 429
+    },
+    {
+      "district": "BHARUCH",
+      "state": "GUJARAT",
+      "pincodeCount": 42,
+      "recordCount": 379
+    },
+    {
+      "district": "JAJAPUR",
+      "state": "ODISHA",
+      "pincodeCount": 42,
+      "recordCount": 303
+    },
+    {
+      "district": "UDAIPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 42,
+      "recordCount": 488
+    },
+    {
+      "district": "DEHRADUN",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 42,
+      "recordCount": 247
+    },
+    {
+      "district": "GORAKHPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 42,
+      "recordCount": 415
+    },
+    {
+      "district": "PURBI CHAMPARAN",
+      "state": "BIHAR",
+      "pincodeCount": 41,
+      "recordCount": 426
+    },
+    {
+      "district": "AMRAVATI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 41,
+      "recordCount": 467
+    },
+    {
+      "district": "Kakinada",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 40,
+      "recordCount": 253
+    },
+    {
+      "district": "SIWAN",
+      "state": "BIHAR",
+      "pincodeCount": 40,
+      "recordCount": 329
+    },
+    {
+      "district": "BAGALKOT",
+      "state": "KARNATAKA",
+      "pincodeCount": 40,
+      "recordCount": 330
+    },
+    {
+      "district": "PALGHAR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 40,
+      "recordCount": 250
+    },
+    {
+      "district": "BHADRAK",
+      "state": "ODISHA",
+      "pincodeCount": 40,
+      "recordCount": 322
+    },
+    {
+      "district": "Ranipet",
+      "state": "TAMIL NADU",
+      "pincodeCount": 40,
+      "recordCount": 209
+    },
+    {
+      "district": "PRATAPGARH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 40,
+      "recordCount": 363
+    },
+    {
+      "district": "BALLIA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 40,
+      "recordCount": 356
+    },
+    {
+      "district": "NTR",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 39,
+      "recordCount": 248
+    },
+    {
+      "district": "SAMASTIPUR",
+      "state": "BIHAR",
+      "pincodeCount": 39,
+      "recordCount": 380
+    },
+    {
+      "district": "BHOJPUR",
+      "state": "BIHAR",
+      "pincodeCount": 39,
+      "recordCount": 303
+    },
+    {
+      "district": "DHARWAD",
+      "state": "KARNATAKA",
+      "pincodeCount": 39,
+      "recordCount": 208
+    },
+    {
+      "district": "KENDRAPARA",
+      "state": "ODISHA",
+      "pincodeCount": 39,
+      "recordCount": 278
+    },
+    {
+      "district": "ALIGARH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 39,
+      "recordCount": 387
+    },
+    {
+      "district": "NAGAPATTINAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 39,
+      "recordCount": 174
+    },
+    {
+      "district": "BOKARO",
+      "state": "JHARKHAND",
+      "pincodeCount": 38,
+      "recordCount": 206
+    },
+    {
+      "district": "BHAVNAGAR",
+      "state": "GUJARAT",
+      "pincodeCount": 38,
+      "recordCount": 329
+    },
+    {
+      "district": "NAVSARI",
+      "state": "GUJARAT",
+      "pincodeCount": 38,
+      "recordCount": 290
+    },
+    {
+      "district": "KRISHNAGIRI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 38,
+      "recordCount": 298
+    },
+    {
+      "district": "JALPAIGURI",
+      "state": "WEST BENGAL",
+      "pincodeCount": 38,
+      "recordCount": 210
+    },
+    {
+      "district": "RANCHI",
+      "state": "JHARKHAND",
+      "pincodeCount": 37,
+      "recordCount": 331
+    },
+    {
+      "district": "JAMNAGAR",
+      "state": "GUJARAT",
+      "pincodeCount": 37,
+      "recordCount": 232
+    },
+    {
+      "district": "DAVANGERE",
+      "state": "KARNATAKA",
+      "pincodeCount": 37,
+      "recordCount": 261
+    },
+    {
+      "district": "CHITRADURGA",
+      "state": "KARNATAKA",
+      "pincodeCount": 37,
+      "recordCount": 321
+    },
+    {
+      "district": "VALSAD",
+      "state": "GUJARAT",
+      "pincodeCount": 37,
+      "recordCount": 273
+    },
+    {
+      "district": "VARANASI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 37,
+      "recordCount": 263
+    },
+    {
+      "district": "UNA",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 36,
+      "recordCount": 186
+    },
+    {
+      "district": "JUNAGADH",
+      "state": "GUJARAT",
+      "pincodeCount": 36,
+      "recordCount": 292
+    },
+    {
+      "district": "CHITTORGARH",
+      "state": "RAJASTHAN",
+      "pincodeCount": 36,
+      "recordCount": 286
+    },
+    {
+      "district": "AYODHYA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 36,
+      "recordCount": 367
+    },
+    {
+      "district": "KARUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 36,
+      "recordCount": 242
+    },
+    {
+      "district": "MEDCHAL MALKAJGIRI",
+      "state": "TELANGANA",
+      "pincodeCount": 35,
+      "recordCount": 101
+    },
+    {
+      "district": "BHOPAL",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 35,
+      "recordCount": 141
+    },
+    {
+      "district": "AMRITSAR",
+      "state": "PUNJAB",
+      "pincodeCount": 35,
+      "recordCount": 295
+    },
+    {
+      "district": "ROHTAS",
+      "state": "BIHAR",
+      "pincodeCount": 34,
+      "recordCount": 300
+    },
+    {
+      "district": "CHANDRAPUR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 34,
+      "recordCount": 555
+    },
+    {
+      "district": "KASARAGOD",
+      "state": "KERALA",
+      "pincodeCount": 34,
+      "recordCount": 233
+    },
+    {
+      "district": "YAVATMAL",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 34,
+      "recordCount": 404
+    },
+    {
+      "district": "BHILWARA",
+      "state": "RAJASTHAN",
+      "pincodeCount": 34,
+      "recordCount": 392
+    },
+    {
+      "district": "PURI",
+      "state": "ODISHA",
+      "pincodeCount": 34,
+      "recordCount": 294
+    },
+    {
+      "district": "GONDA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 34,
+      "recordCount": 351
+    },
+    {
+      "district": "BARABANKI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 34,
+      "recordCount": 365
+    },
+    {
+      "district": "SIDDIPET",
+      "state": "TELANGANA",
+      "pincodeCount": 33,
+      "recordCount": 249
+    },
+    {
+      "district": "DHARMAPURI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 33,
+      "recordCount": 258
+    },
+    {
+      "district": "BHARATPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 33,
+      "recordCount": 401
+    },
+    {
+      "district": "ALMORA",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 33,
+      "recordCount": 326
+    },
+    {
+      "district": "AMBEDKAR NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 33,
+      "recordCount": 329
+    },
+    {
+      "district": "MUMBAI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 33,
+      "recordCount": 111
+    },
+    {
+      "district": "HANUMAKONDA",
+      "state": "TELANGANA",
+      "pincodeCount": 32,
+      "recordCount": 178
+    },
+    {
+      "district": "NIZAMABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 32,
+      "recordCount": 290
+    },
+    {
+      "district": "GAYA",
+      "state": "BIHAR",
+      "pincodeCount": 32,
+      "recordCount": 403
+    },
+    {
+      "district": "BEGUSARAI",
+      "state": "BIHAR",
+      "pincodeCount": 32,
+      "recordCount": 236
+    },
+    {
+      "district": "SOLAN",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 32,
+      "recordCount": 183
+    },
+    {
+      "district": "KOLAR",
+      "state": "KARNATAKA",
+      "pincodeCount": 32,
+      "recordCount": 223
+    },
+    {
+      "district": "SABAR KANTHA",
+      "state": "GUJARAT",
+      "pincodeCount": 32,
+      "recordCount": 340
+    },
+    {
+      "district": "ANUGUL",
+      "state": "ODISHA",
+      "pincodeCount": 32,
+      "recordCount": 272
+    },
+    {
+      "district": "KANCHIPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 32,
+      "recordCount": 156
+    },
+    {
+      "district": "MALDAH",
+      "state": "WEST BENGAL",
+      "pincodeCount": 32,
+      "recordCount": 339
+    },
+    {
+      "district": "KALLAKURICHI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 32,
+      "recordCount": 250
+    },
+    {
+      "district": "PURULIA",
+      "state": "WEST BENGAL",
+      "pincodeCount": 32,
+      "recordCount": 444
+    },
+    {
+      "district": "NALGONDA",
+      "state": "TELANGANA",
+      "pincodeCount": 31,
+      "recordCount": 331
+    },
+    {
+      "district": "Parvathipuram Manyam",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 31,
+      "recordCount": 287
+    },
+    {
+      "district": "KHAMMAM",
+      "state": "TELANGANA",
+      "pincodeCount": 31,
+      "recordCount": 423
+    },
+    {
+      "district": "VAISHALI",
+      "state": "BIHAR",
+      "pincodeCount": 31,
+      "recordCount": 297
+    },
+    {
+      "district": "TINSUKIA",
+      "state": "ASSAM",
+      "pincodeCount": 31,
+      "recordCount": 142
+    },
+    {
+      "district": "BALLARI",
+      "state": "KARNATAKA",
+      "pincodeCount": 31,
+      "recordCount": 207
+    },
+    {
+      "district": "AMRELI",
+      "state": "GUJARAT",
+      "pincodeCount": 31,
+      "recordCount": 346
+    },
+    {
+      "district": "HAVERI",
+      "state": "KARNATAKA",
+      "pincodeCount": 31,
+      "recordCount": 257
+    },
+    {
+      "district": "RAICHUR",
+      "state": "KARNATAKA",
+      "pincodeCount": 31,
+      "recordCount": 290
+    },
+    {
+      "district": "BULDHANA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 31,
+      "recordCount": 363
+    },
+    {
+      "district": "BALANGIR",
+      "state": "ODISHA",
+      "pincodeCount": 31,
+      "recordCount": 316
+    },
+    {
+      "district": "KORAPUT",
+      "state": "ODISHA",
+      "pincodeCount": 31,
+      "recordCount": 273
+    },
+    {
+      "district": "EAST KHASI HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 31,
+      "recordCount": 161
+    },
+    {
+      "district": "SULTANPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 31,
+      "recordCount": 327
+    },
+    {
+      "district": "THENI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 31,
+      "recordCount": 159
+    },
+    {
+      "district": "Ariyalur",
+      "state": "TAMIL NADU",
+      "pincodeCount": 31,
+      "recordCount": 222
+    },
+    {
+      "district": "KAMRUP",
+      "state": "ASSAM",
+      "pincodeCount": 30,
+      "recordCount": 201
+    },
+    {
+      "district": "EAST SINGHBUM",
+      "state": "JHARKHAND",
+      "pincodeCount": 30,
+      "recordCount": 278
+    },
+    {
+      "district": "BIDAR",
+      "state": "KARNATAKA",
+      "pincodeCount": 30,
+      "recordCount": 299
+    },
+    {
+      "district": "SAGAR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 30,
+      "recordCount": 334
+    },
+    {
+      "district": "INDORE",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 30,
+      "recordCount": 164
+    },
+    {
+      "district": "Shahid Bhagat Singh Nagar",
+      "state": "PUNJAB",
+      "pincodeCount": 30,
+      "recordCount": 173
+    },
+    {
+      "district": "SAMBALPUR",
+      "state": "ODISHA",
+      "pincodeCount": 30,
+      "recordCount": 223
+    },
+    {
+      "district": "SITAPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 30,
+      "recordCount": 423
+    },
+    {
+      "district": "COOCHBEHAR",
+      "state": "WEST BENGAL",
+      "pincodeCount": 30,
+      "recordCount": 304
+    },
+    {
+      "district": "DEORIA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 30,
+      "recordCount": 293
+    },
+    {
+      "district": "JORHAT",
+      "state": "ASSAM",
+      "pincodeCount": 29,
+      "recordCount": 187
+    },
+    {
+      "district": "RAMGARH",
+      "state": "JHARKHAND",
+      "pincodeCount": 29,
+      "recordCount": 129
+    },
+    {
+      "district": "VIJAYNAGAR",
+      "state": "KARNATAKA",
+      "pincodeCount": 29,
+      "recordCount": 240
+    },
+    {
+      "district": "BANAS KANTHA",
+      "state": "GUJARAT",
+      "pincodeCount": 29,
+      "recordCount": 410
+    },
+    {
+      "district": "GURUGRAM",
+      "state": "HARYANA",
+      "pincodeCount": 29,
+      "recordCount": 108
+    },
+    {
+      "district": "REWA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 29,
+      "recordCount": 335
+    },
+    {
+      "district": "BEED",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 29,
+      "recordCount": 342
+    },
+    {
+      "district": "BIKANER",
+      "state": "RAJASTHAN",
+      "pincodeCount": 29,
+      "recordCount": 330
+    },
+    {
+      "district": "JAGATSINGHAPUR",
+      "state": "ODISHA",
+      "pincodeCount": 29,
+      "recordCount": 211
+    },
+    {
+      "district": "Amethi",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 29,
+      "recordCount": 246
+    },
+    {
+      "district": "MATHURA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 29,
+      "recordCount": 216
+    },
+    {
+      "district": "AGRA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 29,
+      "recordCount": 339
+    },
+    {
+      "district": "BULANDSHAHR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 29,
+      "recordCount": 311
+    },
+    {
+      "district": "DIBRUGARH",
+      "state": "ASSAM",
+      "pincodeCount": 28,
+      "recordCount": 219
+    },
+    {
+      "district": "NAGAON",
+      "state": "ASSAM",
+      "pincodeCount": 28,
+      "recordCount": 213
+    },
+    {
+      "district": "SITAMARHI",
+      "state": "BIHAR",
+      "pincodeCount": 28,
+      "recordCount": 300
+    },
+    {
+      "district": "KOTA",
+      "state": "RAJASTHAN",
+      "pincodeCount": 28,
+      "recordCount": 190
+    },
+    {
+      "district": "BARMER",
+      "state": "RAJASTHAN",
+      "pincodeCount": 28,
+      "recordCount": 638
+    },
+    {
+      "district": "PITHORAGARH",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 28,
+      "recordCount": 322
+    },
+    {
+      "district": "TEHRI GARHWAL",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 28,
+      "recordCount": 267
+    },
+    {
+      "district": "GAUTAM BUDDHA NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 28,
+      "recordCount": 123
+    },
+    {
+      "district": "KARIMNAGAR",
+      "state": "TELANGANA",
+      "pincodeCount": 27,
+      "recordCount": 185
+    },
+    {
+      "district": "MEDAK",
+      "state": "TELANGANA",
+      "pincodeCount": 27,
+      "recordCount": 163
+    },
+    {
+      "district": "Anakapalli",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 279
+    },
+    {
+      "district": "SONITPUR",
+      "state": "ASSAM",
+      "pincodeCount": 27,
+      "recordCount": 126
+    },
+    {
+      "district": "AURANGABAD",
+      "state": "BIHAR",
+      "pincodeCount": 27,
+      "recordCount": 304
+    },
+    {
+      "district": "KARIMGANJ",
+      "state": "ASSAM",
+      "pincodeCount": 27,
+      "recordCount": 159
+    },
+    {
+      "district": "KULLU",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 154
+    },
+    {
+      "district": "SURENDRANAGAR",
+      "state": "GUJARAT",
+      "pincodeCount": 27,
+      "recordCount": 292
+    },
+    {
+      "district": "KODAGU",
+      "state": "KARNATAKA",
+      "pincodeCount": 27,
+      "recordCount": 216
+    },
+    {
+      "district": "CHAMBA",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 231
+    },
+    {
+      "district": "OSMANABAD",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 27,
+      "recordCount": 289
+    },
+    {
+      "district": "CHHINDWARA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 399
+    },
+    {
+      "district": "GURDASPUR",
+      "state": "PUNJAB",
+      "pincodeCount": 27,
+      "recordCount": 208
+    },
+    {
+      "district": "RAJSAMAND",
+      "state": "RAJASTHAN",
+      "pincodeCount": 27,
+      "recordCount": 216
+    },
+    {
+      "district": "KALAHANDI",
+      "state": "ODISHA",
+      "pincodeCount": 27,
+      "recordCount": 414
+    },
+    {
+      "district": "Tirupathur",
+      "state": "TAMIL NADU",
+      "pincodeCount": 27,
+      "recordCount": 189
+    },
+    {
+      "district": "DAUSA",
+      "state": "RAJASTHAN",
+      "pincodeCount": 27,
+      "recordCount": 258
+    },
+    {
+      "district": "GANGANAGAR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 27,
+      "recordCount": 410
+    },
+    {
+      "district": "CHAMOLI",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 27,
+      "recordCount": 261
+    },
+    {
+      "district": "BAREILLY",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 289
+    },
+    {
+      "district": "KHERI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 27,
+      "recordCount": 377
+    },
+    {
+      "district": "BHADRADRI KOTHAGUDEM",
+      "state": "TELANGANA",
+      "pincodeCount": 26,
+      "recordCount": 345
+    },
+    {
+      "district": "BUXAR",
+      "state": "BIHAR",
+      "pincodeCount": 26,
+      "recordCount": 186
+    },
+    {
+      "district": "NALBARI",
+      "state": "ASSAM",
+      "pincodeCount": 26,
+      "recordCount": 148
+    },
+    {
+      "district": "KOPPAL",
+      "state": "KARNATAKA",
+      "pincodeCount": 26,
+      "recordCount": 220
+    },
+    {
+      "district": "BILASPUR",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 26,
+      "recordCount": 147
+    },
+    {
+      "district": "AKOLA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 26,
+      "recordCount": 241
+    },
+    {
+      "district": "JALNA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 26,
+      "recordCount": 205
+    },
+    {
+      "district": "DHULE",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 26,
+      "recordCount": 273
+    },
+    {
+      "district": "DUNGARPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 26,
+      "recordCount": 295
+    },
+    {
+      "district": "DHENKANAL",
+      "state": "ODISHA",
+      "pincodeCount": 26,
+      "recordCount": 246
+    },
+    {
+      "district": "BARGARH",
+      "state": "ODISHA",
+      "pincodeCount": 26,
+      "recordCount": 281
+    },
+    {
+      "district": "SAWAI MADHOPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 26,
+      "recordCount": 221
+    },
+    {
+      "district": "GHAZIABAD",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 26,
+      "recordCount": 118
+    },
+    {
+      "district": "NALANDA",
+      "state": "BIHAR",
+      "pincodeCount": 25,
+      "recordCount": 281
+    },
+    {
+      "district": "NAWADA",
+      "state": "BIHAR",
+      "pincodeCount": 25,
+      "recordCount": 231
+    },
+    {
+      "district": "SATNA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 25,
+      "recordCount": 300
+    },
+    {
+      "district": "CHURU",
+      "state": "RAJASTHAN",
+      "pincodeCount": 25,
+      "recordCount": 366
+    },
+    {
+      "district": "KANDHAMAL",
+      "state": "ODISHA",
+      "pincodeCount": 25,
+      "recordCount": 299
+    },
+    {
+      "district": "KARAULI",
+      "state": "RAJASTHAN",
+      "pincodeCount": 25,
+      "recordCount": 262
+    },
+    {
+      "district": "HARDOI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 25,
+      "recordCount": 334
+    },
+    {
+      "district": "MEERUT",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 25,
+      "recordCount": 270
+    },
+    {
+      "district": "BASTI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 25,
+      "recordCount": 277
+    },
+    {
+      "district": "PERAMBALUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 25,
+      "recordCount": 140
+    },
+    {
+      "district": "Alluri Sitharama Raju",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 24,
+      "recordCount": 266
+    },
+    {
+      "district": "DURG",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 24,
+      "recordCount": 176
+    },
+    {
+      "district": "LATUR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 24,
+      "recordCount": 288
+    },
+    {
+      "district": "JABALPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 24,
+      "recordCount": 236
+    },
+    {
+      "district": "MOGA",
+      "state": "PUNJAB",
+      "pincodeCount": 24,
+      "recordCount": 172
+    },
+    {
+      "district": "KAPURTHALA",
+      "state": "PUNJAB",
+      "pincodeCount": 24,
+      "recordCount": 125
+    },
+    {
+      "district": "PATIALA",
+      "state": "PUNJAB",
+      "pincodeCount": 24,
+      "recordCount": 182
+    },
+    {
+      "district": "Alipurduar",
+      "state": "WEST BENGAL",
+      "pincodeCount": 24,
+      "recordCount": 159
+    },
+    {
+      "district": "BIJNOR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 24,
+      "recordCount": 280
+    },
+    {
+      "district": "MUZAFFARNAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 24,
+      "recordCount": 228
+    },
+    {
+      "district": "MAHABUBNAGAR",
+      "state": "TELANGANA",
+      "pincodeCount": 23,
+      "recordCount": 156
+    },
+    {
+      "district": "KATIHAR",
+      "state": "BIHAR",
+      "pincodeCount": 23,
+      "recordCount": 185
+    },
+    {
+      "district": "PURNIA",
+      "state": "BIHAR",
+      "pincodeCount": 23,
+      "recordCount": 191
+    },
+    {
+      "district": "BHAGALPUR",
+      "state": "BIHAR",
+      "pincodeCount": 23,
+      "recordCount": 245
+    },
+    {
+      "district": "SIVASAGAR",
+      "state": "ASSAM",
+      "pincodeCount": 23,
+      "recordCount": 173
+    },
+    {
+      "district": "SRINAGAR",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 23,
+      "recordCount": 58
+    },
+    {
+      "district": "AMBALA",
+      "state": "HARYANA",
+      "pincodeCount": 23,
+      "recordCount": 142
+    },
+    {
+      "district": "CHAMARAJANAGARA",
+      "state": "KARNATAKA",
+      "pincodeCount": 23,
+      "recordCount": 207
+    },
+    {
+      "district": "AIZAWL",
+      "state": "MIZORAM",
+      "pincodeCount": 23,
+      "recordCount": 152
+    },
+    {
+      "district": "UJJAIN",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 23,
+      "recordCount": 199
+    },
+    {
+      "district": "NAYAGARH",
+      "state": "ODISHA",
+      "pincodeCount": 23,
+      "recordCount": 227
+    },
+    {
+      "district": "CHANDIGARH",
+      "state": "CHANDIGARH",
+      "pincodeCount": 23,
+      "recordCount": 53
+    },
+    {
+      "district": "BATHINDA",
+      "state": "PUNJAB",
+      "pincodeCount": 23,
+      "recordCount": 157
+    },
+    {
+      "district": "PONDICHERRY",
+      "state": "PUDUCHERRY",
+      "pincodeCount": 23,
+      "recordCount": 63
+    },
+    {
+      "district": "FATEHPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 23,
+      "recordCount": 256
+    },
+    {
+      "district": "JHANSI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 23,
+      "recordCount": 215
+    },
+    {
+      "district": "KAMAREDDY",
+      "state": "TELANGANA",
+      "pincodeCount": 22,
+      "recordCount": 192
+    },
+    {
+      "district": "Annamayya",
+      "state": "ANDHRA PRADESH",
+      "pincodeCount": 22,
+      "recordCount": 173
+    },
+    {
+      "district": "SUPAUL",
+      "state": "BIHAR",
+      "pincodeCount": 22,
+      "recordCount": 211
+    },
+    {
+      "district": "GADAG",
+      "state": "KARNATAKA",
+      "pincodeCount": 22,
+      "recordCount": 168
+    },
+    {
+      "district": "TAPI",
+      "state": "GUJARAT",
+      "pincodeCount": 22,
+      "recordCount": 185
+    },
+    {
+      "district": "SOUTH",
+      "state": "DELHI",
+      "pincodeCount": 22,
+      "recordCount": 72
+    },
+    {
+      "district": "PATAN",
+      "state": "GUJARAT",
+      "pincodeCount": 22,
+      "recordCount": 270
+    },
+    {
+      "district": "JHAJJAR",
+      "state": "HARYANA",
+      "pincodeCount": 22,
+      "recordCount": 147
+    },
+    {
+      "district": "SONIPAT",
+      "state": "HARYANA",
+      "pincodeCount": 22,
+      "recordCount": 179
+    },
+    {
+      "district": "GWALIOR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 22,
+      "recordCount": 171
+    },
+    {
+      "district": "JALORE",
+      "state": "RAJASTHAN",
+      "pincodeCount": 22,
+      "recordCount": 289
+    },
+    {
+      "district": "S.A.S Nagar",
+      "state": "PUNJAB",
+      "pincodeCount": 22,
+      "recordCount": 103
+    },
+    {
+      "district": "Tarn Taran",
+      "state": "PUNJAB",
+      "pincodeCount": 22,
+      "recordCount": 178
+    },
+    {
+      "district": "HARIDWAR",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 22,
+      "recordCount": 118
+    },
+    {
+      "district": "NAINITAL",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 22,
+      "recordCount": 165
+    },
+    {
+      "district": "MAU",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 22,
+      "recordCount": 196
+    },
+    {
+      "district": "KUSHI NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 22,
+      "recordCount": 216
+    },
+    {
+      "district": "Jagitial",
+      "state": "TELANGANA",
+      "pincodeCount": 21,
+      "recordCount": 196
+    },
+    {
+      "district": "VIKARABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 21,
+      "recordCount": 199
+    },
+    {
+      "district": "GOPALGANJ",
+      "state": "BIHAR",
+      "pincodeCount": 21,
+      "recordCount": 208
+    },
+    {
+      "district": "NAGARKURNOOL",
+      "state": "TELANGANA",
+      "pincodeCount": 21,
+      "recordCount": 224
+    },
+    {
+      "district": "WEST SINGHBHUM",
+      "state": "JHARKHAND",
+      "pincodeCount": 21,
+      "recordCount": 327
+    },
+    {
+      "district": "JANJGIR-CHAMPA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 21,
+      "recordCount": 249
+    },
+    {
+      "district": "YADGIR",
+      "state": "KARNATAKA",
+      "pincodeCount": 21,
+      "recordCount": 201
+    },
+    {
+      "district": "BHIND",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 21,
+      "recordCount": 259
+    },
+    {
+      "district": "BAHRAICH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 21,
+      "recordCount": 293
+    },
+    {
+      "district": "SONBHADRA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 21,
+      "recordCount": 288
+    },
+    {
+      "district": "MANCHERIAL",
+      "state": "TELANGANA",
+      "pincodeCount": 20,
+      "recordCount": 157
+    },
+    {
+      "district": "PEDDAPALLI",
+      "state": "TELANGANA",
+      "pincodeCount": 20,
+      "recordCount": 170
+    },
+    {
+      "district": "GOLAGHAT",
+      "state": "ASSAM",
+      "pincodeCount": 20,
+      "recordCount": 148
+    },
+    {
+      "district": "BARPETA",
+      "state": "ASSAM",
+      "pincodeCount": 20,
+      "recordCount": 163
+    },
+    {
+      "district": "BENGALURU RURAL",
+      "state": "KARNATAKA",
+      "pincodeCount": 20,
+      "recordCount": 135
+    },
+    {
+      "district": "BILASPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 20,
+      "recordCount": 147
+    },
+    {
+      "district": "CHIKKABALLAPURA",
+      "state": "KARNATAKA",
+      "pincodeCount": 20,
+      "recordCount": 197
+    },
+    {
+      "district": "PANCH MAHALS",
+      "state": "GUJARAT",
+      "pincodeCount": 20,
+      "recordCount": 223
+    },
+    {
+      "district": "NEW DELHI",
+      "state": "DELHI",
+      "pincodeCount": 20,
+      "recordCount": 84
+    },
+    {
+      "district": "ARVALLI",
+      "state": "GUJARAT",
+      "pincodeCount": 20,
+      "recordCount": 241
+    },
+    {
+      "district": "HISAR",
+      "state": "HARYANA",
+      "pincodeCount": 20,
+      "recordCount": 215
+    },
+    {
+      "district": "BALAGHAT",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 20,
+      "recordCount": 478
+    },
+    {
+      "district": "CHHATARPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 20,
+      "recordCount": 262
+    },
+    {
+      "district": "NANDURBAR",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 20,
+      "recordCount": 236
+    },
+    {
+      "district": "West Tripura",
+      "state": "TRIPURA",
+      "pincodeCount": 20,
+      "recordCount": 125
+    },
+    {
+      "district": "RAYAGADA",
+      "state": "ODISHA",
+      "pincodeCount": 20,
+      "recordCount": 269
+    },
+    {
+      "district": "RUPNAGAR",
+      "state": "PUNJAB",
+      "pincodeCount": 20,
+      "recordCount": 109
+    },
+    {
+      "district": "HANUMANGARH",
+      "state": "RAJASTHAN",
+      "pincodeCount": 20,
+      "recordCount": 272
+    },
+    {
+      "district": "SAHARANPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 20,
+      "recordCount": 211
+    },
+    {
+      "district": "MAHARAJGANJ",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 20,
+      "recordCount": 205
+    },
+    {
+      "district": "UNNAO",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 20,
+      "recordCount": 270
+    },
+    {
+      "district": "JANGOAN",
+      "state": "TELANGANA",
+      "pincodeCount": 19,
+      "recordCount": 156
+    },
+    {
+      "district": "PASHCHIM CHAMPARAN",
+      "state": "BIHAR",
+      "pincodeCount": 19,
+      "recordCount": 276
+    },
+    {
+      "district": "HAZARIBAGH",
+      "state": "JHARKHAND",
+      "pincodeCount": 19,
+      "recordCount": 191
+    },
+    {
+      "district": "DUMKA",
+      "state": "JHARKHAND",
+      "pincodeCount": 19,
+      "recordCount": 288
+    },
+    {
+      "district": "RAIGARH",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 19,
+      "recordCount": 296
+    },
+    {
+      "district": "PANCHKULA",
+      "state": "HARYANA",
+      "pincodeCount": 19,
+      "recordCount": 50
+    },
+    {
+      "district": "ROHTAK",
+      "state": "HARYANA",
+      "pincodeCount": 19,
+      "recordCount": 118
+    },
+    {
+      "district": "WARDHA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 19,
+      "recordCount": 199
+    },
+    {
+      "district": "WAYANAD",
+      "state": "KERALA",
+      "pincodeCount": 19,
+      "recordCount": 163
+    },
+    {
+      "district": "BETUL",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 19,
+      "recordCount": 305
+    },
+    {
+      "district": "HOSHANGABAD",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 19,
+      "recordCount": 222
+    },
+    {
+      "district": "KHARGONE",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 19,
+      "recordCount": 220
+    },
+    {
+      "district": "BHANDARA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 19,
+      "recordCount": 139
+    },
+    {
+      "district": "SEHORE",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 19,
+      "recordCount": 192
+    },
+    {
+      "district": "JHALAWAR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 19,
+      "recordCount": 249
+    },
+    {
+      "district": "JHARSUGUDA",
+      "state": "ODISHA",
+      "pincodeCount": 19,
+      "recordCount": 92
+    },
+    {
+      "district": "SIROHI",
+      "state": "RAJASTHAN",
+      "pincodeCount": 19,
+      "recordCount": 187
+    },
+    {
+      "district": "SANGRUR",
+      "state": "PUNJAB",
+      "pincodeCount": 19,
+      "recordCount": 150
+    },
+    {
+      "district": "UDAM SINGH NAGAR",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 19,
+      "recordCount": 110
+    },
+    {
+      "district": "Mulugu",
+      "state": "TELANGANA",
+      "pincodeCount": 18,
+      "recordCount": 140
+    },
+    {
+      "district": "MAHABUBABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 18,
+      "recordCount": 193
+    },
+    {
+      "district": "SURYAPET",
+      "state": "TELANGANA",
+      "pincodeCount": 18,
+      "recordCount": 218
+    },
+    {
+      "district": "MADHEPURA",
+      "state": "BIHAR",
+      "pincodeCount": 18,
+      "recordCount": 202
+    },
+    {
+      "district": "BAKSA",
+      "state": "ASSAM",
+      "pincodeCount": 18,
+      "recordCount": 130
+    },
+    {
+      "district": "GIRIDIH",
+      "state": "JHARKHAND",
+      "pincodeCount": 18,
+      "recordCount": 228
+    },
+    {
+      "district": "SARAIKELA KHARSAWAN",
+      "state": "JHARKHAND",
+      "pincodeCount": 18,
+      "recordCount": 157
+    },
+    {
+      "district": "RAMANAGARA",
+      "state": "KARNATAKA",
+      "pincodeCount": 18,
+      "recordCount": 183
+    },
+    {
+      "district": "KORBA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 18,
+      "recordCount": 129
+    },
+    {
+      "district": "SIRMAUR",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 171
+    },
+    {
+      "district": "KATHUA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 18,
+      "recordCount": 135
+    },
+    {
+      "district": "BHIWANI",
+      "state": "HARYANA",
+      "pincodeCount": 18,
+      "recordCount": 149
+    },
+    {
+      "district": "PARBHANI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 18,
+      "recordCount": 196
+    },
+    {
+      "district": "RAISEN",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 255
+    },
+    {
+      "district": "MANDSAUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 221
+    },
+    {
+      "district": "SHIVPURI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 263
+    },
+    {
+      "district": "BANSWARA",
+      "state": "RAJASTHAN",
+      "pincodeCount": 18,
+      "recordCount": 264
+    },
+    {
+      "district": "BUNDI",
+      "state": "RAJASTHAN",
+      "pincodeCount": 18,
+      "recordCount": 176
+    },
+    {
+      "district": "SIDDHARTH NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 225
+    },
+    {
+      "district": "KANNAUJ",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 145
+    },
+    {
+      "district": "JALAUN",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 18,
+      "recordCount": 242
+    },
+    {
+      "district": "LAKHIMPUR",
+      "state": "ASSAM",
+      "pincodeCount": 17,
+      "recordCount": 173
+    },
+    {
+      "district": "JEHANABAD",
+      "state": "BIHAR",
+      "pincodeCount": 17,
+      "recordCount": 124
+    },
+    {
+      "district": "BANKA",
+      "state": "BIHAR",
+      "pincodeCount": 17,
+      "recordCount": 241
+    },
+    {
+      "district": "DHUBRI",
+      "state": "ASSAM",
+      "pincodeCount": 17,
+      "recordCount": 133
+    },
+    {
+      "district": "UDALGURI",
+      "state": "ASSAM",
+      "pincodeCount": 17,
+      "recordCount": 101
+    },
+    {
+      "district": "GUMLA",
+      "state": "JHARKHAND",
+      "pincodeCount": 17,
+      "recordCount": 226
+    },
+    {
+      "district": "BALODA BAZAR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 17,
+      "recordCount": 171
+    },
+    {
+      "district": "GADCHIROLI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 17,
+      "recordCount": 473
+    },
+    {
+      "district": "TONK",
+      "state": "RAJASTHAN",
+      "pincodeCount": 17,
+      "recordCount": 221
+    },
+    {
+      "district": "CHANDAULI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 17,
+      "recordCount": 204
+    },
+    {
+      "district": "BUDAUN",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 17,
+      "recordCount": 252
+    },
+    {
+      "district": "DINAJPUR UTTAR",
+      "state": "WEST BENGAL",
+      "pincodeCount": 17,
+      "recordCount": 209
+    },
+    {
+      "district": "Jhargram",
+      "state": "WEST BENGAL",
+      "pincodeCount": 17,
+      "recordCount": 186
+    },
+    {
+      "district": "FARRUKHABAD",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 17,
+      "recordCount": 155
+    },
+    {
+      "district": "ETAH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 17,
+      "recordCount": 201
+    },
+    {
+      "district": "WARANGAL",
+      "state": "TELANGANA",
+      "pincodeCount": 16,
+      "recordCount": 159
+    },
+    {
+      "district": "Narayanpet",
+      "state": "TELANGANA",
+      "pincodeCount": 16,
+      "recordCount": 124
+    },
+    {
+      "district": "YADADRI BHUVANAGIRI",
+      "state": "TELANGANA",
+      "pincodeCount": 16,
+      "recordCount": 189
+    },
+    {
+      "district": "ARARIA",
+      "state": "BIHAR",
+      "pincodeCount": 16,
+      "recordCount": 161
+    },
+    {
+      "district": "KOKRAJHAR",
+      "state": "ASSAM",
+      "pincodeCount": 16,
+      "recordCount": 110
+    },
+    {
+      "district": "Biswanath",
+      "state": "ASSAM",
+      "pincodeCount": 16,
+      "recordCount": 97
+    },
+    {
+      "district": "PALAMU",
+      "state": "JHARKHAND",
+      "pincodeCount": 16,
+      "recordCount": 313
+    },
+    {
+      "district": "KOREA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 16,
+      "recordCount": 90
+    },
+    {
+      "district": "UDHAMPUR",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 16,
+      "recordCount": 119
+    },
+    {
+      "district": "GIR SOMNATH",
+      "state": "GUJARAT",
+      "pincodeCount": 16,
+      "recordCount": 165
+    },
+    {
+      "district": "Mahisagar",
+      "state": "GUJARAT",
+      "pincodeCount": 16,
+      "recordCount": 166
+    },
+    {
+      "district": "DOHAD",
+      "state": "GUJARAT",
+      "pincodeCount": 16,
+      "recordCount": 226
+    },
+    {
+      "district": "FARIDABAD",
+      "state": "HARYANA",
+      "pincodeCount": 16,
+      "recordCount": 66
+    },
+    {
+      "district": "KANGPOKPI",
+      "state": "MANIPUR",
+      "pincodeCount": 16,
+      "recordCount": 108
+    },
+    {
+      "district": "SEONI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 256
+    },
+    {
+      "district": "NARSINGHPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 207
+    },
+    {
+      "district": "ANUPPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 133
+    },
+    {
+      "district": "DHAR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 260
+    },
+    {
+      "district": "NABARANGPUR",
+      "state": "ODISHA",
+      "pincodeCount": 16,
+      "recordCount": 202
+    },
+    {
+      "district": "SHAHJAHANPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 294
+    },
+    {
+      "district": "DINAJPUR DAKSHIN",
+      "state": "WEST BENGAL",
+      "pincodeCount": 16,
+      "recordCount": 163
+    },
+    {
+      "district": "KANPUR DEHAT",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 199
+    },
+    {
+      "district": "AURAIYA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 158
+    },
+    {
+      "district": "ETAWAH",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 175
+    },
+    {
+      "district": "MIRZAPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 16,
+      "recordCount": 263
+    },
+    {
+      "district": "KHAGARIA",
+      "state": "BIHAR",
+      "pincodeCount": 15,
+      "recordCount": 144
+    },
+    {
+      "district": "Nirmal",
+      "state": "TELANGANA",
+      "pincodeCount": 15,
+      "recordCount": 137
+    },
+    {
+      "district": "DEOGHAR",
+      "state": "JHARKHAND",
+      "pincodeCount": 15,
+      "recordCount": 126
+    },
+    {
+      "district": "JASHPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 15,
+      "recordCount": 190
+    },
+    {
+      "district": "RAJOURI",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 15,
+      "recordCount": 147
+    },
+    {
+      "district": "BOTAD",
+      "state": "GUJARAT",
+      "pincodeCount": 15,
+      "recordCount": 104
+    },
+    {
+      "district": "DEVBHUMI DWARKA",
+      "state": "GUJARAT",
+      "pincodeCount": 15,
+      "recordCount": 139
+    },
+    {
+      "district": "YAMUNANAGAR",
+      "state": "HARYANA",
+      "pincodeCount": 15,
+      "recordCount": 119
+    },
+    {
+      "district": "NORTH WEST",
+      "state": "DELHI",
+      "pincodeCount": 15,
+      "recordCount": 54
+    },
+    {
+      "district": "REWARI",
+      "state": "HARYANA",
+      "pincodeCount": 15,
+      "recordCount": 130
+    },
+    {
+      "district": "SIRSA",
+      "state": "HARYANA",
+      "pincodeCount": 15,
+      "recordCount": 165
+    },
+    {
+      "district": "KARNAL",
+      "state": "HARYANA",
+      "pincodeCount": 15,
+      "recordCount": 168
+    },
+    {
+      "district": "EAST NIMAR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 178
+    },
+    {
+      "district": "BARAN",
+      "state": "RAJASTHAN",
+      "pincodeCount": 15,
+      "recordCount": 197
+    },
+    {
+      "district": "GAJAPATI",
+      "state": "ODISHA",
+      "pincodeCount": 15,
+      "recordCount": 185
+    },
+    {
+      "district": "SAMBHAL",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 185
+    },
+    {
+      "district": "AMROHA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 102
+    },
+    {
+      "district": "SANT KABEER NAGAR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 192
+    },
+    {
+      "district": "HAMIRPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 144
+    },
+    {
+      "district": "FIROZABAD",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 164
+    },
+    {
+      "district": "MAINPURI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 182
+    },
+    {
+      "district": "HATHRAS",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 15,
+      "recordCount": 153
+    },
+    {
+      "district": "RAJANNA SIRCILLA",
+      "state": "TELANGANA",
+      "pincodeCount": 14,
+      "recordCount": 122
+    },
+    {
+      "district": "ARWAL",
+      "state": "BIHAR",
+      "pincodeCount": 14,
+      "recordCount": 94
+    },
+    {
+      "district": "HAILAKANDI",
+      "state": "ASSAM",
+      "pincodeCount": 14,
+      "recordCount": 98
+    },
+    {
+      "district": "KINNAUR",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 72
+    },
+    {
+      "district": "BARAMULLA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 14,
+      "recordCount": 133
+    },
+    {
+      "district": "Budgam",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 14,
+      "recordCount": 81
+    },
+    {
+      "district": "CHHOTAUDEPUR",
+      "state": "GUJARAT",
+      "pincodeCount": 14,
+      "recordCount": 212
+    },
+    {
+      "district": "WEST",
+      "state": "DELHI",
+      "pincodeCount": 14,
+      "recordCount": 94
+    },
+    {
+      "district": "MANDLA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 361
+    },
+    {
+      "district": "NEEMUCH",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 135
+    },
+    {
+      "district": "KATNI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 194
+    },
+    {
+      "district": "SHAHDOL",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 169
+    },
+    {
+      "district": "VIDISHA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 208
+    },
+    {
+      "district": "RATLAM",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 186
+    },
+    {
+      "district": "RAJGARH",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 196
+    },
+    {
+      "district": "SHAJAPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 125
+    },
+    {
+      "district": "FIROZEPUR",
+      "state": "PUNJAB",
+      "pincodeCount": 14,
+      "recordCount": 124
+    },
+    {
+      "district": "BAGESHWAR",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 14,
+      "recordCount": 153
+    },
+    {
+      "district": "RUDRA PRAYAG",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 14,
+      "recordCount": 131
+    },
+    {
+      "district": "MORADABAD",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 143
+    },
+    {
+      "district": "BALRAMPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 14,
+      "recordCount": 185
+    },
+    {
+      "district": "WANAPARTHY",
+      "state": "TELANGANA",
+      "pincodeCount": 13,
+      "recordCount": 92
+    },
+    {
+      "district": "KARBI ANGLONG",
+      "state": "ASSAM",
+      "pincodeCount": 13,
+      "recordCount": 97
+    },
+    {
+      "district": "SAHARSA",
+      "state": "BIHAR",
+      "pincodeCount": 13,
+      "recordCount": 167
+    },
+    {
+      "district": "DARRANG",
+      "state": "ASSAM",
+      "pincodeCount": 13,
+      "recordCount": 74
+    },
+    {
+      "district": "RAJNANDGAON",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 13,
+      "recordCount": 388
+    },
+    {
+      "district": "ANANTNAG",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 13,
+      "recordCount": 114
+    },
+    {
+      "district": "KISHTWAR",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 13,
+      "recordCount": 35
+    },
+    {
+      "district": "MORBI",
+      "state": "GUJARAT",
+      "pincodeCount": 13,
+      "recordCount": 172
+    },
+    {
+      "district": "PORBANDAR",
+      "state": "GUJARAT",
+      "pincodeCount": 13,
+      "recordCount": 91
+    },
+    {
+      "district": "NORTH",
+      "state": "DELHI",
+      "pincodeCount": 13,
+      "recordCount": 73
+    },
+    {
+      "district": "PANIPAT",
+      "state": "HARYANA",
+      "pincodeCount": 13,
+      "recordCount": 98
+    },
+    {
+      "district": "KURUKSHETRA",
+      "state": "HARYANA",
+      "pincodeCount": 13,
+      "recordCount": 113
+    },
+    {
+      "district": "IMPHAL WEST",
+      "state": "MANIPUR",
+      "pincodeCount": 13,
+      "recordCount": 77
+    },
+    {
+      "district": "DEWAS",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 211
+    },
+    {
+      "district": "DAMOH",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 216
+    },
+    {
+      "district": "GUNA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 163
+    },
+    {
+      "district": "MORENA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 212
+    },
+    {
+      "district": "PATHANKOT",
+      "state": "PUNJAB",
+      "pincodeCount": 13,
+      "recordCount": 72
+    },
+    {
+      "district": "JAISALMER",
+      "state": "RAJASTHAN",
+      "pincodeCount": 13,
+      "recordCount": 355
+    },
+    {
+      "district": "FATEHGARH SAHIB",
+      "state": "PUNJAB",
+      "pincodeCount": 13,
+      "recordCount": 87
+    },
+    {
+      "district": "SRI MUKTSAR SAHIB",
+      "state": "PUNJAB",
+      "pincodeCount": 13,
+      "recordCount": 135
+    },
+    {
+      "district": "DHOLPUR",
+      "state": "RAJASTHAN",
+      "pincodeCount": 13,
+      "recordCount": 187
+    },
+    {
+      "district": "BHADOHI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 103
+    },
+    {
+      "district": "BAGHPAT",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 130
+    },
+    {
+      "district": "KAUSHAMBI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 13,
+      "recordCount": 122
+    },
+    {
+      "district": "CHARAIDEO",
+      "state": "ASSAM",
+      "pincodeCount": 12,
+      "recordCount": 73
+    },
+    {
+      "district": "GOALPARA",
+      "state": "ASSAM",
+      "pincodeCount": 12,
+      "recordCount": 106
+    },
+    {
+      "district": "LATEHAR",
+      "state": "JHARKHAND",
+      "pincodeCount": 12,
+      "recordCount": 185
+    },
+    {
+      "district": "GODDA",
+      "state": "JHARKHAND",
+      "pincodeCount": 12,
+      "recordCount": 220
+    },
+    {
+      "district": "SAHEBGANJ",
+      "state": "JHARKHAND",
+      "pincodeCount": 12,
+      "recordCount": 103
+    },
+    {
+      "district": "PULWAMA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 12,
+      "recordCount": 76
+    },
+    {
+      "district": "NARMADA",
+      "state": "GUJARAT",
+      "pincodeCount": 12,
+      "recordCount": 160
+    },
+    {
+      "district": "WASHIM",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 12,
+      "recordCount": 172
+    },
+    {
+      "district": "KOHIMA",
+      "state": "NAGALAND",
+      "pincodeCount": 12,
+      "recordCount": 50
+    },
+    {
+      "district": "ASHOKNAGAR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 12,
+      "recordCount": 159
+    },
+    {
+      "district": "FAZILKA",
+      "state": "PUNJAB",
+      "pincodeCount": 12,
+      "recordCount": 148
+    },
+    {
+      "district": "WEST GARO HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 12,
+      "recordCount": 181
+    },
+    {
+      "district": "BOUDH",
+      "state": "ODISHA",
+      "pincodeCount": 12,
+      "recordCount": 158
+    },
+    {
+      "district": "BARNALA",
+      "state": "PUNJAB",
+      "pincodeCount": 12,
+      "recordCount": 74
+    },
+    {
+      "district": "UTTAR KASHI",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 12,
+      "recordCount": 132
+    },
+    {
+      "district": "BANDA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 12,
+      "recordCount": 210
+    },
+    {
+      "district": "LALITPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 12,
+      "recordCount": 162
+    },
+    {
+      "district": "South East",
+      "state": "DELHI",
+      "pincodeCount": 12,
+      "recordCount": 35
+    },
+    {
+      "district": "MARIGAON",
+      "state": "ASSAM",
+      "pincodeCount": 11,
+      "recordCount": 101
+    },
+    {
+      "district": "JAMUI",
+      "state": "BIHAR",
+      "pincodeCount": 11,
+      "recordCount": 176
+    },
+    {
+      "district": "MUNGER",
+      "state": "BIHAR",
+      "pincodeCount": 11,
+      "recordCount": 118
+    },
+    {
+      "district": "RI BHOI",
+      "state": "MEGHALAYA",
+      "pincodeCount": 11,
+      "recordCount": 76
+    },
+    {
+      "district": "GARHWA",
+      "state": "JHARKHAND",
+      "pincodeCount": 11,
+      "recordCount": 286
+    },
+    {
+      "district": "FATEHABAD",
+      "state": "HARYANA",
+      "pincodeCount": 11,
+      "recordCount": 136
+    },
+    {
+      "district": "JIND",
+      "state": "HARYANA",
+      "pincodeCount": 11,
+      "recordCount": 163
+    },
+    {
+      "district": "KAITHAL",
+      "state": "HARYANA",
+      "pincodeCount": 11,
+      "recordCount": 123
+    },
+    {
+      "district": "PANNA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 153
+    },
+    {
+      "district": "TIKAMGARH",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 134
+    },
+    {
+      "district": "GONDIA",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 11,
+      "recordCount": 498
+    },
+    {
+      "district": "South Tripura",
+      "state": "TRIPURA",
+      "pincodeCount": 11,
+      "recordCount": 86
+    },
+    {
+      "district": "PAPUM PARE",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 81
+    },
+    {
+      "district": "Dhalai",
+      "state": "TRIPURA",
+      "pincodeCount": 11,
+      "recordCount": 84
+    },
+    {
+      "district": "North Tripura",
+      "state": "TRIPURA",
+      "pincodeCount": 11,
+      "recordCount": 108
+    },
+    {
+      "district": "MANSA",
+      "state": "PUNJAB",
+      "pincodeCount": 11,
+      "recordCount": 100
+    },
+    {
+      "district": "FARIDKOT",
+      "state": "PUNJAB",
+      "pincodeCount": 11,
+      "recordCount": 67
+    },
+    {
+      "district": "SOUTH ANDAMANS",
+      "state": "ANDAMAN AND NICOBAR ISLANDS",
+      "pincodeCount": 11,
+      "recordCount": 48
+    },
+    {
+      "district": "KALIMPONG",
+      "state": "WEST BENGAL",
+      "pincodeCount": 11,
+      "recordCount": 48
+    },
+    {
+      "district": "PILIBHIT",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 166
+    },
+    {
+      "district": "SHAMLI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 97
+    },
+    {
+      "district": "Kasganj",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 11,
+      "recordCount": 109
+    },
+    {
+      "district": "JAYASHANKAR BHUPALAPALLY",
+      "state": "TELANGANA",
+      "pincodeCount": 10,
+      "recordCount": 167
+    },
+    {
+      "district": "JOGULAMBA GADWAL",
+      "state": "TELANGANA",
+      "pincodeCount": 10,
+      "recordCount": 104
+    },
+    {
+      "district": "DHEMAJI",
+      "state": "ASSAM",
+      "pincodeCount": 10,
+      "recordCount": 95
+    },
+    {
+      "district": "HOJAI",
+      "state": "ASSAM",
+      "pincodeCount": 10,
+      "recordCount": 76
+    },
+    {
+      "district": "BONGAIGAON",
+      "state": "ASSAM",
+      "pincodeCount": 10,
+      "recordCount": 69
+    },
+    {
+      "district": "CHATRA",
+      "state": "JHARKHAND",
+      "pincodeCount": 10,
+      "recordCount": 190
+    },
+    {
+      "district": "BALOD",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 10,
+      "recordCount": 140
+    },
+    {
+      "district": "DODA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 10,
+      "recordCount": 64
+    },
+    {
+      "district": "MAHENDRAGARH",
+      "state": "HARYANA",
+      "pincodeCount": 10,
+      "recordCount": 120
+    },
+    {
+      "district": "HINGOLI",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 10,
+      "recordCount": 150
+    },
+    {
+      "district": "SIDHI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 10,
+      "recordCount": 158
+    },
+    {
+      "district": "SINGRAULI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 10,
+      "recordCount": 109
+    },
+    {
+      "district": "PRATAPGARH",
+      "state": "RAJASTHAN",
+      "pincodeCount": 10,
+      "recordCount": 170
+    },
+    {
+      "district": "CHAMPAWAT",
+      "state": "UTTARAKHAND",
+      "pincodeCount": 10,
+      "recordCount": 84
+    },
+    {
+      "district": "RAMPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 10,
+      "recordCount": 127
+    },
+    {
+      "district": "KUMURAM BHEEM ASIFABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 9,
+      "recordCount": 135
+    },
+    {
+      "district": "KAIMUR (BHABUA)",
+      "state": "BIHAR",
+      "pincodeCount": 9,
+      "recordCount": 164
+    },
+    {
+      "district": "CHIRANG",
+      "state": "ASSAM",
+      "pincodeCount": 9,
+      "recordCount": 64
+    },
+    {
+      "district": "DIMA HASAO",
+      "state": "ASSAM",
+      "pincodeCount": 9,
+      "recordCount": 78
+    },
+    {
+      "district": "ADILABAD",
+      "state": "TELANGANA",
+      "pincodeCount": 9,
+      "recordCount": 143
+    },
+    {
+      "district": "KODERMA",
+      "state": "JHARKHAND",
+      "pincodeCount": 9,
+      "recordCount": 84
+    },
+    {
+      "district": "PAKUR",
+      "state": "JHARKHAND",
+      "pincodeCount": 9,
+      "recordCount": 131
+    },
+    {
+      "district": "SURAJPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 9,
+      "recordCount": 74
+    },
+    {
+      "district": "LAHUL AND SPITI",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 9,
+      "recordCount": 46
+    },
+    {
+      "district": "REASI",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 9,
+      "recordCount": 60
+    },
+    {
+      "district": "CHARKI DADRI",
+      "state": "HARYANA",
+      "pincodeCount": 9,
+      "recordCount": 77
+    },
+    {
+      "district": "GARIYABAND",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 9,
+      "recordCount": 137
+    },
+    {
+      "district": "SOUTH WEST",
+      "state": "DELHI",
+      "pincodeCount": 9,
+      "recordCount": 34
+    },
+    {
+      "district": "DATIA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 9,
+      "recordCount": 140
+    },
+    {
+      "district": "SONEPUR",
+      "state": "ODISHA",
+      "pincodeCount": 9,
+      "recordCount": 107
+    },
+    {
+      "district": "MALKANGIRI",
+      "state": "ODISHA",
+      "pincodeCount": 9,
+      "recordCount": 152
+    },
+    {
+      "district": "Unakoti",
+      "state": "TRIPURA",
+      "pincodeCount": 9,
+      "recordCount": 79
+    },
+    {
+      "district": "HAPUR",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 9,
+      "recordCount": 102
+    },
+    {
+      "district": "MAHOBA",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 9,
+      "recordCount": 98
+    },
+    {
+      "district": "LAKSHADWEEP DISTRICT",
+      "state": "LAKSHADWEEP",
+      "pincodeCount": 9,
+      "recordCount": 10
+    },
+    {
+      "district": "LAKHISARAI",
+      "state": "BIHAR",
+      "pincodeCount": 8,
+      "recordCount": 92
+    },
+    {
+      "district": "KISHANGANJ",
+      "state": "BIHAR",
+      "pincodeCount": 8,
+      "recordCount": 92
+    },
+    {
+      "district": "BEMETARA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 8,
+      "recordCount": 81
+    },
+    {
+      "district": "DHAMTARI",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 8,
+      "recordCount": 134
+    },
+    {
+      "district": "IMPHAL EAST",
+      "state": "MANIPUR",
+      "pincodeCount": 8,
+      "recordCount": 82
+    },
+    {
+      "district": "DIMAPUR",
+      "state": "NAGALAND",
+      "pincodeCount": 8,
+      "recordCount": 51
+    },
+    {
+      "district": "MOKOKCHUNG",
+      "state": "NAGALAND",
+      "pincodeCount": 8,
+      "recordCount": 53
+    },
+    {
+      "district": "DINDORI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 8,
+      "recordCount": 178
+    },
+    {
+      "district": "BARWANI",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 8,
+      "recordCount": 151
+    },
+    {
+      "district": "JHABUA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 8,
+      "recordCount": 116
+    },
+    {
+      "district": "Sepahijala",
+      "state": "TRIPURA",
+      "pincodeCount": 8,
+      "recordCount": 92
+    },
+    {
+      "district": "Gomati",
+      "state": "TRIPURA",
+      "pincodeCount": 8,
+      "recordCount": 82
+    },
+    {
+      "district": "EAST GARO HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 8,
+      "recordCount": 81
+    },
+    {
+      "district": "SHRAVASTI",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 8,
+      "recordCount": 102
+    },
+    {
+      "district": "KARAIKAL",
+      "state": "PUDUCHERRY",
+      "pincodeCount": 8,
+      "recordCount": 27
+    },
+    {
+      "district": "KONDAGAON",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 7,
+      "recordCount": 220
+    },
+    {
+      "district": "MAJULI",
+      "state": "ASSAM",
+      "pincodeCount": 7,
+      "recordCount": 57
+    },
+    {
+      "district": "KHUNTI",
+      "state": "JHARKHAND",
+      "pincodeCount": 7,
+      "recordCount": 92
+    },
+    {
+      "district": "SIMDEGA",
+      "state": "JHARKHAND",
+      "pincodeCount": 7,
+      "recordCount": 110
+    },
+    {
+      "district": "LOHARDAGA",
+      "state": "JHARKHAND",
+      "pincodeCount": 7,
+      "recordCount": 74
+    },
+    {
+      "district": "BALRAMPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 7,
+      "recordCount": 139
+    },
+    {
+      "district": "SURGUJA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 7,
+      "recordCount": 74
+    },
+    {
+      "district": "KUPWARA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 7,
+      "recordCount": 81
+    },
+    {
+      "district": "SAMBA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 7,
+      "recordCount": 43
+    },
+    {
+      "district": "LEH LADAKH",
+      "state": "LADAKH",
+      "pincodeCount": 7,
+      "recordCount": 61
+    },
+    {
+      "district": "KARGIL",
+      "state": "LADAKH",
+      "pincodeCount": 7,
+      "recordCount": 58
+    },
+    {
+      "district": "MAHASAMUND",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 7,
+      "recordCount": 156
+    },
+    {
+      "district": "CHURACHANDPUR",
+      "state": "MANIPUR",
+      "pincodeCount": 7,
+      "recordCount": 80
+    },
+    {
+      "district": "SENAPATI",
+      "state": "MANIPUR",
+      "pincodeCount": 7,
+      "recordCount": 36
+    },
+    {
+      "district": "SERCHHIP",
+      "state": "MIZORAM",
+      "pincodeCount": 7,
+      "recordCount": 39
+    },
+    {
+      "district": "Niwari",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 7,
+      "recordCount": 58
+    },
+    {
+      "district": "UMARIA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 7,
+      "recordCount": 121
+    },
+    {
+      "district": "NUAPADA",
+      "state": "ODISHA",
+      "pincodeCount": 7,
+      "recordCount": 154
+    },
+    {
+      "district": "WEST KAMENG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 7,
+      "recordCount": 42
+    },
+    {
+      "district": "NORTH AND MIDDLE ANDAMAN",
+      "state": "ANDAMAN AND NICOBAR ISLANDS",
+      "pincodeCount": 7,
+      "recordCount": 34
+    },
+    {
+      "district": "EAST DISTRICT",
+      "state": "SIKKIM",
+      "pincodeCount": 7,
+      "recordCount": 51
+    },
+    {
+      "district": "CHITRAKOOT",
+      "state": "UTTAR PRADESH",
+      "pincodeCount": 7,
+      "recordCount": 92
+    },
+    {
+      "district": "SHAHDARA",
+      "state": "DELHI",
+      "pincodeCount": 7,
+      "recordCount": 28
+    },
+    {
+      "district": "CENTRAL",
+      "state": "DELHI",
+      "pincodeCount": 7,
+      "recordCount": 32
+    },
+    {
+      "district": "WEST KARBI ANGLONG",
+      "state": "ASSAM",
+      "pincodeCount": 6,
+      "recordCount": 33
+    },
+    {
+      "district": "SHEIKHPURA",
+      "state": "BIHAR",
+      "pincodeCount": 6,
+      "recordCount": 98
+    },
+    {
+      "district": "SOUTH SALMARA MANCACHAR",
+      "state": "ASSAM",
+      "pincodeCount": 6,
+      "recordCount": 32
+    },
+    {
+      "district": "Bajali",
+      "state": "ASSAM",
+      "pincodeCount": 6,
+      "recordCount": 26
+    },
+    {
+      "district": "JAMTARA",
+      "state": "JHARKHAND",
+      "pincodeCount": 6,
+      "recordCount": 87
+    },
+    {
+      "district": "KANKER",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 6,
+      "recordCount": 188
+    },
+    {
+      "district": "MUNGELI",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 6,
+      "recordCount": 83
+    },
+    {
+      "district": "BANDIPORA",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 6,
+      "recordCount": 53
+    },
+    {
+      "district": "SHOPIAN",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 6,
+      "recordCount": 26
+    },
+    {
+      "district": "PALWAL",
+      "state": "HARYANA",
+      "pincodeCount": 6,
+      "recordCount": 64
+    },
+    {
+      "district": "NUH",
+      "state": "HARYANA",
+      "pincodeCount": 6,
+      "recordCount": 56
+    },
+    {
+      "district": "CHANDEL",
+      "state": "MANIPUR",
+      "pincodeCount": 6,
+      "recordCount": 72
+    },
+    {
+      "district": "KOLASIB",
+      "state": "MIZORAM",
+      "pincodeCount": 6,
+      "recordCount": 33
+    },
+    {
+      "district": "ZUNHEBOTO",
+      "state": "NAGALAND",
+      "pincodeCount": 6,
+      "recordCount": 42
+    },
+    {
+      "district": "PEREN",
+      "state": "NAGALAND",
+      "pincodeCount": 6,
+      "recordCount": 25
+    },
+    {
+      "district": "ALIRAJPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 6,
+      "recordCount": 98
+    },
+    {
+      "district": "AGAR MALWA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 6,
+      "recordCount": 69
+    },
+    {
+      "district": "DEOGARH",
+      "state": "ODISHA",
+      "pincodeCount": 6,
+      "recordCount": 83
+    },
+    {
+      "district": "CHANGLANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 6,
+      "recordCount": 66
+    },
+    {
+      "district": "MALERKOTLA",
+      "state": "PUNJAB",
+      "pincodeCount": 6,
+      "recordCount": 45
+    },
+    {
+      "district": "SOUTH DISTRICT",
+      "state": "SIKKIM",
+      "pincodeCount": 6,
+      "recordCount": 51
+    },
+    {
+      "district": "DANTEWADA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 5,
+      "recordCount": 142
+    },
+    {
+      "district": "SHEOHAR",
+      "state": "BIHAR",
+      "pincodeCount": 5,
+      "recordCount": 46
+    },
+    {
+      "district": "GANDERBAL",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 5,
+      "recordCount": 30
+    },
+    {
+      "district": "RAMBAN",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 5,
+      "recordCount": 50
+    },
+    {
+      "district": "DANG",
+      "state": "GUJARAT",
+      "pincodeCount": 5,
+      "recordCount": 56
+    },
+    {
+      "district": "LUNGLEI",
+      "state": "MIZORAM",
+      "pincodeCount": 5,
+      "recordCount": 25
+    },
+    {
+      "district": "MAMIT",
+      "state": "MIZORAM",
+      "pincodeCount": 5,
+      "recordCount": 29
+    },
+    {
+      "district": "SHEOPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 5,
+      "recordCount": 85
+    },
+    {
+      "district": "Khowai",
+      "state": "TRIPURA",
+      "pincodeCount": 5,
+      "recordCount": 67
+    },
+    {
+      "district": "WEST JAINTIA HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 5,
+      "recordCount": 110
+    },
+    {
+      "district": "EAST",
+      "state": "DELHI",
+      "pincodeCount": 5,
+      "recordCount": 23
+    },
+    {
+      "district": "KABIRDHAM",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 4,
+      "recordCount": 98
+    },
+    {
+      "district": "POONCH",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 4,
+      "recordCount": 64
+    },
+    {
+      "district": "KULGAM",
+      "state": "JAMMU AND KASHMIR",
+      "pincodeCount": 4,
+      "recordCount": 49
+    },
+    {
+      "district": "DADRA AND NAGAR HAVELI",
+      "state": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+      "pincodeCount": 4,
+      "recordCount": 34
+    },
+    {
+      "district": "NORTH EAST",
+      "state": "DELHI",
+      "pincodeCount": 4,
+      "recordCount": 21
+    },
+    {
+      "district": "PHERZAWL",
+      "state": "MANIPUR",
+      "pincodeCount": 4,
+      "recordCount": 27
+    },
+    {
+      "district": "THOUBAL",
+      "state": "MANIPUR",
+      "pincodeCount": 4,
+      "recordCount": 50
+    },
+    {
+      "district": "KAKCHING",
+      "state": "MANIPUR",
+      "pincodeCount": 4,
+      "recordCount": 40
+    },
+    {
+      "district": "BISHNUPUR",
+      "state": "MANIPUR",
+      "pincodeCount": 4,
+      "recordCount": 36
+    },
+    {
+      "district": "SAITUAL",
+      "state": "MIZORAM",
+      "pincodeCount": 4,
+      "recordCount": 29
+    },
+    {
+      "district": "WOKHA",
+      "state": "NAGALAND",
+      "pincodeCount": 4,
+      "recordCount": 29
+    },
+    {
+      "district": "MON",
+      "state": "NAGALAND",
+      "pincodeCount": 4,
+      "recordCount": 32
+    },
+    {
+      "district": "PHEK",
+      "state": "NAGALAND",
+      "pincodeCount": 4,
+      "recordCount": 39
+    },
+    {
+      "district": "HARDA",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 4,
+      "recordCount": 106
+    },
+    {
+      "district": "BURHANPUR",
+      "state": "MADHYA PRADESH",
+      "pincodeCount": 4,
+      "recordCount": 71
+    },
+    {
+      "district": "TUENSANG",
+      "state": "NAGALAND",
+      "pincodeCount": 4,
+      "recordCount": 41
+    },
+    {
+      "district": "EAST SIANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 4,
+      "recordCount": 47
+    },
+    {
+      "district": "UPPER SIANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 4,
+      "recordCount": 44
+    },
+    {
+      "district": "WEST KHASI HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 4,
+      "recordCount": 94
+    },
+    {
+      "district": "NICOBARS",
+      "state": "ANDAMAN AND NICOBAR ISLANDS",
+      "pincodeCount": 4,
+      "recordCount": 18
+    },
+    {
+      "district": "NORTH DISTRICT",
+      "state": "SIKKIM",
+      "pincodeCount": 4,
+      "recordCount": 27
+    },
+    {
+      "district": "Pakyong",
+      "state": "SIKKIM",
+      "pincodeCount": 4,
+      "recordCount": 32
+    },
+    {
+      "district": "NARAYANPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 3,
+      "recordCount": 65
+    },
+    {
+      "district": "Gaurella Pendra Marwahi",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 3,
+      "recordCount": 49
+    },
+    {
+      "district": "DAMAN",
+      "state": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+      "pincodeCount": 3,
+      "recordCount": 13
+    },
+    {
+      "district": "JIRIBAM",
+      "state": "MANIPUR",
+      "pincodeCount": 3,
+      "recordCount": 25
+    },
+    {
+      "district": "UKHRUL",
+      "state": "MANIPUR",
+      "pincodeCount": 3,
+      "recordCount": 43
+    },
+    {
+      "district": "NONEY",
+      "state": "MANIPUR",
+      "pincodeCount": 3,
+      "recordCount": 25
+    },
+    {
+      "district": "TAMENGLONG",
+      "state": "MANIPUR",
+      "pincodeCount": 3,
+      "recordCount": 39
+    },
+    {
+      "district": "CHAMPHAI",
+      "state": "MIZORAM",
+      "pincodeCount": 3,
+      "recordCount": 43
+    },
+    {
+      "district": "TAWANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 3,
+      "recordCount": 26
+    },
+    {
+      "district": "LOWER SIANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 3,
+      "recordCount": 35
+    },
+    {
+      "district": "NAMSAI",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 3,
+      "recordCount": 37
+    },
+    {
+      "district": "LOHIT",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 3,
+      "recordCount": 28
+    },
+    {
+      "district": "SOUTH WEST KHASI HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 3,
+      "recordCount": 36
+    },
+    {
+      "district": "EAST JAINTIA HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 3,
+      "recordCount": 49
+    },
+    {
+      "district": "SOUTH GARO HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 3,
+      "recordCount": 85
+    },
+    {
+      "district": "WEST DISTRICT",
+      "state": "SIKKIM",
+      "pincodeCount": 3,
+      "recordCount": 48
+    },
+    {
+      "district": "DIU",
+      "state": "THE DADRA AND NAGAR HAVELI AND DAMAN AND DIU",
+      "pincodeCount": 3,
+      "recordCount": 5
+    },
+    {
+      "district": "KAMJONG",
+      "state": "MANIPUR",
+      "pincodeCount": 2,
+      "recordCount": 16
+    },
+    {
+      "district": "TENGNOUPAL",
+      "state": "MANIPUR",
+      "pincodeCount": 2,
+      "recordCount": 28
+    },
+    {
+      "district": "KHAWZAWL",
+      "state": "MIZORAM",
+      "pincodeCount": 2,
+      "recordCount": 19
+    },
+    {
+      "district": "LAWNGTLAI",
+      "state": "MIZORAM",
+      "pincodeCount": 2,
+      "recordCount": 49
+    },
+    {
+      "district": "WEST SIANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 52
+    },
+    {
+      "district": "SIANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 8
+    },
+    {
+      "district": "DIBANG VALLEY",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 77
+    },
+    {
+      "district": "TIRAP",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 31
+    },
+    {
+      "district": "LONGDING",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 35
+    },
+    {
+      "district": "SHI YOMI",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 14
+    },
+    {
+      "district": "LOWER SUBANSIRI",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 54
+    },
+    {
+      "district": "LOWER DIBANG VALLEY",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 18
+    },
+    {
+      "district": "PAKKE KESSANG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 2,
+      "recordCount": 19
+    },
+    {
+      "district": "SOUTH WEST GARO HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 2,
+      "recordCount": 28
+    },
+    {
+      "district": "BIJAPUR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 1,
+      "recordCount": 57
+    },
+    {
+      "district": "SUKMA",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 1,
+      "recordCount": 18
+    },
+    {
+      "district": "BASTAR",
+      "state": "CHHATTISGARH",
+      "pincodeCount": 1,
+      "recordCount": 48
+    },
+    {
+      "district": "Hnahthial",
+      "state": "MIZORAM",
+      "pincodeCount": 1,
+      "recordCount": 16
+    },
+    {
+      "district": "SAIHA",
+      "state": "MIZORAM",
+      "pincodeCount": 1,
+      "recordCount": 22
+    },
+    {
+      "district": "KIPHIRE",
+      "state": "NAGALAND",
+      "pincodeCount": 1,
+      "recordCount": 21
+    },
+    {
+      "district": "MAHE",
+      "state": "PUDUCHERRY",
+      "pincodeCount": 1,
+      "recordCount": 4
+    },
+    {
+      "district": "Noklak",
+      "state": "NAGALAND",
+      "pincodeCount": 1,
+      "recordCount": 9
+    },
+    {
+      "district": "LEPARADA",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 5
+    },
+    {
+      "district": "UPPER SUBANSIRI",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 153
+    },
+    {
+      "district": "ANJAW",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 53
+    },
+    {
+      "district": "KURUNG KUMEY",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 146
+    },
+    {
+      "district": "EAST KAMENG",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 95
+    },
+    {
+      "district": "NORTH GARO HILLS",
+      "state": "MEGHALAYA",
+      "pincodeCount": 1,
+      "recordCount": 28
+    },
+    {
+      "district": "LONGLENG",
+      "state": "NAGALAND",
+      "pincodeCount": 1,
+      "recordCount": 11
+    },
+    {
+      "district": "KRA DAADI",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 3
+    },
+    {
+      "district": "Soreng",
+      "state": "SIKKIM",
+      "pincodeCount": 1,
+      "recordCount": 3
+    },
+    {
+      "district": "YANAM",
+      "state": "PUDUCHERRY",
+      "pincodeCount": 1,
+      "recordCount": 1
+    },
+    {
+      "district": "KAMLE",
+      "state": "ARUNACHAL PRADESH",
+      "pincodeCount": 1,
+      "recordCount": 2
+    }
+  ],
+  "tnDistricts": [
+    {
+      "district": "Ariyalur",
+      "state": "TAMIL NADU",
+      "pincodeCount": 31,
+      "recordCount": 222,
+      "status": "PENDING"
+    },
+    {
+      "district": "CHENGALPATTU",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 277,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "CHENNAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 83,
+      "recordCount": 152,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "COIMBATORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 109,
+      "recordCount": 414,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "CUDDALORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 68,
+      "recordCount": 473,
+      "status": "PENDING"
+    },
+    {
+      "district": "DHARMAPURI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 33,
+      "recordCount": 258,
+      "status": "PENDING"
+    },
+    {
+      "district": "DINDIGUL",
+      "state": "TAMIL NADU",
+      "pincodeCount": 58,
+      "recordCount": 460,
+      "status": "PENDING"
+    },
+    {
+      "district": "ERODE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 342,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "KALLAKURICHI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 32,
+      "recordCount": 250,
+      "status": "PENDING"
+    },
+    {
+      "district": "KANCHIPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 32,
+      "recordCount": 156,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "KANNIYAKUMARI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 65,
+      "recordCount": 268,
+      "status": "PENDING"
+    },
+    {
+      "district": "KARUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 36,
+      "recordCount": 242,
+      "status": "PENDING"
+    },
+    {
+      "district": "KRISHNAGIRI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 38,
+      "recordCount": 298,
+      "status": "PENDING"
+    },
+    {
+      "district": "MADURAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 57,
+      "recordCount": 389,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "MAYILADUTHURAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 51,
+      "recordCount": 214,
+      "status": "PENDING"
+    },
+    {
+      "district": "NAGAPATTINAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 39,
+      "recordCount": 174,
+      "status": "PENDING"
+    },
+    {
+      "district": "NAMAKKAL",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 355,
+      "status": "PENDING"
+    },
+    {
+      "district": "PERAMBALUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 25,
+      "recordCount": 140,
+      "status": "PENDING"
+    },
+    {
+      "district": "PUDUKKOTTAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 53,
+      "recordCount": 339,
+      "status": "PENDING"
+    },
+    {
+      "district": "RAMANATHAPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 58,
+      "recordCount": 307,
+      "status": "PENDING"
+    },
+    {
+      "district": "Ranipet",
+      "state": "TAMIL NADU",
+      "pincodeCount": 40,
+      "recordCount": 209,
+      "status": "PENDING"
+    },
+    {
+      "district": "SALEM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 90,
+      "recordCount": 503,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "SIVAGANGA",
+      "state": "TAMIL NADU",
+      "pincodeCount": 66,
+      "recordCount": 315,
+      "status": "PENDING"
+    },
+    {
+      "district": "TENKASI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 50,
+      "recordCount": 239,
+      "status": "PENDING"
+    },
+    {
+      "district": "THANJAVUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 101,
+      "recordCount": 514,
+      "status": "PENDING"
+    },
+    {
+      "district": "THE NILGIRIS",
+      "state": "TAMIL NADU",
+      "pincodeCount": 47,
+      "recordCount": 181,
+      "status": "PENDING"
+    },
+    {
+      "district": "THENI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 31,
+      "recordCount": 159,
+      "status": "PENDING"
+    },
+    {
+      "district": "THIRUVALLUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 61,
+      "recordCount": 352,
+      "status": "PENDING"
+    },
+    {
+      "district": "THIRUVARUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 73,
+      "recordCount": 358,
+      "status": "PENDING"
+    },
+    {
+      "district": "TIRUCHIRAPPALLI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 90,
+      "recordCount": 487,
+      "status": "COMPLETED"
+    },
+    {
+      "district": "TIRUNELVELI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 77,
+      "recordCount": 302,
+      "status": "PENDING"
+    },
+    {
+      "district": "Tirupathur",
+      "state": "TAMIL NADU",
+      "pincodeCount": 27,
+      "recordCount": 189,
+      "status": "PENDING"
+    },
+    {
+      "district": "TIRUPPUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 65,
+      "recordCount": 354,
+      "status": "PENDING"
+    },
+    {
+      "district": "TIRUVANNAMALAI",
+      "state": "TAMIL NADU",
+      "pincodeCount": 71,
+      "recordCount": 496,
+      "status": "PENDING"
+    },
+    {
+      "district": "TUTICORIN",
+      "state": "TAMIL NADU",
+      "pincodeCount": 92,
+      "recordCount": 424,
+      "status": "PENDING"
+    },
+    {
+      "district": "VELLORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 51,
+      "recordCount": 252,
+      "status": "PENDING"
+    },
+    {
+      "district": "VILLUPURAM",
+      "state": "TAMIL NADU",
+      "pincodeCount": 59,
+      "recordCount": 390,
+      "status": "PENDING"
+    },
+    {
+      "district": "VIRUDHUNAGAR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 60,
+      "recordCount": 279,
+      "status": "PENDING"
+    }
+  ],
+  "topDistricts": [
+    {
+      "district": "NA",
+      "state": "NA",
+      "pincodeCount": 338,
+      "recordCount": 715
+    },
+    {
+      "district": "THRISSUR",
+      "state": "KERALA",
+      "pincodeCount": 168,
+      "recordCount": 485
+    },
+    {
+      "district": "PUNE",
+      "state": "MAHARASHTRA",
+      "pincodeCount": 150,
+      "recordCount": 801
+    },
+    {
+      "district": "24 PARAGANAS NORTH",
+      "state": "WEST BENGAL",
+      "pincodeCount": 144,
+      "recordCount": 694
+    },
+    {
+      "district": "ERNAKULAM",
+      "state": "KERALA",
+      "pincodeCount": 143,
+      "recordCount": 394
+    },
+    {
+      "district": "PALAKKAD",
+      "state": "KERALA",
+      "pincodeCount": 139,
+      "recordCount": 456
+    },
+    {
+      "district": "THIRUVANANTHAPURAM",
+      "state": "KERALA",
+      "pincodeCount": 133,
+      "recordCount": 413
+    },
+    {
+      "district": "KOTTAYAM",
+      "state": "KERALA",
+      "pincodeCount": 121,
+      "recordCount": 406
+    },
+    {
+      "district": "BENGALURU URBAN",
+      "state": "KARNATAKA",
+      "pincodeCount": 117,
+      "recordCount": 279
+    },
+    {
+      "district": "ALAPPUZHA",
+      "state": "KERALA",
+      "pincodeCount": 116,
+      "recordCount": 298
+    },
+    {
+      "district": "KOLLAM",
+      "state": "KERALA",
+      "pincodeCount": 115,
+      "recordCount": 367
+    },
+    {
+      "district": "BELAGAVI",
+      "state": "KARNATAKA",
+      "pincodeCount": 113,
+      "recordCount": 721
+    },
+    {
+      "district": "PATHANAMTHITTA",
+      "state": "KERALA",
+      "pincodeCount": 111,
+      "recordCount": 318
+    },
+    {
+      "district": "COIMBATORE",
+      "state": "TAMIL NADU",
+      "pincodeCount": 109,
+      "recordCount": 414
+    },
+    {
+      "district": "KANGRA",
+      "state": "HIMACHAL PRADESH",
+      "pincodeCount": 103,
+      "recordCount": 651
+    },
+    {
+      "district": "KANNUR",
+      "state": "KERALA",
+      "pincodeCount": 103,
+      "recordCount": 383
+    },
+    {
+      "district": "MALAPPURAM",
+      "state": "KERALA",
+      "pincodeCount": 102,
+      "recordCount": 436
+    },
+    {
+      "district": "THANJAVUR",
+      "state": "TAMIL NADU",
+      "pincodeCount": 101,
+      "recordCount": 514
+    },
+    {
+      "district": "DAKSHINA KANNADA",
+      "state": "KARNATAKA",
+      "pincodeCount": 96,
+      "recordCount": 468
+    },
+    {
+      "district": "TUTICORIN",
+      "state": "TAMIL NADU",
+      "pincodeCount": 92,
+      "recordCount": 424
+    }
+  ]
+}

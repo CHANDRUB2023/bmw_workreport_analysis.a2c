@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import { Search, ArrowUpDown, Table as TableIcon, CheckCircle, AlertCircle } from 'lucide-react';
+import { Search, ArrowUpDown, Table as TableIcon, CheckCircle, AlertCircle, Clock } from 'lucide-react';
 
 export default function DistrictVenueTableCard({ districts = [], onSelectDistrict }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState('ALL'); // 'ALL', 'EXACT', 'APPROX'
-  const [sortField, setSortField] = useState('rank'); // 'rank', 'district', 'venueCount', 'pincodeCount'
+  const [filterType, setFilterType] = useState('ALL'); // 'ALL', 'EXACT', 'APPROX', 'COMPLETED'
+  const [sortField, setSortField] = useState('rank'); // 'rank', 'district', 'venueCount', 'pincodeCount', 'status'
   const [sortDirection, setSortDirection] = useState('asc'); // 'asc', 'desc'
 
   const handleSort = (field) => {
@@ -14,18 +14,20 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
       setSortDirection(prev => (prev === 'asc' ? 'desc' : 'asc'));
     } else {
       setSortField(field);
-      setSortDirection(field === 'district' ? 'asc' : (field === 'rank' ? 'asc' : 'desc'));
+      setSortDirection(field === 'district' || field === 'status' ? 'asc' : (field === 'rank' ? 'asc' : 'desc'));
     }
   };
 
   const processedDistricts = useMemo(() => {
     let list = [...districts];
 
-    // Filter by type
+    // Filter by type or status
     if (filterType === 'EXACT') {
       list = list.filter(d => !d.isApproximate);
     } else if (filterType === 'APPROX') {
       list = list.filter(d => d.isApproximate);
+    } else if (filterType === 'COMPLETED') {
+      list = list.filter(d => d.status === 'COMPLETED');
     }
 
     // Filter by search
@@ -62,7 +64,7 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
             <span>DISTRICT VENUE MASTER DATA TABLE</span>
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
-            Full tabular list of Tamil Nadu district venue volumes and data types.
+            Full tabular list of Tamil Nadu district venue volumes, status, and precision types.
           </p>
         </div>
 
@@ -79,12 +81,13 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
             />
           </div>
 
-          {/* Type Filter */}
+          {/* Type / Status Filter */}
           <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
             {[
               { id: 'ALL', label: 'All' },
               { id: 'EXACT', label: 'Exact' },
-              { id: 'APPROX', label: 'Approximate ±' }
+              { id: 'APPROX', label: 'Approximate ±' },
+              { id: 'COMPLETED', label: 'Completed' }
             ].map(f => (
               <button
                 key={f.id}
@@ -138,6 +141,15 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
                 <span>Data Type</span>
               </th>
               <th
+                onClick={() => handleSort('status')}
+                className="px-4 py-3 cursor-pointer hover:bg-slate-100 transition-colors"
+              >
+                <div className="flex items-center gap-1">
+                  <span>Status</span>
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                </div>
+              </th>
+              <th
                 onClick={() => handleSort('pincodeCount')}
                 className="px-4 py-3 cursor-pointer hover:bg-slate-100 transition-colors"
               >
@@ -176,6 +188,17 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
                       </span>
                     )}
                   </td>
+                  <td className="px-4 py-2.5">
+                    {d.status === 'COMPLETED' ? (
+                      <span className="px-2 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-900 border border-emerald-200 inline-flex items-center gap-1">
+                        <CheckCircle className="w-3 h-3 text-emerald-700" /> COMPLETED
+                      </span>
+                    ) : (
+                      <span className="px-2 py-0.5 rounded text-[10px] font-extrabold bg-slate-100 text-slate-700 border border-slate-200 inline-flex items-center gap-1">
+                        <Clock className="w-3 h-3 text-slate-500" /> {d.status || 'PENDING'}
+                      </span>
+                    )}
+                  </td>
                   <td className="px-4 py-2.5 text-slate-700 font-bold">
                     {d.pincodeCount} PINs
                   </td>
@@ -183,7 +206,7 @@ export default function DistrictVenueTableCard({ districts = [], onSelectDistric
               ))
             ) : (
               <tr>
-                <td colSpan={5} className="text-center text-slate-400 py-8">
+                <td colSpan={6} className="text-center text-slate-400 py-8">
                   No matching district records found
                 </td>
               </tr>
