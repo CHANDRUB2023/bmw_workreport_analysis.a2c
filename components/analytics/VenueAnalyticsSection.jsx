@@ -8,7 +8,6 @@ import VenueRangeDistributionCard from './VenueRangeDistributionCard';
 import UtVenueBarChart from './UtVenueBarChart';
 import DistrictDrilldownCard from './DistrictDrilldownCard';
 import DistrictVenueTableCard from './DistrictVenueTableCard';
-import VenueInsightsCards from './VenueInsightsCards';
 import { Building2, AlertTriangle, RefreshCw } from 'lucide-react';
 
 export default function VenueAnalyticsSection({ refreshTrigger }) {
@@ -116,9 +115,6 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
         <div className="space-y-6">
           {/* SEC 10 KPI CARDS */}
           <VenueKpisCard summary={data.summary} />
-
-          {/* SEC 10 INSIGHT CARDS */}
-          <VenueInsightsCards summary={data.summary} />
 
           {/* MAP & DRILLDOWN GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
