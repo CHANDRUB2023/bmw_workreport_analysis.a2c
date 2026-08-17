@@ -7,6 +7,7 @@ import DistrictVenueBarChart from './DistrictVenueBarChart';
 import VenueRangeDistributionCard from './VenueRangeDistributionCard';
 import UtVenueBarChart from './UtVenueBarChart';
 import DistrictDrilldownCard from './DistrictDrilldownCard';
+import DynamicExcelFieldsCard from './DynamicExcelFieldsCard';
 import DistrictVenueTableCard from './DistrictVenueTableCard';
 import { Building2, AlertTriangle, RefreshCw } from 'lucide-react';
 
@@ -115,6 +116,9 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
         <div className="space-y-6">
           {/* SEC 10 KPI CARDS */}
           <VenueKpisCard summary={data.summary} />
+
+          {/* DYNAMIC EXCEL ADDITIONAL FIELDS (If present in workbook) */}
+          <DynamicExcelFieldsCard dynamicColumns={data.dynamicColumns} />
 
           {/* MAP & DRILLDOWN GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">

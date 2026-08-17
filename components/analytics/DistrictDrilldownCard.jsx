@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, MapPin, Eye, X, CheckCircle, AlertCircle, Copy, Check } from 'lucide-react';
+import { Search, MapPin, Eye, X, CheckCircle, AlertCircle, Copy, Check, Sparkles } from 'lucide-react';
 
 export default function DistrictDrilldownCard({ districts = [], selectedDistrict, onSelectDistrict }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -60,7 +60,7 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
       </div>
 
       {activeDistrict ? (
-        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5">
+        <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-3">
           {/* Clean 2x2 Grid Layout for Perfect Spacing & Full Text Visibility */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 items-stretch">
             {/* Card 1: District & Rank */}
@@ -140,6 +140,28 @@ export default function DistrictDrilldownCard({ districts = [], selectedDistrict
               </button>
             </div>
           </div>
+
+          {/* Dynamic Additional Fields Display */}
+          {activeDistrict.additionalFields && Object.keys(activeDistrict.additionalFields).length > 0 && (
+            <div className="pt-2 border-t border-slate-200/80 space-y-2">
+              <span className="text-[10px] font-extrabold text-blue-900 uppercase tracking-wider block flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span>Additional Excel Fields ({Object.keys(activeDistrict.additionalFields).length})</span>
+              </span>
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                {Object.entries(activeDistrict.additionalFields).map(([fKey, fVal]) => (
+                  <div key={fKey} className="bg-white border border-slate-200 rounded-lg p-2 flex flex-col justify-between">
+                    <span className="text-[10px] font-bold text-slate-400 uppercase truncate" title={fKey}>
+                      {fKey}
+                    </span>
+                    <span className="text-xs font-black text-slate-800 truncate mt-0.5" title={String(fVal)}>
+                      {String(fVal)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       ) : (
         <div className="text-center text-xs text-slate-400 py-6">Select a district to view drill-down analysis</div>
