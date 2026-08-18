@@ -54,7 +54,7 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
         <div className="inline-flex p-3 bg-blue-50 text-blue-600 rounded-full animate-bounce">
           <Building2 className="w-6 h-6" />
         </div>
-        <h3 className="text-base font-bold text-slate-800">Loading Section 10 — Venue Analytics...</h3>
+        <h3 className="text-base font-bold text-slate-800">Loading Section 08 — Venue Analytics...</h3>
         <p className="text-xs text-slate-500">Processing TN Districts Pincodes.xlsx dataset...</p>
       </div>
     );
@@ -86,7 +86,7 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
         <div>
           <h2 className="text-xl font-black text-slate-900 tracking-tight flex items-center gap-2 flex-wrap">
             <span className="px-2.5 py-0.5 text-xs font-extrabold bg-blue-100 text-blue-800 border border-blue-200 rounded-md">
-              SEC 10
+              SEC 08
             </span>
             <span className="text-slate-300">|</span>
             <span className="text-blue-900 uppercase">VENUE ANALYTICS (BOOK MY VENUE - BMW)</span>

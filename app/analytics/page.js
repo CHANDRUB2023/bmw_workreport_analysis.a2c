@@ -22,14 +22,25 @@ import { calculateWhatIfScenarios } from '@/lib/analyticsService';
 const VALID_SECTIONS = [1, 2, 3, 4, 5, 6, 8, 10];
 
 const SECTION_TITLES = {
-  1: 'SEC 1 — Executive Overview',
-  2: 'SEC 2 — India Geographic Map',
-  3: 'SEC 3 — TN District Analysis',
-  4: 'SEC 4 — Manpower Requirement',
-  5: 'SEC 5 — Metro System Analysis',
-  6: 'SEC 6 — Workforce What-If',
-  8: 'SEC 8 — Working Hours vs Output',
-  10: 'SEC 10 — Venue Analytics'
+  1: '01 — Executive Overview',
+  2: '02 — India Geographic Map',
+  3: '03 — TN District Analysis',
+  4: '04 — Manpower Requirement',
+  5: '05 — Metro System Analysis',
+  6: '06 — Workforce What-If',
+  8: '07 — Working Hours vs Output',
+  10: '08 — Venue Analytics'
+};
+
+const SECTION_BADGES = {
+  1: 'SEC 01',
+  2: 'SEC 02',
+  3: 'SEC 03',
+  4: 'SEC 04',
+  5: 'SEC 05',
+  6: 'SEC 06',
+  8: 'SEC 07',
+  10: 'SEC 08'
 };
 
 export default function AnalyticsDashboardPage() {
@@ -190,14 +201,20 @@ export default function AnalyticsDashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-100/40 to-slate-50 text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900 flex flex-col justify-between relative overflow-hidden animate-stage1-shell">
+      {/* Subtle Depth Background Elements */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-indigo-400/5 rounded-full blur-3xl pointer-events-none -z-10" />
+
       {/* Header Navigation Banner */}
-      <AnalyticsHeader
-        onExportPdf={handleExportPdf}
-        isLoading={isLoading}
-        onRefresh={fetchAnalytics}
-        onToggleMobileSidebar={() => setIsMobileSidebarOpen((prev) => !prev)}
-      />
+      <div className="animate-stage3-header">
+        <AnalyticsHeader
+          onExportPdf={handleExportPdf}
+          isLoading={isLoading}
+          onRefresh={fetchAnalytics}
+          onToggleMobileSidebar={() => setIsMobileSidebarOpen((prev) => !prev)}
+        />
+      </div>
 
       {/* Sidebar + Main Content Layout Container */}
       <div className="flex-1 flex flex-col lg:flex-row max-w-full">
@@ -210,15 +227,15 @@ export default function AnalyticsDashboardPage() {
         />
 
         {/* Main Content Viewport */}
-        <main className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+        <main className="flex-1 min-w-0 px-4 sm:px-6 lg:px-8 py-6 space-y-6 animate-stage4-viewport">
           {/* Top Section Navigation Header */}
-          <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs flex flex-wrap items-center justify-between gap-3">
+          <div className="bg-white/80 backdrop-blur-md border border-slate-200/90 rounded-2xl p-4 shadow-2xs flex flex-wrap items-center justify-between gap-3 transition-all animate-stage5-title">
             <div className="flex items-center gap-3">
-              <span className="px-2.5 py-1 text-xs font-black bg-blue-600 text-white rounded-lg shadow-2xs">
-                SEC {selectedSection}
+              <span className="px-2.5 py-1 text-xs font-black bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg shadow-2xs shadow-blue-600/30 animate-badge-pop">
+                {SECTION_BADGES[selectedSection] || `SEC ${selectedSection}`}
               </span>
-              <h2 className="text-base sm:text-lg font-extrabold text-slate-900">
-                {SECTION_TITLES[selectedSection] || `Section ${selectedSection}`}
+              <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
+                <span>{SECTION_TITLES[selectedSection] || `Section ${selectedSection}`}</span>
               </h2>
             </div>
 
@@ -226,19 +243,19 @@ export default function AnalyticsDashboardPage() {
               <button
                 onClick={() => prevSection && handleSelectSection(prevSection)}
                 disabled={!prevSection}
-                className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
+                className="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 disabled:opacity-40 disabled:hover:bg-white cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-all shadow-2xs"
                 title="Previous Section"
               >
                 <ChevronLeft className="w-3.5 h-3.5" />
                 Prev
               </button>
-              <span className="text-slate-400 font-medium text-[11px] px-1">
+              <span className="text-slate-400 font-medium text-[11px] px-1 bg-slate-100 rounded-md py-0.5 border border-slate-200">
                 {currentSectionIndex + 1} / {VALID_SECTIONS.length}
               </span>
               <button
                 onClick={() => nextSection && handleSelectSection(nextSection)}
                 disabled={!nextSection}
-                className="px-3 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 disabled:opacity-40 disabled:hover:bg-transparent cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-colors"
+                className="px-3 py-1.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-100 active:scale-95 disabled:opacity-40 disabled:hover:bg-white cursor-pointer disabled:cursor-not-allowed flex items-center gap-1 transition-all shadow-2xs"
                 title="Next Section"
               >
                 Next
@@ -247,18 +264,30 @@ export default function AnalyticsDashboardPage() {
             </div>
           </div>
 
-          {/* Loading Indicator */}
+          {/* Skeleton Shimmer Loading Placeholder */}
           {isLoading && (
-            <div className="p-12 text-center bg-white border border-slate-200 rounded-2xl shadow-xs space-y-3">
-              <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto" />
-              <p className="text-sm font-bold text-slate-700">Loading Master Dataset Analytics...</p>
-              <p className="text-xs text-slate-400">Parsing and memoizing 165,627 records in-memory...</p>
+            <div className="p-8 bg-white border border-slate-200 rounded-2xl shadow-xs space-y-6 animate-fade-in">
+              <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+                <div className="h-6 w-48 bg-slate-200 rounded-lg animate-shimmer" />
+                <div className="h-6 w-24 bg-slate-200 rounded-lg animate-shimmer" />
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {[1, 2, 3, 4].map((n) => (
+                  <div key={n} className="h-28 bg-slate-100 rounded-xl p-4 space-y-3 border border-slate-200/60 animate-shimmer">
+                    <div className="h-4 w-20 bg-slate-200 rounded" />
+                    <div className="h-8 w-16 bg-slate-300 rounded-md" />
+                  </div>
+                ))}
+              </div>
+              <div className="h-64 bg-slate-100 rounded-2xl border border-slate-200/60 animate-shimmer flex items-center justify-center text-slate-400 font-bold text-xs">
+                Parsing master dataset & memoizing analytics...
+              </div>
             </div>
           )}
 
-          {/* Conditional Rendering of Currently Selected Section Only */}
+          {/* Conditional Rendering of Currently Selected Section Only with Animated Entrance */}
           {!isLoading && data && (
-            <>
+            <div key={selectedSection} className="animate-section-enter space-y-6">
               {/* SEC 1 — EXECUTIVE OVERVIEW */}
               {selectedSection === 1 && (
                 <ExecutiveOverview kpis={{
@@ -324,16 +353,16 @@ export default function AnalyticsDashboardPage() {
               )}
 
               {/* BOTTOM DOWNLOAD PDF REPORT ACTION BUTTON */}
-              <div className="flex justify-center pt-4">
+              <div className="flex justify-center pt-6">
                 <button
                   onClick={handleExportPdf}
-                  className="px-8 py-3.5 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-blue-600/20 hover:shadow-lg transition-all inline-flex items-center gap-2.5 cursor-pointer"
+                  className="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 active:scale-95 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-blue-600/25 hover:shadow-lg hover:shadow-blue-600/35 transition-all duration-200 inline-flex items-center gap-2.5 cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
                   DOWNLOAD PDF REPORT
                 </button>
               </div>
-            </>
+            </div>
           )}
         </main>
       </div>

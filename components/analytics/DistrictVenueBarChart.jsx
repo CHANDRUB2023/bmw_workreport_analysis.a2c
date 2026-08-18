@@ -26,7 +26,7 @@ export default function DistrictVenueBarChart({ districts = [] }) {
     return list;
   }, [districts, limit, sortOrder]);
 
-  const chartHeight = Math.max(380, processedData.length * 28);
+  const chartHeight = Math.max(160, processedData.length * 30);
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -125,7 +125,7 @@ export default function DistrictVenueBarChart({ districts = [] }) {
       </div>
 
       {/* Chart */}
-      <div style={{ height: `${chartHeight}px`, minHeight: '380px' }} className="w-full">
+      <div style={{ height: `${chartHeight}px` }} className="w-full transition-all duration-300">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             layout="vertical"

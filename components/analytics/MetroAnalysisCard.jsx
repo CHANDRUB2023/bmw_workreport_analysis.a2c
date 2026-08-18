@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search, Train, Building2, MapPin, Info, CheckCircle2 } from 'lucide-react';
 import { VERIFIED_METRO_SYSTEMS } from '@/lib/productivityService';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function MetroAnalysisCard({ metroData }) {
   const [selectedCity, setSelectedCity] = useState('Chennai');
@@ -26,11 +27,11 @@ export default function MetroAnalysisCard({ metroData }) {
     : filteredSystems[0] || systems[0];
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+    <section className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-2xs space-y-4 animate-fade-in">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200/90 pb-3 gap-2">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 5</span>
+            <span className="px-2 py-0.5 text-xs font-black bg-blue-100 text-blue-800 rounded-md">SEC 05</span>
             <span className="flex items-center gap-2">
               <Train className="w-4 h-4 text-blue-600" />
               METRO SYSTEM NETWORK & STATION ANALYSIS
@@ -41,7 +42,7 @@ export default function MetroAnalysisCard({ metroData }) {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 flex-wrap">
           <div className="relative">
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
             <input
@@ -49,18 +50,22 @@ export default function MetroAnalysisCard({ metroData }) {
               placeholder="Search city / metro line..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-8 pr-3 py-1.5 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500 w-44 bg-slate-50 font-medium"
+              className="pl-8 pr-3 py-1.5 text-xs border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 w-44 bg-slate-50 font-medium transition-all focus:bg-white"
             />
           </div>
 
-          <div className="bg-blue-50 border border-blue-200 rounded-lg px-3 py-1 text-center">
+          <div className="bg-blue-50/90 border border-blue-200 rounded-xl px-3 py-1 text-center shadow-2xs">
             <span className="text-[10px] text-blue-700 uppercase font-bold block">Metro Cities</span>
-            <span className="text-sm font-black text-blue-900">{totalCities} Cities</span>
+            <span className="text-sm font-black text-blue-900">
+              <AnimatedCounter value={totalCities} suffix=" Cities" />
+            </span>
           </div>
 
-          <div className="bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-1 text-center">
+          <div className="bg-emerald-50/90 border border-emerald-200 rounded-xl px-3 py-1 text-center shadow-2xs">
             <span className="text-[10px] text-emerald-700 uppercase font-bold block">Total Stations</span>
-            <span className="text-sm font-black text-emerald-900">{totalStations} Stations</span>
+            <span className="text-sm font-black text-emerald-900">
+              <AnimatedCounter value={totalStations} suffix=" Stations" />
+            </span>
           </div>
         </div>
       </div>
@@ -71,17 +76,17 @@ export default function MetroAnalysisCard({ metroData }) {
           <span className="text-xs font-bold text-slate-600 block mb-1">
             Select Metro City ({filteredSystems.length})
           </span>
-          <div className="grid grid-cols-2 gap-2 max-h-[300px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-2 gap-2 max-h-[300px] overflow-y-auto pr-1 custom-scrollbar">
             {filteredSystems.map((s) => {
               const isSelected = activeSystem?.city === s.city;
               return (
                 <button
                   key={s.city}
                   onClick={() => setSelectedCity(s.city)}
-                  className={`p-2.5 rounded-lg border text-left text-xs transition-all flex items-center justify-between cursor-pointer ${
+                  className={`p-2.5 rounded-xl border text-left text-xs transition-all duration-150 flex items-center justify-between cursor-pointer active:scale-95 ${
                     isSelected
-                      ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-xs'
-                      : 'bg-slate-50 border-slate-200 hover:bg-slate-100 text-slate-800 font-medium'
+                      ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-600 font-bold shadow-xs'
+                      : 'bg-slate-50/80 border-slate-200/80 hover:bg-slate-100 text-slate-800 font-medium hover:translate-x-0.5'
                   }`}
                 >
                   <span className="truncate pr-1">{s.city}</span>
@@ -97,7 +102,7 @@ export default function MetroAnalysisCard({ metroData }) {
         </div>
 
         {/* Right Active City Details & Station List Card */}
-        <div className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col justify-between space-y-4">
+        <div className="lg:col-span-7 bg-slate-50/80 border border-slate-200/90 rounded-2xl p-4 flex flex-col justify-between space-y-4 shadow-2xs">
           {activeSystem ? (
             <div className="space-y-4">
               <div className="flex items-center justify-between border-b border-slate-200 pb-2">
@@ -109,8 +114,8 @@ export default function MetroAnalysisCard({ metroData }) {
                     {activeSystem.city} Metro Network
                   </h4>
                 </div>
-                <span className="px-3 py-1 bg-blue-100 text-blue-900 font-black rounded-lg text-sm border border-blue-200">
-                  {activeSystem.totalStations} Operational Stations
+                <span className="px-3 py-1 bg-blue-100/90 text-blue-900 font-black rounded-xl text-sm border border-blue-200 shadow-2xs">
+                  <AnimatedCounter value={activeSystem.totalStations} suffix=" Operational Stations" />
                 </span>
               </div>
 
@@ -118,7 +123,7 @@ export default function MetroAnalysisCard({ metroData }) {
                 <span className="text-xs font-bold text-slate-700 block mb-1">Transit Corridors / Lines:</span>
                 <div className="flex flex-wrap gap-1.5">
                   {activeSystem.lines.map(l => (
-                    <span key={l} className="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-bold text-slate-800">
+                    <span key={l} className="px-2.5 py-1 bg-white border border-slate-200/80 rounded-lg text-[11px] font-bold text-slate-800 shadow-2xs">
                       {l}
                     </span>
                   ))}
@@ -127,9 +132,9 @@ export default function MetroAnalysisCard({ metroData }) {
 
               <div>
                 <span className="text-xs font-bold text-slate-700 block mb-1">Key Operational Metro Stations:</span>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 max-h-[160px] overflow-y-auto">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 max-h-[160px] overflow-y-auto custom-scrollbar">
                   {activeSystem.sampleStations.map(st => (
-                    <div key={st} className="px-2.5 py-1.5 bg-white border border-blue-200 rounded-lg text-xs font-semibold text-blue-950 flex items-center gap-1.5">
+                    <div key={st} className="px-2.5 py-1.5 bg-white border border-blue-200/70 rounded-xl text-xs font-semibold text-blue-950 flex items-center gap-1.5 shadow-2xs hover:border-blue-300 transition-colors">
                       <MapPin className="w-3 h-3 text-blue-600 shrink-0" />
                       <span className="truncate">{st}</span>
                     </div>
@@ -142,7 +147,7 @@ export default function MetroAnalysisCard({ metroData }) {
           )}
 
           {/* Legitimate Data Source & Freshness Indicator */}
-          <div className="border-t border-slate-200 pt-2.5 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+          <div className="border-t border-slate-200/90 pt-2.5 flex items-center justify-between text-[11px] text-slate-500 font-medium">
             <div className="flex items-center gap-1.5">
               <Info className="w-3.5 h-3.5 text-blue-600" />
               <span>Data Source: Official Urban Transit Network Database</span>

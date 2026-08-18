@@ -162,8 +162,8 @@ export default function TnVenueMapCard({ districts = [], selectedDistrict, onSel
   }, [geojsonData, selectedDistrict, venueDataMap, onSelectDistrict]);
 
   return (
-    <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+    <div className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-2xs space-y-4 animate-fade-in">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200/90 pb-3 gap-2">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
             <MapPin className="w-5 h-5 text-blue-600" />
@@ -177,7 +177,7 @@ export default function TnVenueMapCard({ districts = [], selectedDistrict, onSel
         {selectedDistrict && (
           <button
             onClick={() => onSelectDistrict && onSelectDistrict(null)}
-            className="px-3 py-1 bg-slate-100 hover:bg-slate-200 border border-slate-300 text-slate-700 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer self-start sm:self-auto"
+            className="px-3 py-1.5 bg-slate-100/90 hover:bg-slate-200/90 active:scale-95 border border-slate-300 text-slate-700 text-xs font-bold rounded-xl transition-all duration-150 flex items-center gap-1.5 cursor-pointer self-start sm:self-auto shadow-2xs"
           >
             <RotateCcw className="w-3.5 h-3.5" />
             RESET SELECTION
@@ -187,20 +187,20 @@ export default function TnVenueMapCard({ districts = [], selectedDistrict, onSel
 
       <div
         ref={mapContainerRef}
-        className="relative z-0 w-full h-[400px] rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-2xs"
+        className="w-full h-[400px] rounded-2xl border border-slate-200/90 bg-slate-50 overflow-hidden shadow-2xs leaflet-container-isolated"
       />
 
       {/* Map Legend */}
       <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600 font-semibold pt-1 border-t border-slate-100">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="text-slate-400 font-bold uppercase text-[10px]">Venue Scale:</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block" style={{ backgroundColor: '#1e40af' }} /> 500+</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block" style={{ backgroundColor: '#2563eb' }} /> 300–499</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block" style={{ backgroundColor: '#3b82f6' }} /> 200–299</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block" style={{ backgroundColor: '#60a5fa' }} /> 100–199</span>
-          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block" style={{ backgroundColor: '#93c5fd' }} /> Below 100</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block shadow-2xs" style={{ backgroundColor: '#1e40af' }} /> 500+</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block shadow-2xs" style={{ backgroundColor: '#2563eb' }} /> 300–499</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block shadow-2xs" style={{ backgroundColor: '#3b82f6' }} /> 200–299</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block shadow-2xs" style={{ backgroundColor: '#60a5fa' }} /> 100–199</span>
+          <span className="flex items-center gap-1"><span className="w-3 h-3 rounded-xs inline-block shadow-2xs" style={{ backgroundColor: '#93c5fd' }} /> Below 100</span>
         </div>
-        <div className="text-[11px] text-amber-700 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">
+        <div className="text-[11px] text-amber-800 font-extrabold bg-amber-50 px-2.5 py-0.5 rounded-lg border border-amber-200 shadow-2xs">
           ± indicates approximate values
         </div>
       </div>

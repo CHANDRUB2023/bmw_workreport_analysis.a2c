@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CheckCircle, Clock, MapPin, Building, ShieldCheck, RotateCcw, CheckSquare, Square, RefreshCw } from 'lucide-react';
 import { COMPLETED_TN_DISTRICTS, normalizeTnDistrictName } from '@/lib/formatUtils';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 const STORAGE_KEY = 'a2c_tn_district_status_v1';
 
@@ -267,12 +268,12 @@ export default function TnDistrictAnalysis({ tnDistricts = [], onStatusChange })
   const pendingCount = Math.max(0, 38 - completedCount - progressCount);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
+    <section className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-2xs space-y-4 animate-fade-in">
       {/* Title Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200/90 pb-3 gap-2">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold bg-amber-100 text-amber-800 rounded-md">SEC 3</span>
+            <span className="px-2 py-0.5 text-xs font-black bg-amber-100 text-amber-800 rounded-md">SEC 03</span>
             <span>TAMIL NADU DISTRICT OPERATIONS & STATUS MAP</span>
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -284,19 +285,19 @@ export default function TnDistrictAnalysis({ tnDistricts = [], onStatusChange })
           {selectedTnDistrict && (
             <button
               onClick={() => setSelectedTnDistrict(null)}
-              className="px-3 py-1 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold rounded-xl transition-all duration-150 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-2xs"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               RESET MAP
             </button>
           )}
 
-          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs">
+          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs">
             {['ALL', 'COMPLETED', 'PROGRESS', 'PENDING'].map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-2.5 py-1 font-bold rounded-md transition-all cursor-pointer ${
+                className={`px-2.5 py-1 font-bold rounded-lg transition-all duration-150 cursor-pointer active:scale-95 ${
                   filter === f
                     ? 'bg-white text-slate-900 shadow-xs'
                     : 'text-slate-500 hover:text-slate-800'
@@ -310,35 +311,43 @@ export default function TnDistrictAnalysis({ tnDistricts = [], onStatusChange })
       </div>
 
       {/* Dynamic Status Summary Report Banner */}
-      <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
-        <div className="bg-white border border-emerald-200 rounded-lg p-2.5 flex items-center justify-between">
+      <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-3.5 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs shadow-2xs">
+        <div className="bg-white border border-emerald-200 rounded-xl p-2.5 flex items-center justify-between shadow-2xs">
           <div>
             <span className="text-[10px] font-bold text-emerald-700 uppercase block">Completed Work</span>
-            <span className="text-lg font-black text-emerald-900">{completedCount} Districts</span>
+            <span className="text-lg font-black text-emerald-900">
+              <AnimatedCounter value={completedCount} suffix=" Districts" />
+            </span>
           </div>
           <CheckCircle className="w-5 h-5 text-emerald-600" />
         </div>
 
-        <div className="bg-white border border-amber-200 rounded-lg p-2.5 flex items-center justify-between">
+        <div className="bg-white border border-amber-200 rounded-xl p-2.5 flex items-center justify-between shadow-2xs">
           <div>
             <span className="text-[10px] font-bold text-amber-700 uppercase block">In Progress</span>
-            <span className="text-lg font-black text-amber-900">{progressCount} Districts</span>
+            <span className="text-lg font-black text-amber-900">
+              <AnimatedCounter value={progressCount} suffix=" Districts" />
+            </span>
           </div>
           <Clock className="w-5 h-5 text-amber-600" />
         </div>
 
-        <div className="bg-white border border-slate-200 rounded-lg p-2.5 flex items-center justify-between">
+        <div className="bg-white border border-slate-200 rounded-xl p-2.5 flex items-center justify-between shadow-2xs">
           <div>
             <span className="text-[10px] font-bold text-slate-500 uppercase block">Pending Work</span>
-            <span className="text-lg font-black text-slate-800">{pendingCount} Districts</span>
+            <span className="text-lg font-black text-slate-800">
+              <AnimatedCounter value={pendingCount} suffix=" Districts" />
+            </span>
           </div>
           <Building className="w-5 h-5 text-slate-400" />
         </div>
 
-        <div className="bg-white border border-blue-200 rounded-lg p-2.5 flex items-center justify-between">
+        <div className="bg-white border border-blue-200 rounded-xl p-2.5 flex items-center justify-between shadow-2xs">
           <div>
             <span className="text-[10px] font-bold text-blue-700 uppercase block">Completion Rate</span>
-            <span className="text-lg font-black text-blue-900">{((completedCount / 38) * 100).toFixed(1)}%</span>
+            <span className="text-lg font-black text-blue-900">
+              <AnimatedCounter value={((completedCount / 38) * 100).toFixed(1)} suffix="%" />
+            </span>
           </div>
           <ShieldCheck className="w-5 h-5 text-blue-600" />
         </div>
@@ -349,7 +358,7 @@ export default function TnDistrictAnalysis({ tnDistricts = [], onStatusChange })
         <div className="lg:col-span-7 space-y-2">
           <div
             ref={mapContainerRef}
-            className="w-full h-[460px] rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-2xs"
+            className="w-full h-[460px] rounded-2xl border border-slate-200/90 bg-slate-50 overflow-hidden shadow-2xs leaflet-container-isolated"
           />
           <div className="flex items-center justify-between text-[11px] text-slate-600 font-semibold px-1">
             <div className="flex items-center gap-3">

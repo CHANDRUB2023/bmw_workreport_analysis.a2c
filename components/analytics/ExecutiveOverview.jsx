@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MapPin, Building2, Globe, CheckCircle2, Clock, Percent, ShieldCheck } from 'lucide-react';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function ExecutiveOverview({ kpis }) {
   const cards = [
@@ -10,61 +11,61 @@ export default function ExecutiveOverview({ kpis }) {
       value: kpis?.totalStates ?? 37,
       subtitle: 'Covered in Master CSV',
       icon: Globe,
-      iconBg: 'bg-blue-100 text-blue-700'
+      iconBg: 'bg-blue-100/90 text-blue-700 border border-blue-200/50'
     },
     {
       title: 'Total Districts',
-      value: (kpis?.totalDistricts ?? 750).toLocaleString(),
+      value: kpis?.totalDistricts ?? 750,
       subtitle: 'All-India Coverage',
       icon: Building2,
-      iconBg: 'bg-indigo-100 text-indigo-700'
+      iconBg: 'bg-indigo-100/90 text-indigo-700 border border-indigo-200/50'
     },
     {
       title: 'Unique Pincodes',
-      value: (kpis?.totalUniquePincodes ?? 19586).toLocaleString(),
+      value: kpis?.totalUniquePincodes ?? 19586,
       subtitle: '6-Digit Verified PINs',
       icon: MapPin,
-      iconBg: 'bg-sky-100 text-sky-700'
+      iconBg: 'bg-sky-100/90 text-sky-700 border border-sky-200/50'
     },
     {
       title: 'Tamil Nadu Districts',
       value: kpis?.tnTotalDistricts ?? 38,
       subtitle: 'Target Operations Scope',
       icon: ShieldCheck,
-      iconBg: 'bg-amber-100 text-amber-800'
+      iconBg: 'bg-amber-100/90 text-amber-800 border border-amber-200/50'
     },
     {
       title: 'Completed Districts',
       value: kpis?.tnCompletedDistricts ?? 8,
       subtitle: 'Operational Verified',
       icon: CheckCircle2,
-      iconBg: 'bg-emerald-100 text-emerald-700'
+      iconBg: 'bg-emerald-100/90 text-emerald-700 border border-emerald-200/50'
     },
     {
       title: 'Pending Districts',
       value: kpis?.tnPendingDistricts ?? 30,
       subtitle: 'Workforce Queue',
       icon: Clock,
-      iconBg: 'bg-orange-100 text-orange-700'
+      iconBg: 'bg-orange-100/90 text-orange-700 border border-orange-200/50'
     },
     {
       title: 'Completion Rate',
       value: `${kpis?.tnCompletionPct ?? 21.1}%`,
       subtitle: 'TN Operational Progress',
       icon: Percent,
-      iconBg: 'bg-teal-100 text-teal-700'
+      iconBg: 'bg-teal-100/90 text-teal-700 border border-teal-200/50'
     }
   ];
 
   return (
     <section className="space-y-4">
-      <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+      <div className="flex items-center justify-between border-b border-slate-200/90 pb-2.5">
         <h2 className="text-lg font-extrabold text-slate-900 tracking-tight flex items-center gap-2">
-          <span>SECTION 1</span>
+          <span className="px-2 py-0.5 bg-blue-100 text-blue-800 rounded-md text-xs font-black">SEC 01</span>
           <span className="text-slate-300">|</span>
           <span className="text-blue-900">EXECUTIVE OVERVIEW</span>
         </h2>
-        <span className="text-xs font-medium text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
+        <span className="text-xs font-semibold text-slate-500 bg-white px-3 py-1 rounded-lg border border-slate-200 shadow-2xs">
           Source: Master CSV Dataset
         </span>
       </div>
@@ -91,22 +92,23 @@ export default function ExecutiveOverview({ kpis }) {
               key={i}
               tabIndex={0}
               role="region"
+              style={{ animationDelay: `${i * 50}ms` }}
               aria-label={`${c.title}: ${c.value}`}
-              className="relative group bg-white border border-slate-200/90 rounded-xl p-4 shadow-xs hover:shadow-md transition-all duration-200 flex flex-col justify-between animate-fade-in focus:outline-none focus:ring-2 focus:ring-blue-500/50 cursor-pointer"
+              className="relative group bg-white border border-slate-200/90 rounded-2xl p-4 shadow-2xs hover:shadow-lg hover:border-blue-300/80 transition-all duration-300 flex flex-col justify-between animate-fade-in focus:outline-none focus:ring-2 focus:ring-blue-500/50 cursor-pointer premium-card-hover"
             >
-              {/* Existing Card Content (Visual Labels & Card Dimensions Locked) */}
+              {/* Card Content Header & Icon */}
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-bold text-slate-500 uppercase tracking-wider truncate">
+                <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider truncate">
                   {c.title}
                 </span>
-                <div className={`p-1.5 rounded-lg shrink-0 ${c.iconBg}`}>
+                <div className={`p-1.5 rounded-xl shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6 ${c.iconBg}`}>
                   <Icon className="w-4 h-4" />
                 </div>
               </div>
 
               <div>
                 <div className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                  {c.value}
+                  <AnimatedCounter value={c.value} />
                 </div>
                 <div className="text-[11px] font-medium text-slate-400 mt-0.5 truncate">
                   {c.subtitle}
@@ -115,7 +117,7 @@ export default function ExecutiveOverview({ kpis }) {
 
               {/* Edge-Safe Floating Rich Tooltip */}
               <div
-                className={`opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-250 ease-out transform translate-y-1 group-hover:translate-y-0 group-focus:translate-y-0 group-focus-within:translate-y-0 absolute bottom-full mb-2.5 w-56 z-50 p-3 bg-slate-900 text-white rounded-xl shadow-2xl border border-slate-700/80 text-left ${tooltipPosClass}`}
+                className={`opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus:opacity-100 group-focus:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto transition-all duration-250 ease-out transform translate-y-1 group-hover:translate-y-0 group-focus:translate-y-0 group-focus-within:translate-y-0 absolute bottom-full mb-2.5 w-56 z-50 p-3.5 bg-slate-900/95 backdrop-blur-md text-white rounded-2xl shadow-2xl border border-slate-700/80 text-left ${tooltipPosClass}`}
               >
                 <div className="flex items-center gap-2 mb-1.5 pb-1.5 border-b border-slate-800">
                   <div className={`p-1 rounded-md text-xs shrink-0 ${c.iconBg}`}>
@@ -126,8 +128,8 @@ export default function ExecutiveOverview({ kpis }) {
                   </span>
                 </div>
 
-                <div className="text-lg font-black text-blue-400 tracking-tight">
-                  {c.value}
+                <div className="text-xl font-black text-blue-400 tracking-tight">
+                  <AnimatedCounter value={c.value} />
                 </div>
 
                 <div className="text-[11px] font-medium text-slate-300 mt-1 leading-snug">

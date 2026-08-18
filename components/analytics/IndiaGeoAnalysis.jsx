@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MapPin, Building, Info, CheckCircle2, Clock, RotateCcw } from 'lucide-react';
 import { normalizeStateName } from '@/lib/formatUtils';
+import AnimatedCounter from '@/components/ui/AnimatedCounter';
 
 export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSelectState }) {
   const [search, setSearch] = useState('');
@@ -150,11 +151,11 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
   };
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200 pb-3 gap-2">
+    <section className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-2xs space-y-4 animate-fade-in">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-slate-200/90 pb-3 gap-2">
         <div>
           <h3 className="text-base font-extrabold text-slate-900 flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold bg-blue-100 text-blue-800 rounded-md">SEC 2</span>
+            <span className="px-2 py-0.5 text-xs font-black bg-blue-100 text-blue-800 rounded-md">SEC 02</span>
             <span>INTERACTIVE INDIA GEOGRAPHIC MAP</span>
           </h3>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -166,7 +167,7 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
           {selectedState && (
             <button
               onClick={() => onSelectState(null)}
-              className="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5"
+              className="px-3 py-1.5 bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-800 text-xs font-bold rounded-xl transition-all duration-150 active:scale-95 flex items-center gap-1.5 cursor-pointer shadow-2xs"
             >
               <RotateCcw className="w-3.5 h-3.5" />
               RESET MAP
@@ -178,7 +179,7 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
             placeholder="Search state..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="px-3 py-1.5 text-xs border border-slate-300 rounded-lg focus:outline-hidden focus:ring-2 focus:ring-blue-500 w-36 sm:w-44 bg-slate-50"
+            className="px-3 py-1.5 text-xs border border-slate-200 rounded-xl focus:outline-hidden focus:ring-2 focus:ring-blue-500 w-36 sm:w-44 bg-slate-50 transition-all focus:bg-white"
           />
         </div>
       </div>
@@ -188,7 +189,7 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
         <div className="lg:col-span-7 space-y-2">
           <div
             ref={mapContainerRef}
-            className="w-full h-[450px] rounded-xl border border-slate-200 bg-slate-50 overflow-hidden shadow-2xs"
+            className="w-full h-[450px] rounded-2xl border border-slate-200/90 bg-slate-50 overflow-hidden shadow-2xs leaflet-container-isolated"
           />
           <div className="text-[11px] text-slate-500 text-center font-medium">
             Hover over any state to preview statistics • Click boundary polygon to select state
@@ -198,7 +199,7 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
         {/* Right: State Selector & Details Panel */}
         <div className="lg:col-span-5 space-y-4">
           {/* State Details Card */}
-          <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-3">
+          <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-4 space-y-3 shadow-2xs">
             <div className="flex items-center justify-between border-b border-slate-200 pb-2">
               <div>
                 <span className="text-[10px] font-bold text-blue-600 uppercase tracking-widest block">
@@ -210,36 +211,36 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
               </div>
 
               {selectedData?.isTamilNadu && (
-                <span className="px-2.5 py-1 text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300 rounded-md">
+                <span className="px-2.5 py-1 text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300 rounded-lg shadow-2xs">
                   Target State
                 </span>
               )}
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-white border border-slate-200 rounded-lg p-3">
+              <div className="bg-white border border-slate-200/80 rounded-xl p-3 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
                   <Building className="w-3.5 h-3.5 text-blue-600" />
                   <span>Total Districts</span>
                 </div>
                 <div className="text-xl font-extrabold text-slate-900">
-                  {selectedData ? selectedData.districtCount : allIndiaSummary.totalDistricts}
+                  <AnimatedCounter value={selectedData ? selectedData.districtCount : allIndiaSummary.totalDistricts} />
                 </div>
               </div>
 
-              <div className="bg-white border border-slate-200 rounded-lg p-3">
+              <div className="bg-white border border-slate-200/80 rounded-xl p-3 shadow-2xs">
                 <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-1">
                   <MapPin className="w-3.5 h-3.5 text-sky-600" />
                   <span>Unique PINs</span>
                 </div>
                 <div className="text-xl font-extrabold text-slate-900">
-                  {(selectedData ? selectedData.pincodeCount : allIndiaSummary.totalPincodes).toLocaleString()}
+                  <AnimatedCounter value={selectedData ? selectedData.pincodeCount : allIndiaSummary.totalPincodes} />
                 </div>
               </div>
             </div>
 
             {selectedData?.isTamilNadu ? (
-              <div className="bg-white border border-amber-200 rounded-lg p-3 space-y-2">
+              <div className="bg-white border border-amber-200 rounded-xl p-3 space-y-2 shadow-2xs">
                 <span className="text-xs font-bold text-slate-700 block border-b border-slate-100 pb-1">
                   Tamil Nadu Operational Breakdown
                 </span>
@@ -255,7 +256,7 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
                 </div>
               </div>
             ) : (
-              <div className="text-[11px] text-slate-500 bg-white border border-slate-200 rounded-lg p-2.5 flex items-start gap-2">
+              <div className="text-[11px] text-slate-500 bg-white border border-slate-200/80 rounded-xl p-2.5 flex items-start gap-2 shadow-2xs">
                 <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>
                   {selectedData
@@ -271,17 +272,17 @@ export default function IndiaGeoAnalysis({ statesData = [], selectedState, onSel
             <span className="text-xs font-bold text-slate-600 block">
               Quick State List ({filteredStates.length})
             </span>
-            <div className="grid grid-cols-2 gap-1.5 max-h-[170px] overflow-y-auto pr-1">
+            <div className="grid grid-cols-2 gap-1.5 max-h-[170px] overflow-y-auto pr-1 custom-scrollbar">
               {filteredStates.map((st) => {
                 const isSelected = (selectedState || '').toUpperCase() === st.stateName.toUpperCase();
                 return (
                   <button
                     key={st.stateName}
                     onClick={() => onSelectState(st.stateName)}
-                    className={`p-2 rounded-lg border text-left text-xs transition-all flex items-center justify-between ${
+                    className={`p-2 rounded-xl border text-left text-xs transition-all duration-150 flex items-center justify-between cursor-pointer active:scale-95 ${
                       isSelected
-                        ? 'bg-blue-600 text-white border-blue-600 font-bold shadow-xs'
-                        : 'bg-slate-50 text-slate-800 border-slate-200 hover:bg-slate-100 font-medium'
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-blue-600 font-bold shadow-xs'
+                        : 'bg-slate-50/80 text-slate-800 border-slate-200/80 hover:bg-slate-100 font-medium hover:translate-x-0.5'
                     }`}
                   >
                     <span className="truncate pr-1">{st.stateName}</span>

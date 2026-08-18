@@ -35,6 +35,8 @@ export default function UtVenueBarChart({ unionTerritories = [] }) {
     return null;
   };
 
+  const utHeight = Math.max(140, sortedUt.length * 38);
+
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-5 shadow-xs space-y-4">
       <div className="border-b border-slate-200 pb-3">
@@ -47,7 +49,7 @@ export default function UtVenueBarChart({ unionTerritories = [] }) {
         </p>
       </div>
 
-      <div className="w-full h-[320px]">
+      <div style={{ height: `${utHeight}px` }} className="w-full transition-all duration-300">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             layout="vertical"

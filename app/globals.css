@@ -10,8 +10,10 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
 }
 
+/* Custom Animation Keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -20,6 +22,42 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes sectionEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.985) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes sidebarSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -34,18 +72,234 @@ body {
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes activeGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(37, 99, 235, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
+  }
+}
+
+/* 6-Stage Staged Page Load Keyframes */
+@keyframes stage1Shell {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes stage2Sidebar {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes stage3Header {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stage4Viewport {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stage5Title {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes progressGrow {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--target-width, 100%);
+  }
+}
+
+@keyframes tooltipPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes checkmarkDraw {
+  0% {
+    stroke-dashoffset: 50;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* Utility Animation Classes */
+.animate-stage1-shell {
+  animation: stage1Shell 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-stage2-sidebar {
+  animation: stage2Sidebar 550ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-stage3-header {
+  animation: stage3Header 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-stage4-viewport {
+  animation: stage4Viewport 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-stage5-title {
+  animation: stage5Title 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-progress-grow {
+  animation: progressGrow 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-tooltip-pop {
+  animation: tooltipPop 180ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 .animate-fade-in {
   animation: fadeIn 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-section-enter {
+  animation: sectionEnter 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-sidebar-slide {
+  animation: sidebarSlideIn 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-badge-pop {
+  animation: badgePop 280ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-modal-pop {
   animation: modalPop 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(241,245,249,0.8) 0%, rgba(226,232,240,0.9) 50%, rgba(241,245,249,0.8) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+.animate-active-glow {
+  animation: activeGlowPulse 3s infinite ease-in-out;
+}
+
+/* Leaflet Map Stacking & Bounds Enforcement */
+.leaflet-container-isolated {
+  z-index: 0 !important;
+  position: relative !important;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.leaflet-container-isolated .leaflet-pane {
+  z-index: 1 !important;
+}
+
+.leaflet-container-isolated .leaflet-top,
+.leaflet-container-isolated .leaflet-bottom {
+  z-index: 2 !important;
+}
+
+/* Interactive Card Micro-Interactions */
+.premium-card-hover {
+  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 220ms cubic-bezier(0.16, 1, 0.3, 1), border-color 220ms ease;
+}
+
+.premium-card-hover:hover {
+  transform: translateY(-3.5px);
+  box-shadow: 0 12px 24px -6px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+}
+
+/* Custom Scrollbar for Sidebar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .animate-stage1-shell,
+  .animate-stage2-sidebar,
+  .animate-stage3-header,
+  .animate-stage4-viewport,
+  .animate-stage5-title,
+  .animate-progress-grow,
+  .animate-tooltip-pop,
   .animate-fade-in,
-  .animate-modal-pop {
+  .animate-section-enter,
+  .animate-sidebar-slide,
+  .animate-badge-pop,
+  .animate-modal-pop,
+  .animate-shimmer,
+  .animate-active-glow,
+  .premium-card-hover {
     animation: none !important;
     transition: none !important;
+    transform: none !important;
   }
 }
+
