@@ -126,7 +126,7 @@ export default function VenueAnalyticsSection({ refreshTrigger }) {
           <VenueKpisCard summary={data.summary} />
 
           {/* DYNAMIC EXCEL ADDITIONAL FIELDS (If present in workbook) */}
-          <DynamicExcelFieldsCard dynamicColumns={data.dynamicColumns} />
+          <DynamicExcelFieldsCard dynamicColumns={data.dynamicColumns} excelSheets={data.excelSheets} />
 
           {/* MAP & DRILLDOWN GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
